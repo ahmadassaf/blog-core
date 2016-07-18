@@ -1,0 +1,304 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "5d2d07f112b8de19f2c0dbfec3e42c05",
+      "css": "spin",
+      "code": 59413,
+      "src": "fontelico"
+    },
+    {
+      "uid": "9dd9e835aebe1060ba7190ad2b2ed951",
+      "css": "search",
+      "code": 59406,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "31951fbb9820ed0690f675b3d495c8da",
+      "css": "chat-empty",
+      "code": 59404,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "399ef63b1e23ab1b761dfbb5591fa4da",
+      "css": "right-open",
+      "code": 59409,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e4dde1992f787163e2e2b534b8c8067d",
+      "css": "angle-down",
+      "code": 59400,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "25b34dea4784f72c710454f32ff8fa2b",
+      "css": "star",
+      "code": 59410,
+      "src": "entypo"
+    },
+    {
+      "uid": "815503841e980c848f55e0271deacead",
+      "css": "link",
+      "code": 59411,
+      "src": "entypo"
+    },
+    {
+      "uid": "91426c82d94428a33353e495418435e3",
+      "css": "share",
+      "code": 59401,
+      "src": "entypo"
+    },
+    {
+      "uid": "d10920db2e79c997c5e783279291970c",
+      "css": "dot",
+      "code": 59277,
+      "src": "entypo"
+    },
+    {
+      "uid": "b945f4ac2439565661e8e4878e35d379",
+      "css": "gplus",
+      "code": 59403,
+      "src": "entypo"
+    },
+    {
+      "uid": "689febe699d74bc8862965555503e445",
+      "css": "pinterest",
+      "code": 59397,
+      "src": "entypo"
+    },
+    {
+      "uid": "ef5e2b339a93fff038cc6a28f8c91edd",
+      "css": "stumbleupon",
+      "code": 59393,
+      "src": "entypo"
+    },
+    {
+      "uid": "tau7t0t38662eqxrb80ozeiase5em2x9",
+      "css": "thumbs-up",
+      "code": 128077,
+      "src": "typicons"
+    },
+    {
+      "uid": "7yekfd0qlkgp6emwfbo10sjdmf8pewli",
+      "css": "download",
+      "code": 59399,
+      "src": "typicons"
+    },
+    {
+      "uid": "d6944e1d9af302093d43b299bbecbbbe02",
+      "css": "home",
+      "code": 8962,
+      "src": "iconic"
+    },
+    {
+      "uid": "d3d5f318c8e9a58245c2e48c7ce0f57d",
+      "css": "tag-2",
+      "code": 59394,
+      "src": "iconic"
+    },
+    {
+      "uid": "96a3aff31cec6cfbe6177151b3a44d20",
+      "css": "quote-left-alt",
+      "code": 10075,
+      "src": "iconic"
+    },
+    {
+      "uid": "6d0d103e180c68aa77bd26a595b5aa5f",
+      "css": "quote-right-alt",
+      "code": 10076,
+      "src": "iconic"
+    },
+    {
+      "uid": "c93d6731f7cc8c218754e005306bad54",
+      "css": "doc-inv-alt",
+      "code": 59398,
+      "src": "iconic"
+    },
+    {
+      "uid": "fc94b92194752796654c96c7b7dccebb",
+      "css": "cog",
+      "code": 9881,
+      "src": "iconic"
+    },
+    {
+      "uid": "7ssl5z5jrhu13tb13cd3gb4bdfkzbfzw",
+      "css": "print",
+      "code": 59158,
+      "src": "modernpics"
+    },
+    {
+      "uid": "e6t4yvmv401e9gpo2anslq4uqy2iz692",
+      "css": "signal",
+      "code": 59248,
+      "src": "modernpics"
+    },
+    {
+      "uid": "00e1f929aa3c591e05de52eb94eda625",
+      "css": "reply",
+      "code": 61482,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "26abd5de5952c46cf3a31f70330241a0",
+      "css": "retweet",
+      "code": 61483,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "981c9f3d44fd4fd6b37c0b5a981334ce",
+      "css": "clock",
+      "code": 59407,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "1e2035b7cbaeb3d902cf9849e456069d",
+      "css": "delicious",
+      "code": 59395,
+      "src": "zocial"
+    },
+    {
+      "uid": "b3a537446285bb3510bba57d20374818",
+      "css": "reddit",
+      "code": 59392,
+      "src": "zocial"
+    },
+    {
+      "uid": "231eeeedfdda9dd5d03dc8d03060007d",
+      "css": "flickr",
+      "code": 70,
+      "src": "zocial"
+    },
+    {
+      "uid": "5cf33e5f0b89834df4fb10609aec90d6",
+      "css": "instapaper",
+      "code": 59402,
+      "src": "zocial"
+    },
+    {
+      "uid": "2a3192d0f8fe0c7cf959168e68eb16d8",
+      "css": "rss",
+      "code": 82,
+      "src": "zocial"
+    },
+    {
+      "uid": "b1ec8e90c2c85cf0035849980a3789b3",
+      "css": "twitter",
+      "code": 84,
+      "src": "zocial"
+    },
+    {
+      "uid": "57a4f84c40a0c44d47387105f162a427",
+      "css": "youtube",
+      "code": 85,
+      "src": "zocial"
+    },
+    {
+      "uid": "e47352cd4c5e069288b29a2c9ab9d305",
+      "css": "vimeo",
+      "code": 86,
+      "src": "zocial"
+    },
+    {
+      "uid": "5287c0dd80c29636f3d45b8b52cd3021",
+      "css": "podcast",
+      "code": 96,
+      "src": "zocial"
+    },
+    {
+      "uid": "6f7586c6f99798c3c1de6123d1f6cfa9",
+      "css": "facebook",
+      "code": 102,
+      "src": "zocial"
+    },
+    {
+      "uid": "9bba5df43e4e9419975336161e1810c3",
+      "css": "github",
+      "code": 103,
+      "src": "zocial"
+    },
+    {
+      "uid": "c91522256a4c3972e9a2765b995b7252",
+      "css": "pinboard",
+      "code": 110,
+      "src": "zocial"
+    },
+    {
+      "uid": "6a85bc0b09a4f21d2a3ced2bdffbc770",
+      "css": "quora",
+      "code": 59408,
+      "src": "zocial"
+    },
+    {
+      "uid": "58b5f27abdf85c2b2b8db2770d61162d",
+      "css": "buffer",
+      "code": 229,
+      "src": "zocial"
+    },
+    {
+      "uid": "a7632b6db17256019e34ec72fb236be0",
+      "css": "pocket",
+      "code": 231,
+      "src": "zocial"
+    },
+    {
+      "uid": "d611dd319d8c13b4551dc5bd85c1bdfd",
+      "css": "twitter-text",
+      "code": 62210,
+      "src": "brandico"
+    },
+    {
+      "uid": "076f25da90f45dd112e006f2cd7ea76b",
+      "css": "tumblr",
+      "code": 62225,
+      "src": "brandico"
+    },
+    {
+      "uid": "542e3f055aaa4ddfb9ab3e00397db47f",
+      "css": "linkedin",
+      "code": 62234,
+      "src": "brandico"
+    },
+    {
+      "uid": "745f28cc6b06e5d131f6d650377b6cf5",
+      "css": "photo",
+      "code": 57443,
+      "src": "elusive"
+    },
+    {
+      "uid": "7acc2dfe18c6f4548626696fab27ba8a",
+      "css": "play-circled",
+      "code": 59396,
+      "src": "elusive"
+    },
+    {
+      "uid": "aa18911cd641967c899c575aeb80cd7e",
+      "css": "github-circle",
+      "code": 59414,
+      "src": "elusive"
+    },
+    {
+      "uid": "326b529aa8b8913d3bc4a632f3dcec69",
+      "css": "slideshare",
+      "code": 59405,
+      "src": "elusive"
+    },
+    {
+      "uid": "a5e7f5574a71d31bdf2012f0c2acb2a3",
+      "css": "stackoverflow",
+      "code": 57394,
+      "src": "elusive"
+    },
+    {
+      "uid": "43e4647c57186b5e06874621b5e665be",
+      "css": "calendar",
+      "code": 59412,
+      "src": "linecons"
+    }
+  ]
+}
