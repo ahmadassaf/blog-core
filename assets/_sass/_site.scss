@@ -1,28 +1,34 @@
 .block-left {
-  float: left;
+  margin: 0 0 120px 0;
   .content {
     z-index: 1;
+    width:100%;
+    display:table;
     position: relative;
   }
 }
 
-.block-right {
-  float: right;
-  overflow-y: auto;
+.fixed-sidebar {
+    height: 100%;
+    width: 35px;
+    position: fixed;
+    display: block;
+    z-index: 1;
 }
 
 .block-left,
 .block-right {
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  background: $white;
   position: relative;
-  display: table;
+  display: block;
   > div {
     display: table-cell;
     vertical-align: middle;
   }
   .content {
     height: 100%;
+    margin-bottom: 30px;
   }
 }
 
@@ -32,8 +38,8 @@
 }
 
 .content {
-  padding: 60px;
-  max-width: 600px;
+  padding: 0 60px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -444,15 +450,15 @@ canvas {
     .content {
       height: auto;
       display: block;
-      max-width: 800px;
+      max-width: 1400px;
     }
   }
   .logo {
     top: 20px;
-    left: 20px;
+    left: 50px;
     position: absolute;
     img {
-      width: 50px;
+      width: 70px;
       height: auto;
     }
     &:after {
@@ -466,7 +472,7 @@ canvas {
   position: absolute;
   bottom: 50px;
   left: 50px;
-  color: rgba($white, 0.6);
+  color: $black;
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   em {
@@ -516,7 +522,7 @@ canvas {
 }
 
 .tags {
-  margin-top: 20px;
+  margin: 0 0 0 5px;
   > li {
     display: inline-block;
     background: darken($white, 5%);
@@ -525,14 +531,14 @@ canvas {
     font-size: 11px;
     text-transform: uppercase;
     > a {
-      color: $white;
+      color: $black;
     }
   }
 }
 
 .inner-post {
   h1 {
-    font-size: 70px;
+    font-size: 40px;
     line-height: 70px;
     margin-bottom: 50px;
   }
@@ -549,12 +555,12 @@ canvas {
   h5,
   h6 {
     font-weight: bold;
-    color: rgba($overlay-color, 0.7);
+    color: $black;
   }
   p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
-    color: #6c6c6c;
+    color: $black;
     margin-bottom: 1.3em;
   }
   small {
@@ -573,6 +579,8 @@ canvas {
     > li {
       position: relative;
       margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6em;
       &:first-child {
         margin-top: 20px;
       }
@@ -585,10 +593,8 @@ canvas {
 }
 
 .post-title-section {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
-  right: 50px;
+  position: relative;
+  top: 110px;
   .section-title {
     position: relative;
     left: auto;
@@ -597,12 +603,12 @@ canvas {
   }
   .tags > li {
     background: none;
-    border: 1px solid rgba($white, 0.4);
+    border: 1px solid rgba($black, 0.4);
     color: $white;
     font-size: 15px;
   }
   .section-line {
-    color: $green;
+    color: $black;
     position: relative;
     display: -webkit-box;
     display: -moz-box;
@@ -620,7 +626,7 @@ canvas {
       -ms-flex: 1;
       flex: 1;
       height: 3px;
-      background: rgba($white, 0.4);
+      background: $black;
       margin-left: 10px;
     }
     a {
@@ -643,7 +649,7 @@ canvas {
         -ms-flex: 1;
         flex: 1;
         height: 3px;
-        background: rgba($white, 0.4);
+        background: $black;
         margin-right: 10px;
       }
       &:after {
@@ -654,8 +660,9 @@ canvas {
 }
 
 .date-highlight {
-  text-align: center;
-  margin: 50px 0;
+  text-align: left;
+  margin: 10px 0;
+  padding: 0 10px;
   color: darken($white, 40);
   display: -webkit-box;
   display: -moz-box;
@@ -663,28 +670,6 @@ canvas {
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  &:before {
-    content: '';
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    height: 2px;
-    background: #eaeaea;
-    margin-right: 10px;
-  }
-  &:after {
-    content: '';
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    height: 2px;
-    background: #eaeaea;
-    margin-left: 10px;
-  }
 }
 
 .footer-line {
@@ -693,9 +678,8 @@ canvas {
 }
 
 .share-buttons {
-  position: absolute;
-  top: 32px;
-  left: 40px;
+  position: relative;
+  margin: 20px 0 0 5px;
   > .btn {
     margin-bottom: 0;
   }
@@ -711,14 +695,10 @@ canvas {
 @media screen and (max-width: 960px) {
   .block-left,
   .block-right {
-    float: none;
     width: 100%;
   }
   html {
     overflow: auto;
-  }
-  .block-right {
-    overflow-y: inherit;
   }
   .projects-menu li {
     width: 50% !important;
@@ -731,6 +711,22 @@ canvas {
 }
 
 @media screen and (max-width: 640px) {
+    #posts .logo {
+        position: relative;
+        display: table;
+        margin: 0 auto;
+        left: initial;
+    }
+  .fixed-sidebar {
+    width: 10px;
+  }
+  .block-left {
+    margin: 0 0 30px 0;
+  }
+  .post-title-section {
+    top: 25px;
+
+  }
   .posts-list {
     margin-top: 80px;
     > li {
@@ -749,9 +745,13 @@ canvas {
     }
   }
   .inner-post {
-    h2 {
-      font-size: 20px;
+    h1 {
+      font-size: 40px;
       margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 30px;
+      margin: 40px 0;
     }
     p,
     li {

@@ -13,7 +13,6 @@
 
 html {
   line-height: 1;
-  overflow: hidden;
   &.no-scroll {
     overflow: hidden;
   }
@@ -282,7 +281,6 @@ td:last-child {
 
 // code
 pre {
-    overflow-x: auto; // add scrollbars to wide code blocks
     padding: 1rem;
     line-height: 1.5;
     margin: 0;
@@ -298,4 +296,13 @@ pre {
     border-radius: 2px;
     background-color: darken($white, 5%);
     font-family: $base-font;
+  }
+
+  // colors and backgrounds
+  .blue {
+    background: $blue;
+  }
+
+  .green {
+    background: $green;
   }

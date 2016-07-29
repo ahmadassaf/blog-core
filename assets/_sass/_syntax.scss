@@ -9,6 +9,10 @@ div.highlighter-rouge, figure.highlight {
 }
 pre.highlight {
 	padding: 1rem;
+    overflow-x: hidden;
+    &:hover {
+        overflow-x: scroll;
+    }
 }
 .highlight {
 	pre { background-color: #f5f5f5; }

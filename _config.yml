@@ -2,7 +2,7 @@
 title: Halve
 description: Stylish, Two-Column Jekyll Theme
 url: http://127.0.0.1:4000
-logo: halve.png                                       # Site logo
+logo: logo.svg
 locale: en_US
 
 # Left Block Images
