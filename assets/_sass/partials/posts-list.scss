@@ -1,37 +1,162 @@
+#posts .posts-list-sidebar {
+    display: table-cell;
+    width: 30%;
+    float: left;
+    height: 100%;
+    position: relative;
+
+    .content {
+        position: fixed;
+        display: block;
+        z-index: 2;
+        width: 400px;
+        height: 100%;
+        top: 0;
+
+        .logo {
+            top: 50px;
+            left: 100px;
+
+            img {
+                width: 120px;
+            }
+        }
+    }
+}
+.posts-list-container {
+    display: table-cell;
+    width: 50%;
+    height: 100%;
+    padding: 0 50px;
+}
 .posts-list {
-  margin: 50px 0;
-  > li {
-    margin-bottom: 23px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid darken($white, 8.2353);
-    list-style: none;
-    &:last-child {
-      border: none;
+    > li {
+        margin-bottom: 23px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid darken($white, 8.2353);
+        list-style: none;
+
+        &:last-child {
+            border: none;
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+            .subtitle {
+                display: block;
+                margin: 12px 0;
+                font-size: 22px;
+                color: rgba(0, 0, 0, 0.6);
+                font-weight: 400;
+            }
+        }
+        p {
+            color: darken($white, 40);
+        }
+        .date {
+            color: #399f62;
+            float: right;
+            display: inline-block;
+            font-size: 15px;
+            padding-top: 10px;
+            text-transform: uppercase;
+        }
+        .post-title {
+            display: inline-block;
+            max-width: 75%;
+
+            &:hover span {
+                border-bottom: 1px dotted $green;
+            }
+        }
     }
-    h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
+    .tags li {
+        &:hover {
+            background: $green;
+            color: $white;
+            cursor: pointer;
+
+            a {
+                color: $white;
+            }
+        }
     }
-    p {
-      color: darken($white, 40);
+    > a {
+        color: lighten($black, 28%);
     }
-    .date {
-      color: #399f62;
-      float: right;
-      display: inline-block;
-      font-size: 15px;
-      padding-top: 10px;
-      text-transform: uppercase;
+}
+// entry meta used in tags and categories page
+.entry-meta {
+    font-size: .75rem;
+    text-transform: uppercase;
+    padding-left: 0;
+    display: none;
+
+    // hide header meta on small screens
+    a {
+        color: lighten($black, 45);
     }
-    .post-title {
-      display: inline-block;
-      max-width: 75%;
-      &:hover span {
-        border-bottom: 1px dotted $green;
-      }
+    li {
+        list-style-type: none;
+        display: inline;
     }
-  }
-  .tags li > a {
-    color: lighten($black, 28%);
-  }
+    .tag, .category {
+        display: inline-block;
+        background-color: darken($white, 3%);
+        border-radius: 2px;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        margin: 2px 5px;
+        font-size: 0.7rem;
+        border: none !important;
+
+        span {
+            float: left;
+            padding: 2px 6px;
+        }
+        .count {
+            background-color: darken($white, 8%);
+        }
+        &:hover {
+            background-color: darken($white, 8%);
+        }
+    }
+}
+.entry-title > a {
+    border: none !important;
+}
+
+@media screen and (max-width:960px) {
+    #posts .posts-list-sidebar {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        .content {
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            background: #fff;
+            width: 100%;
+            height: 300px;
+            .section-title {
+               top: 100px;
+               left: 50px;
+            }
+            .logo {
+                top: 50px;
+                left: 50px;
+                img {
+                    width: 70px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:640px) {
+    #posts .posts-list-sidebar .content .logo {
+        position: absolute;
+    }
 }

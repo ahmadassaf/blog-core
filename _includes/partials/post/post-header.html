@@ -4,6 +4,7 @@
 		<div class="post-title-section">
 		 	<div class="section-line">Posts <em>/</em></div>
 		 	<h1 class="section-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+		 	<h2 class="section-subtitle">{{ page.subtitle }}</h2>
 		 	<div class="date-highlight">{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% else %}&#x2756;{% endif %}</div>
 			<ul class="tags">
 				{% for tag in page.tags %}
