@@ -24,6 +24,11 @@
   margin-left: 1.5em;
 }
 
+.inactive {
+  pointer-events: none;
+  pointer: default;
+}
+
 // Buttons
 .btn {
   display: inline-block;

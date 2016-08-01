@@ -1,0 +1,156 @@
+@import "post/post-header";
+
+#posts {
+  .main-content {
+    .content {
+      display: block;
+      max-width: 1400px;
+    }
+  }
+  .logo {
+    top: 20px;
+    left: 50px;
+    position: absolute;
+    img {
+      width: 70px;
+      height: auto;
+    }
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.main-content {
+  width: 100%;
+  background: $white;
+  position: relative;
+  display: block;
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .content {
+    height: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.inner-post {
+  h1 {
+    font-size: 40px;
+    line-height: 70px;
+    margin-bottom: 50px;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    color: $black;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: $black;
+    margin-bottom: 1.3em;
+  }
+  small {
+    color: darken($white, 40);
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  a:not(.btn):not(.pagination_pager) {
+    color: #399f62;
+    border-bottom: 1px dotted $green;
+  }
+  ul,
+  ol {
+    padding-left: 30px;
+    > li {
+      position: relative;
+      margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6em;
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.post-title-section {
+  position: relative;
+  top: 110px;
+  .section-title {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    font-size: 80px;
+  }
+  .tags > li {
+    background: none;
+    border: 1px solid rgba($black, 0.4);
+    color: $white;
+    font-size: 15px;
+  }
+  .section-line {
+    color: $black;
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    &:after {
+      content: '';
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      height: 3px;
+      background: $black;
+      margin-left: 10px;
+    }
+    a {
+      color: $green;
+      &:hover {
+        color: #4dbe7a;
+      }
+    }
+    em {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    &.reverse {
+      margin-top: 40px;
+      &:before {
+        content: '';
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        height: 3px;
+        background: $black;
+        margin-right: 10px;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

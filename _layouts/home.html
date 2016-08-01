@@ -4,7 +4,7 @@ layout: compress
 
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+{% include partials/head.html %}
 <body id="homepage">
 
   <div class="block-left">
@@ -37,7 +37,6 @@ layout: compress
     </div>
   </div>
   {% include overlay.html %}
-  {% include scripts.html %}
-  <script src="{{ site.url }}/assets/js/canvas.js"></script>
+  {% include partials/scripts.html %}
 </body>
 </html>

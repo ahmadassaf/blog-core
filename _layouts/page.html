@@ -4,7 +4,7 @@ layout: compress
 
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+{% include partials/head.html %}
 <body id="posts" class="inner-post-page">
 
     <div class="block-left">
@@ -27,7 +27,7 @@ layout: compress
 
     <div class="block-right">
       <div class="share-buttons">
-        {% include share.html %}
+        {% include partials/post/share.html %}
       </div>
       <a href="../posts.html" title="posts" class="posts-menu-icon"></a>
       <a title="projects" class="projects-menu-icon">
@@ -37,11 +37,11 @@ layout: compress
         <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
         {{ content }}
         <br>
-        {% include share.html %}
+        {% include partials/post/share.html %}
         {% include page-pagination.html %}
       </div>
     </div>
-    {% include scripts.html %}
+    {% include partials/scripts.html %}
     {% include overlay.html %}
 </body>
 </html>

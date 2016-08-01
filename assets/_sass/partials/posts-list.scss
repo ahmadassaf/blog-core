@@ -1,0 +1,37 @@
+.posts-list {
+  margin: 50px 0;
+  > li {
+    margin-bottom: 23px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid darken($white, 8.2353);
+    list-style: none;
+    &:last-child {
+      border: none;
+    }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    p {
+      color: darken($white, 40);
+    }
+    .date {
+      color: #399f62;
+      float: right;
+      display: inline-block;
+      font-size: 15px;
+      padding-top: 10px;
+      text-transform: uppercase;
+    }
+    .post-title {
+      display: inline-block;
+      max-width: 75%;
+      &:hover span {
+        border-bottom: 1px dotted $green;
+      }
+    }
+  }
+  .tags li > a {
+    color: lighten($black, 28%);
+  }
+}

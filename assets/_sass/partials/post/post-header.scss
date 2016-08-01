@@ -1,0 +1,50 @@
+.post-header {
+  margin: 0 0 120px 0;
+  width: 100%;
+  background: $white;
+  position: relative;
+  display: block;
+  .content {
+    z-index: 1;
+    width:100%;
+    display:table;
+    position: relative;
+  }
+}
+
+.date-highlight {
+  text-align: left;
+  margin: 10px 0;
+  padding: 0 10px;
+  color: darken($white, 40);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+
+.tags {
+  margin: 0 0 0 5px;
+  > li {
+    display: inline-block;
+    background: darken($white, 5%);
+    padding: 7px 10px;
+    color: lighten($black, 28%);
+    font-size: 11px;
+    text-transform: uppercase;
+    > a {
+      color: $black;
+    }
+  }
+}
+
+.share-buttons {
+  position: relative;
+  margin: 20px 0 0 5px;
+  > .btn {
+    margin-bottom: 0;
+  }
+}
