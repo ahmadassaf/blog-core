@@ -54,6 +54,8 @@ stackoverflow:     123456/username   from a "http://stackoverflow.com/users/1234
 #hackernews:        username
 behance:           username
 
+categories: general, web development, semantic web, data science
+
 # Gems
 gems:
   - jekyll-feed

@@ -10,14 +10,6 @@
         width: 100%;
         display: table;
         position: relative;
-
-        .post-title-section .section-subtitle {
-            font-size: 40px;
-            color: rgba(0, 0, 0, 0.6);
-            margin: 20px 0 30px 0;
-            padding: 0 5px;
-            text-transform: capitalize;
-        }
     }
 }
 .post-title-section {
@@ -30,6 +22,13 @@
         bottom: auto;
         text-transform: capitalize;
         font-size: 80px;
+    }
+    .section-subtitle {
+            font-size: 40px;
+            color: rgba(0, 0, 0, 0.6);
+            margin: 20px 0 30px 0;
+            padding: 0 5px;
+            text-transform: capitalize;
     }
     .tags > li {
         background: none;

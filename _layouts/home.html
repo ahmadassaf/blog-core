@@ -32,11 +32,13 @@ layout: compress
     <span class="projects-link">PROJECTS</span>
     <div class="content">
       <div class="about-info">
+        {% for category in site.categories %}
+  <p> {{category.name}} </p>
+  {% endfor %}
         {{ content }}
       </div>
     </div>
   </div>
-  {% include overlay.html %}
-  {% include partials/scripts.html %}
+    {% include partials/footer.html %}
 </body>
 </html>

@@ -1,0 +1,26 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+{% include partials/head.html %}
+<body id="page-not-found">
+
+    <div class="page-not-found">
+        <div class="content">
+                {% include partials/post/post-header.html %}
+            <div class="recent-posts">
+                <h1> However, check some of my recent posts</h1>
+                <ul class="posts-list">
+                    {% for post in site.posts limit: 5 %}
+                        {% include partials/post.html %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% include partials/footer.html %}
+
+</html>

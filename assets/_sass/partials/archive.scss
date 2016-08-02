@@ -1,4 +1,4 @@
-#posts .posts-list-sidebar {
+.archive-sidebar {
     display: table-cell;
     width: 30%;
     float: left;
@@ -15,21 +15,21 @@
 
         .logo {
             top: 50px;
-            left: 100px;
-
+            left: 50px;
             img {
                 width: 120px;
             }
         }
     }
 }
-.posts-list-container {
+.archive-container {
     display: table-cell;
     width: 50%;
     height: 100%;
     padding: 0 50px;
 }
-.posts-list {
+
+ul.archive {
     > li {
         margin-bottom: 23px;
         padding-bottom: 20px;
@@ -68,7 +68,7 @@
             max-width: 75%;
 
             &:hover span {
-                border-bottom: 1px dotted $green;
+                border-bottom: 1px solid $green;
             }
         }
     }
@@ -129,10 +129,11 @@
 }
 
 @media screen and (max-width:960px) {
-    #posts .posts-list-sidebar {
+    .archive-sidebar {
         width: 100%;
         height: 300px;
         position: relative;
+
         .content {
             position: fixed;
             z-index: 1;
@@ -140,23 +141,38 @@
             background: #fff;
             width: 100%;
             height: 300px;
+
             .section-title {
-               top: 100px;
-               left: 50px;
-            }
-            .logo {
-                top: 50px;
+                top: 100px;
                 left: 50px;
-                img {
-                    width: 70px;
-                }
+            }
+            .logo img {
+                width: 70px;
             }
         }
     }
 }
 
 @media screen and (max-width:640px) {
-    #posts .posts-list-sidebar .content .logo {
+    .archive-sidebar .content .logo {
         position: absolute;
+    }
+    ul.archive {
+        margin-top: 80px;
+
+        > li {
+            .post-title {
+                max-width: 100%;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .date {
+                float: left;
+                display: block;
+                width: 100%;
+                padding-bottom: 10px;
+            }
+        }
     }
 }
