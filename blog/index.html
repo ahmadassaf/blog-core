@@ -1,6 +1,8 @@
 ---
 layout: compress
+title: blog
 ---
+<section>
 
 <!DOCTYPE html>
 <html>
@@ -14,12 +16,12 @@ layout: compress
 
     <div class="archive-container">
         <ul class="archive">
-        {% for post in page.posts %}
+        {% for post in paginator.posts %}
             {% include partials/post.html %}
         {% endfor %}
+        {% include partials/archive/pagination.html %}
         </ul>
     </div>
-
     {% include partials/footer.html %}
 
 </html>

@@ -24,6 +24,11 @@
     pointer-events: none;
     pointer: default;
 }
+
+// Font
+.capitalize {
+    text-transform:capitalize;
+}
 // Buttons
 .btn {
     display: inline-block;

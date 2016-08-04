@@ -6,7 +6,9 @@ layout: compress
 <html>
 {% include partials/head.html %}
 <body id="homepage">
-
+{% for category in site.categories %}
+        "{{ category | first }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
   <div class="block-left">
     <div class="content">
       <div class="main-info">

@@ -22,11 +22,61 @@
         }
     }
 }
+
 .archive-container {
     display: table-cell;
     width: 50%;
     height: 100%;
     padding: 0 50px;
+
+    .tag-heading {
+        font-size: 30px;
+        color: $green;
+        font-weight: 800;
+        text-transform: capitalize;
+        border-bottom: 1px solid $gray;
+        padding: 5px 0;
+    }
+}
+
+.tags-archive {
+    ul.archive {
+        > li {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        h2.post-list-header {
+            font-size: 22px;
+            .date {
+            font-size: 15px;
+            }
+        }
+        .tags {
+            display:none;
+        }
+    }
+}
+
+.section-title {
+    font-size: 100px;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: $black;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+
+    em {
+        font-style: italic;
+    }
+    span {
+        font-size: 20px;
+    }
+}
+
+.tags .section-title, .archive .section-title {
+    font-size:60px;
 }
 
 ul.archive {
@@ -86,46 +136,6 @@ ul.archive {
     > a {
         color: lighten($black, 28%);
     }
-}
-// entry meta used in tags and categories page
-.entry-meta {
-    font-size: .75rem;
-    text-transform: uppercase;
-    padding-left: 0;
-    display: none;
-
-    // hide header meta on small screens
-    a {
-        color: lighten($black, 45);
-    }
-    li {
-        list-style-type: none;
-        display: inline;
-    }
-    .tag, .category {
-        display: inline-block;
-        background-color: darken($white, 3%);
-        border-radius: 2px;
-        text-decoration: none;
-        transition: all 0.3s ease-in-out;
-        margin: 2px 5px;
-        font-size: 0.7rem;
-        border: none !important;
-
-        span {
-            float: left;
-            padding: 2px 6px;
-        }
-        .count {
-            background-color: darken($white, 8%);
-        }
-        &:hover {
-            background-color: darken($white, 8%);
-        }
-    }
-}
-.entry-title > a {
-    border: none !important;
 }
 
 @media screen and (max-width:960px) {

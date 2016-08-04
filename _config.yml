@@ -54,13 +54,28 @@ stackoverflow:     123456/username   from a "http://stackoverflow.com/users/1234
 #hackernews:        username
 behance:           username
 
-categories: general, web development, semantic web, data science
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive
+    tag: tags
+  permalinks:
+    tag: '/:name/'
+    category: '/:name/'
+
+# posts-list pagination
+paginate: 5
+paginate_path: "blog/page/:num"
 
 # Gems
 gems:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-archives
+  - jekyll-paginate
 
 # Exclude list
 include: [_pages]

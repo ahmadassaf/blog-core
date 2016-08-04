@@ -9,10 +9,10 @@ layout: compress
 
     <div class="page-not-found">
         <div class="content">
-                {% include partials/post/post-header.html %}
+                {% include partials/post/header.html %}
             <div class="recent-posts">
                 <h1> However, check some of my recent posts</h1>
-                <ul class="posts-list">
+                <ul class="archive">
                     {% for post in site.posts limit: 5 %}
                         {% include partials/post.html %}
                     {% endfor %}

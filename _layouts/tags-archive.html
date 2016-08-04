@@ -12,14 +12,9 @@ layout: compress
         </div>
     </div>
 
-    <div class="archive-container">
-        <ul class="archive">
-        {% for post in page.posts %}
-            {% include partials/post.html %}
-        {% endfor %}
-        </ul>
+    <div class="archive-container tags-archive">
+        {{content}}
     </div>
 
     {% include partials/footer.html %}
-
 </html>

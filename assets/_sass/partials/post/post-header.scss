@@ -70,7 +70,10 @@
         }
         a {
             color: $green;
-
+            &.category {
+                color: $black;
+                font-weight: bold;
+            }
             &:hover {
                 color: #4dbe7a;
             }
