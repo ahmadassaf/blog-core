@@ -1,4 +1,5 @@
 .post-header {
+
     margin: 0 0 120px 0;
     width: 100%;
     background: $white;
@@ -6,136 +7,149 @@
     display: block;
 
     .content {
+
         z-index: 1;
         width: 100%;
         display: table;
         position: relative;
-    }
-}
-.post-title-section {
-    position: relative;
-    top: 110px;
 
-    .section-title {
-        position: relative;
-        left: auto;
-        bottom: auto;
-        text-transform: capitalize;
-        font-size: 80px;
-    }
-    .section-subtitle {
-            font-size: 40px;
-            color: rgba(0, 0, 0, 0.6);
-            margin: 20px 0 30px 0;
-            padding: 0 5px;
-            text-transform: capitalize;
-    }
-    .tags > li {
-        background: none;
-        border: 1px solid rgba($black, 0.4);
-        color: $white;
-        font-size: 15px;
-        cursor: pointer;
+        .post-title-section {
+            position: relative;
+            top: 110px;
 
-        &:hover {
-            background: $green;
-
-            a {
-                color: $white;
+            .section-title {
+                position: relative;
+                left: auto;
+                bottom: auto;
+                text-transform: capitalize;
+                font-size: 80px;
             }
-        }
-    }
-    .section-line {
-        color: $black;
-        position: relative;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        align-items: center;
-        font-size: 25px;
-        margin-bottom: 20px;
 
-        &:after {
-            content: '';
-            -webkit-box-flex: 1;
-            -moz-box-flex: 1;
-            -webkit-flex: 1;
-            -ms-flex: 1;
-            flex: 1;
-            height: 3px;
-            background: $black;
-            margin-left: 10px;
-        }
-        a {
-            color: $green;
-            &.category {
+            .section-subtitle {
+                    font-size: 40px;
+                    color: rgba(0, 0, 0, 0.6);
+                    margin: 20px 0 30px 0;
+                    padding: 0 5px;
+                    text-transform: capitalize;
+            }
+
+            .tags {
+
+                padding: 0 0 0 5px;
+                cursor: pointer;
+
+                > li {
+                    background: none;
+                    display: inline-block;
+                    border: 1px solid rgba($black, 0.4);
+                    cursor: pointer;
+                    padding: 7px 10px;
+                    color: lighten($black, 28%);
+                    font-size: 15px;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        background: $green;
+
+                        a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            .section-line {
                 color: $black;
-                font-weight: bold;
-            }
-            &:hover {
-                color: #4dbe7a;
-            }
-        }
-        em {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        &.reverse {
-            margin-top: 40px;
+                position: relative;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                font-size: 25px;
+                margin-bottom: 20px;
 
-            &:before {
-                content: '';
-                -webkit-box-flex: 1;
-                -moz-box-flex: 1;
-                -webkit-flex: 1;
-                -ms-flex: 1;
-                flex: 1;
-                height: 3px;
-                background: $black;
-                margin-right: 10px;
+                &:after {
+                    content: '';
+                    -webkit-box-flex: 1;
+                    -moz-box-flex: 1;
+                    -webkit-flex: 1;
+                    -ms-flex: 1;
+                    flex: 1;
+                    height: 3px;
+                    background: $black;
+                    margin-left: 10px;
+                }
+                a {
+                    color: $green;
+                    &.category {
+                        color: $black;
+                        font-weight: bold;
+                    }
+                    &:hover {
+                        color: #4dbe7a;
+                    }
+                }
+                em {
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+                &.reverse {
+                    margin-top: 40px;
+
+                    &:before {
+                        content: '';
+                        -webkit-box-flex: 1;
+                        -moz-box-flex: 1;
+                        -webkit-flex: 1;
+                        -ms-flex: 1;
+                        flex: 1;
+                        height: 3px;
+                        background: $black;
+                        margin-right: 10px;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
             }
-            &:after {
-                display: none;
+
+            .date {
+                text-align: left;
+                margin: 10px 0;
+                padding: 0 10px;
+                color: darken($white, 40);
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+            }
+
+            .share-buttons {
+                position: relative;
+                margin: 20px 0 0 5px;
+
+                > .btn {
+                    margin-bottom: 0;
+                }
             }
         }
     }
 }
-.date-highlight {
-    text-align: left;
-    margin: 10px 0;
-    padding: 0 10px;
-    color: darken($white, 40);
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-}
-.tags {
-    margin: 0 0 0 5px;
-    cursor: pointer;
 
-    > li {
-        display: inline-block;
-        background: darken($white, 5%);
-        padding: 7px 10px;
-        color: lighten($black, 28%);
-        font-size: 11px;
-        text-transform: uppercase;
-
-        > a {
-            color: $black;
+@media screen and (max-height:610px) {
+    .post-title-section {
+        .section-title {
+            font-size: 45px;
         }
     }
 }
-.share-buttons {
-    position: relative;
-    margin: 20px 0 0 5px;
 
-    > .btn {
-        margin-bottom: 0;
+@media screen and (max-width:960px) {
+    .share-buttons span {
+        display: none;
     }
 }

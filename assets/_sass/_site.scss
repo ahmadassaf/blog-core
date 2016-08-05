@@ -1,10 +1,12 @@
 @import "partials/header";
+@import "partials/home";
 @import "partials/post";
 @import "partials/archive";
-@import "partials/pagination";
-@import "partials/home";
+@import "partials/tags";
 @import "partials/projects";
 @import "partials/404";
+
+@import "partials/pagination";
 
 .fixed-sidebar {
     height: 100%;
@@ -13,11 +15,14 @@
     display: block;
     z-index: 2;
     top: 0;
+    background: $green;
 }
 
 .content {
+    position: relative;
+    display: block;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
     padding: 0 60px;
 }
 
@@ -37,4 +42,25 @@
     }
 }
 
-@import "_media-queries";
+
+@media screen and (max-width:960px) {
+    .main-content {
+        width: 100%;
+    }
+    html {
+        overflow: auto;
+    }
+}
+
+
+
+@media screen and (max-width:640px) {
+
+    .fixed-sidebar {
+        width: 10px;
+    }
+
+    .content {
+        padding: 20px
+    }
+}

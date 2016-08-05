@@ -1,84 +1,124 @@
 @import "post/post-header";
 
-#posts {
-    .main-content {
-        .content {
-            display: block;
-            max-width: 1400px;
-        }
-    }
-    .logo {
-        top: 20px;
-        position: absolute;
+.blog-post {
 
-        img {
-            width: 70px;
-            height: auto;
-        }
-        &:after {
-            display: none;
-        }
-    }
-}
-.main-content {
-    width: 100%;
-    background: $white;
-    position: relative;
-    display: block;
-
-    > div {
-        display: table-cell;
-        vertical-align: middle;
-    }
     .content {
-        height: 100%;
-        margin-bottom: 30px;
-    }
-}
-.inner-post {
-    h1 {
-        font-size: 40px;
-        line-height: 70px;
-        margin-bottom: 50px;
-    }
-    h2 {
-        font-size: 30px;
-        line-height: 30px;
-        margin-top: 20px;
-        margin-bottom: 30px;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: bold;
-        color: $black;
-    }
-    p {
-        font-size: 20px;
-        line-height: 1.6;
-        color: $black;
-        margin-bottom: 1.3em;
-    }
-    small {
-        color: darken($white, 40);
-        font-size: 16px;
-        margin-bottom: 10px;
-        display: block;
-    }
-    a:not(.btn):not(.pagination_pager) {
-        color: #399f62;
-        border-bottom: 1px dotted $green;
-    }
-    ul, ol {
-        padding-left: 30px;
 
-        > li {
-            position: relative;
-            margin-bottom: 20px;
-            font-size: 18px;
-            line-height: 1.6em;
+        a {
+            border-bottom:none !important;
+        }
 
-            &:first-child {
-                margin-top: 20px;
+        .logo {
+            top: 20px;
+            position: absolute;
+
+            img {
+                width: 70px;
+                height: auto;
+            }
+            &:after {
+                display: none;
             }
         }
+
+        > div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        h1 {
+            font-size: 40px;
+            line-height: 70px;
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-size: 30px;
+            line-height: 30px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: bold;
+            color: $black;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: $black;
+            margin-bottom: 1.3em;
+        }
+        small {
+            color: darken($white, 40);
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        a:not(.btn):not(.pagination_pager) {
+            color: $green;
+            border-bottom: 1px dotted $green;
+        }
+        ul, ol {
+            padding-left: 30px;
+
+            > li {
+                position: relative;
+                margin-bottom: 20px;
+                font-size: 18px;
+                line-height: 1.6em;
+
+                &:first-child {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width:640px) {
+
+    .blog-post {
+
+        .post-header {
+            margin: 0 0 40px 0;
+
+            .content {
+                .post-title-section {
+                    top: 25px;
+
+                    .section-title {
+                        font-size: 40px;
+                    }
+                    .section-subtitle {
+                        font-size: 25px;
+                    }
+                    .section-line {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 30px;
+            margin: 40px 0;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        ul > li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+    }
+
+    .date {
+        margin: 80px 0 40px;
     }
 }

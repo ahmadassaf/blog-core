@@ -7,10 +7,11 @@ layout: compress
 
     {% include partials/head.html %}
 
-    {% include partials/post/header.html %}
+    <div class="blog-post">
 
-    <div class="main-content">
-        <div class="inner-post content">
+        {% include partials/post/header.html %}
+
+        <div class="content">
             {{ content }}
             <br>
             {% include partials/post/share.html %}

@@ -2,18 +2,24 @@
     display: block;
     position: relative;
     margin: 150px 0;
-}
 
-.recent-posts h1 {
-    background: $green;
-    color: $white;
-    padding: 2px 5px;
-    width: 580px;
-}
+    h1 {
+        background: $green;
+        color: $white;
+        padding: 2px 5px;
+        width: 580px;
 
+        @media screen and (max-width:640px) {
+            font-size: 25px;
+            background: none;
+            color: $black;
+            font-weight: 800;
+            padding: 0;
 
-@media screen and (max-width:640px) {
-    .recent-posts h1{
-        display: none;
+            &:after {
+                content: ":";
+                margin: 0 5px;
+            }
+        }
     }
 }

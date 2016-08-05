@@ -20,121 +20,100 @@
                 width: 120px;
             }
         }
+
+        .section-title {
+            font-size: 100px;
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            color: $black;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            text-transform:capitalize;
+            font-size:60px;
+            em {
+                font-style: italic;
+            }
+            span {
+                font-size: 20px;
+            }
+        }
     }
 }
 
 .archive-container {
+
     display: table-cell;
     width: 50%;
     height: 100%;
     padding: 0 50px;
 
-    .tag-heading {
-        font-size: 30px;
-        color: $green;
-        font-weight: 800;
-        text-transform: capitalize;
-        border-bottom: 1px solid $gray;
-        padding: 5px 0;
-    }
-}
-
-.tags-archive {
     ul.archive {
         > li {
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-        h2.post-list-header {
-            font-size: 22px;
+            margin-bottom: 23px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid darken($white, 8.2353);
+            list-style: none;
+
+            &:last-child {
+                border: none;
+            }
+            h2 {
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                text-transform: capitalize;
+                .subtitle {
+                    display: block;
+                    margin: 12px 0;
+                    font-size: 22px;
+                    color: rgba(0, 0, 0, 0.6);
+                    font-weight: 400;
+                }
+            }
+            p {
+                color: darken($white, 40);
+            }
             .date {
-            font-size: 15px;
+                color: $gray;
+                float: right;
+                display: inline-block;
+                font-size: 15px;
+                padding-top: 10px;
+                text-transform: uppercase;
+            }
+            .post-title {
+                display: inline-block;
+                max-width: 75%;
+
+                &:hover span {
+                    border-bottom: 1px solid $green;
+                }
             }
         }
-        .tags {
-            display:none;
-        }
-    }
-}
+        .tags li {
 
-.section-title {
-    font-size: 100px;
-    position: absolute;
-    bottom: 50px;
-    left: 50px;
-    color: $black;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-
-    em {
-        font-style: italic;
-    }
-    span {
-        font-size: 20px;
-    }
-}
-
-.tags .section-title, .archive .section-title {
-    font-size:60px;
-}
-
-ul.archive {
-    > li {
-        margin-bottom: 23px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid darken($white, 8.2353);
-        list-style: none;
-
-        &:last-child {
-            border: none;
-        }
-        h2 {
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-transform: capitalize;
-            .subtitle {
-                display: block;
-                margin: 12px 0;
-                font-size: 22px;
-                color: rgba(0, 0, 0, 0.6);
-                font-weight: 400;
-            }
-        }
-        p {
-            color: darken($white, 40);
-        }
-        .date {
-            color: #399f62;
-            float: right;
             display: inline-block;
-            font-size: 15px;
-            padding-top: 10px;
+            background: $light-gray;
+            padding: 7px 10px;
+            color: $dark-gray;
+            font-size: 11px;
             text-transform: uppercase;
-        }
-        .post-title {
-            display: inline-block;
-            max-width: 75%;
 
-            &:hover span {
-                border-bottom: 1px solid $green;
-            }
-        }
-    }
-    .tags li {
-        &:hover {
-            background: $green;
-            color: $white;
-            cursor: pointer;
-
-            a {
+            &:hover {
+                background: $green;
                 color: $white;
+                cursor: pointer;
+
+
+                a {
+                    color: $white;
+                }
             }
         }
-    }
-    > a {
-        color: lighten($black, 28%);
+        > a {
+            color: lighten($black, 28%);
+        }
     }
 }
 
@@ -156,20 +135,27 @@ ul.archive {
                 top: 100px;
                 left: 50px;
             }
-            .logo img {
-                width: 70px;
+            .logo {
+                img {
+                    width: 70px;
+                }
             }
         }
     }
 }
 
 @media screen and (max-width:640px) {
-    .archive-sidebar .content .logo {
-        position: absolute;
+
+    .archive-sidebar {
+        .content {
+            .logo {
+                position: absolute;
+            }
+        }
     }
+
     ul.archive {
         margin-top: 80px;
-
         > li {
             .post-title {
                 max-width: 100%;
