@@ -23,19 +23,26 @@
                 bottom: auto;
                 text-transform: capitalize;
                 font-size: 80px;
+                word-wrap: break-word;
+                font-weight: 400;
+                line-height: 1.2em;
+                margin:0;
             }
 
             .section-subtitle {
-                    font-size: 40px;
-                    color: rgba(0, 0, 0, 0.6);
-                    margin: 20px 0 30px 0;
-                    padding: 0 5px;
-                    text-transform: capitalize;
+                font-size: 40px;
+                color: rgba(0, 0, 0, 0.6);
+                margin: 20px 0 30px 0;
+                padding: 0 5px;
+                text-transform: capitalize;
+                font-weight: 400;
+                line-height: 1.2em;
             }
 
             .tags {
 
-                padding: 0 0 0 5px;
+                margin: 0px 0px 0px 5px;
+                padding: 0;
                 cursor: pointer;
 
                 > li {
@@ -47,6 +54,11 @@
                     color: lighten($black, 28%);
                     font-size: 15px;
                     text-transform: uppercase;
+                    margin: 0;
+
+                    a {
+                      color: $black;
+                    }
 
                     &:hover {
                         background: $green;
@@ -96,7 +108,7 @@
                     margin: 0 10px;
                 }
                 &.reverse {
-                    margin-top: 40px;
+                    margin-top: 30px;
 
                     &:before {
                         content: '';
@@ -130,7 +142,7 @@
 
             .share-buttons {
                 position: relative;
-                margin: 20px 0 0 5px;
+                margin: 20px 5px;
 
                 > .btn {
                     margin-bottom: 0;
@@ -140,10 +152,10 @@
     }
 }
 
-@media screen and (max-height:610px) {
+@media screen and (max-height:605px) {
     .post-title-section {
         .section-title {
-            font-size: 45px;
+            font-size: 45px !important;
         }
     }
 }

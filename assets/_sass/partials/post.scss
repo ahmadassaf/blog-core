@@ -75,7 +75,6 @@
 }
 
 
-
 @media screen and (max-width:640px) {
 
     .blog-post {
@@ -85,7 +84,7 @@
 
             .content {
                 .post-title-section {
-                    top: 25px;
+                    top: 100px;
 
                     .section-title {
                         font-size: 40px;
@@ -96,6 +95,10 @@
                     .section-line {
                         display: none;
                     }
+                }
+
+                .date {
+                    margin: 80px 0 40px;
                 }
             }
         }
@@ -116,9 +119,10 @@
             margin-bottom: 10px;
             font-size: 16px;
         }
-    }
 
-    .date {
-        margin: 80px 0 40px;
+        .content p, .content li {
+            font-size: 16px !important;
+            line-height: 24px !important;
+        }
     }
 }

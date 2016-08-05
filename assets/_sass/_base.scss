@@ -26,7 +26,8 @@ body {
 a {
     color: $overlay-color;
     outline: none;
-    text-decoration: none
+    text-decoration: none;
+    cursor: pointer;
 }
 a:hover, a:active, a:focus, a:visited {
     color: $overlay-color
