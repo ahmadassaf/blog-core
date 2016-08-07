@@ -1,24 +1,30 @@
-.recent-posts {
-    display: block;
-    position: relative;
-    margin: 150px 0;
+.page-not-found {
+    display: table;
+    width:100%;
+    margin: 0 auto;
 
-    h1 {
-        background: $green;
-        color: $white;
-        padding: 2px 5px;
-        width: 580px;
+    .recent-posts {
+        display: block;
+        position: relative;
+        margin: 150px 0;
 
-        @media screen and (max-width:640px) {
-            font-size: 25px;
-            background: none;
-            color: $black;
-            font-weight: 800;
-            padding: 0;
+        h1 {
+            background: $green;
+            color: $white;
+            padding: 2px 5px;
+            width: 580px;
 
-            &:after {
-                content: ":";
-                margin: 0 5px;
+            @media screen and (max-width:640px) {
+                font-size: 25px;
+                background: none;
+                color: $black;
+                font-weight: 800;
+                padding: 0;
+
+                &:after {
+                    content: ":";
+                    margin: 0 5px;
+                }
             }
         }
     }

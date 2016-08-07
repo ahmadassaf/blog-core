@@ -1,15 +1,13 @@
 # Site
-title: Halve
-description: Stylish, Two-Column Jekyll Theme
+title: Ahmad Assaf's Blog
+description: Ahmad Assaf's blog about Software Engineering, Data Science, Productivity and Web Development
 url: http://127.0.0.1:4000
 logo: logo.svg
 locale: en_US
 
-# Left Block Images
 background:
-  homepage: images/home.png                           # this image will be shown on homepage's left block
-  post-list: images/unsplash-image-10.jpg             # this image will be shown on post list page
-  default-post: images/unsplash-gallery-image-3.jpg   # this image will be shown when post's front matter doesn't specify any image
+  homepage: images/home.png             # this image will be shown on homepage's left block
+  default-post: images/logo-plain.png   # this image will be shown when post's front matter doesn't specify any image
 
 # Jekyll
 permalink:          /:title/
@@ -26,7 +24,7 @@ sass:
   style:            compressed
 
 # Google Analytics
-#google-analytics: UA-XXXXX-Y
+google-analytics: UA-11075253-1
 
 # Social Links
 #email:             email

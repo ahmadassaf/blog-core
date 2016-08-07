@@ -5,11 +5,7 @@ layout: compress
 <!DOCTYPE html>
 <html>
     {% include partials/head.html %}
-
-{% for category in site.categories %}
-    {{ category | first }}
-    {% unless forloop.last %},{% endunless %}
-{% endfor %}
+    {% include partials/navigation.html %}
 
     {% include partials/footer.html %}
 
