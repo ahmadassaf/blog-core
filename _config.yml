@@ -64,7 +64,7 @@ jekyll-archives:
     category: '/:name/'
 
 # posts-list pagination
-paginate: 5
+paginate: 7
 paginate_path: "blog/page/:num"
 
 # Gems

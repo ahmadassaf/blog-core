@@ -8,24 +8,6 @@
             border-bottom:none !important;
         }
 
-        .logo {
-            top: 20px;
-            position: absolute;
-
-            img {
-                width: 70px;
-                height: auto;
-            }
-            &:after {
-                display: none;
-            }
-        }
-
-        > div {
-            display: table-cell;
-            vertical-align: middle;
-        }
-
         h1 {
             font-size: 40px;
             line-height: 70px;
@@ -59,11 +41,12 @@
         }
         ul, ol {
             padding-left: 30px;
+            margin: 30px 0;
 
             > li {
                 position: relative;
-                margin-bottom: 20px;
-                font-size: 18px;
+                margin-bottom: 10px;
+                font-size: 20px;
                 line-height: 1.6em;
 
                 &:first-child {
@@ -71,37 +54,51 @@
                 }
             }
         }
+
+        .download-link {
+            text-align: center;
+            margin: 50px 0;
+
+            a {
+                background: $green;
+                color: $white !important;
+                width: 200px;
+                height: 40px;
+                display: inline-table;
+                text-align: center;
+                padding: 7px 10px;
+                font-size: 20px;
+                border-radius: 3px;
+            }
+        }
     }
 }
 
+        .logo {
+            top: 20px;
+            position: absolute;
+
+            img {
+                width: 70px;
+                height: auto;
+            }
+            &:after {
+                display: none;
+            }
+        }
+
+@media screen and (max-width:950px) {
+
+    .blog-post {
+        .align-right {
+            display:none;
+        }
+    }
+}
 
 @media screen and (max-width:640px) {
 
     .blog-post {
-
-        .post-header {
-            margin: 0 0 40px 0;
-
-            .content {
-                .post-title-section {
-                    top: 100px;
-
-                    .section-title {
-                        font-size: 40px;
-                    }
-                    .section-subtitle {
-                        font-size: 25px;
-                    }
-                    .section-line {
-                        display: none;
-                    }
-                }
-
-                .date {
-                    margin: 80px 0 40px;
-                }
-            }
-        }
 
         h1 {
             font-size: 40px;
@@ -125,4 +122,28 @@
             line-height: 24px !important;
         }
     }
+
+            .post-header {
+            margin: 0 0 40px 0;
+
+            .content {
+                .post-title-section {
+                    top: 100px;
+
+                    .section-title {
+                        font-size: 40px;
+                    }
+                    .section-subtitle {
+                        font-size: 25px;
+                    }
+                    .section-line {
+                        display: none;
+                    }
+                }
+
+                .date {
+                    margin: 80px 0 40px;
+                }
+            }
+        }
 }

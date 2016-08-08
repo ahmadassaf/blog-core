@@ -5,7 +5,6 @@ layout: compress
 <!DOCTYPE html>
 <html>
 {% include partials/head.html %}
-<body id="page-not-found">
 
     <div class="page-not-found archive-container">
         <div class="content">
@@ -13,7 +12,7 @@ layout: compress
             <div class="recent-posts">
                 <h1> However, check some of my recent posts</h1>
                 <ul class="archive">
-                    {% for post in site.posts limit: 5 %}
+                    {% for post in site.posts limit: 3 %}
                         {% include partials/post.html %}
                     {% endfor %}
                 </ul>
