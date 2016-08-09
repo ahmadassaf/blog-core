@@ -1,147 +1,24 @@
-.main-info, .about-info {
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
-    margin: 0 auto;
-
-    h1, h2 {
-        font-size: 30px;
-        position: relative;
-        margin-top: 0;
-
-        &:after {
-            content: "";
-            width: 100px;
-            height: 2px;
-            background: #585b63;
-            bottom: -20px;
-            position: absolute;
-            left: 50%;
-            -webkit-transform: translatex(-50%);
-            -moz-transform: translatex(-50%);
-            -ms-transform: translatex(-50%);
-            -o-transform: translatex(-50%);
-            transform: translatex(-50%);
-        }
-    }
-    p {
-        font-size: 21px;
-        line-height: 30px;
-        margin: 10px 0;
-        padding-top: 25px;
-    }
-    ul {
-        font-size: 1em;
-        margin-top: 30px;
-        overflow: hidden;
-
-        li {
-            display: inline-block;
-            background: #585b63;
-            margin-right: 10px;
-            vertical-align: middle;
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            -moz-osx-font-smoothing: grayscale;
+.home {
+    .content {
+        h1.home-section-title {
+            letter-spacing: 7px;
             position: relative;
-            -webkit-transition-property: color;
-            transition-property: color;
-            -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
+            margin: 2em 0;
 
-            &:before {
-                content: "";
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
+            &:after {
+                content: " ";
+                width: 150px;
                 background: $green;
-                -webkit-transform: scaleY(0);
-                transform: scaleY(0);
-                -webkit-transform-origin: 50% 100%;
-                transform-origin: 50% 100%;
-                -webkit-transition-property: transform;
-                transition-property: transform;
-                -webkit-transition-duration: 0.3s;
-                transition-duration: 0.3s;
-                -webkit-transition-timing-function: ease-out;
-                transition-timing-function: ease-out;
-            }
-            &:hover {
-                &:before {
-                    -webkit-transform: scaleY(1);
-                    transform: scaleY(1);
-                }
-            }
-            &:nth-child(odd) {
-                background: $overlay-color;
-            }
-            &:last-child {
-                margin-right: 0;
-            }
-            a {
-                display: inline-block;
-                font-size: 1.3em;
-                padding: 0.3em 0.35em;
-                color: $white;
+                height: 10px;
+                position: absolute;
+                bottom: -15px;
+                left: 0;
             }
         }
-    }
-}
-.main-info {
-    color: $white;
 
-    h1 {
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-    h2 {
-        font-size: 21px;
-        line-height: 30px;
-        margin: 10px 0;
-        padding-top: 25px;
-
-        &:after {
-            display: none;
-        }
-    }
-}
-.about-info {
-    text-align: left;
-
-    h1, h2 {
-        font-size: 35px;
-        color: lighten($black, 27.8431);
-
-        &:after {
-            position: absolute;
-            left: auto;
-            top: auto;
-            -webkit-transform: none;
-            -moz-transform: none;
-            -ms-transform: none;
-            -o-transform: none;
-            transform: none;
-            background: $green;
-            left: 0;
-            width: 200px;
-        }
-    }
-    p {
-        color: darken($white, 40);
-        font-size: 16px;
-        margin: 10px 0;
-        padding-top: 0;
-        line-height: 24px;
-
-        &:first-of-type {
-            padding-top: 35px;
+        .featured-posts {
+            padding: 50px 0;
+            border-bottom: 4px solid;
         }
     }
 }

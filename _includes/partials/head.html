@@ -16,3 +16,13 @@
 </head>
 <body>
     <div class="fixed-sidebar"></div>
+
+    <div class="shapes">
+        {% if page.layout != "post" %}
+            <div class="geometry"></div>
+            <div class="geometry geometry-inverted"></div>
+        {% endif %}
+    </div>
+
+    {% include partials/navigation.html %}
+    <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/images/{{ site.logo }}"></a>

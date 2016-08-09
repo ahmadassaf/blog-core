@@ -1,3 +1,5 @@
+@import "partials/navigation";
+
 .logo {
     max-width: 150px;
     display: inline-block;
@@ -8,4 +10,30 @@
     font: 0/0 verdana;
     color: transparent;
     text-shadow: none;
+}
+
+.geometry {
+    border-bottom: 300px solid rgba(38,139,210,0.5);
+    border-right: 750px solid transparent;
+    border-left: 900px solid transparent;
+    position: fixed;
+    top: -100px;
+    right: -700px;
+    z-index: 2;
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+
+.geometry-inverted {
+    border-bottom: 300px solid rgba(57,159,98,0.8);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
+    right: -480px;
+    z-index: 2;
 }

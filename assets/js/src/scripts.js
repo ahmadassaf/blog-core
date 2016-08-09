@@ -5,6 +5,9 @@ $(function() {
   $(".content").fitVids();
 });
 
+// Navigation Menu
+responsiveNav(".nav-collapse");
+
 // Projects Menu
 $('.projects-menu-icon').click(function() {
   $('html').toggleClass('no-scroll');

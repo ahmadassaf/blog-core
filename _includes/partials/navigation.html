@@ -1,5 +1,5 @@
 <div class="navigation-bar">
-    <ul class="menu">
+    <ul>
         {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
         {% assign categories = site_categories | split:',' | uniq %}
 

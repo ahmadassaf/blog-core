@@ -1,10 +1,11 @@
 .tags-archive {
 
     .tag-heading {
-        font-size: 30px;
+        font-size: 25px;
         color: $green;
         font-weight: 800;
-        text-transform: capitalize;
+        text-transform: uppercase;
+        letter-spacing: 4px;
         border-bottom: 1px solid $gray;
         padding: 5px 0;
     }

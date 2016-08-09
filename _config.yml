@@ -52,13 +52,15 @@ stackoverflow:     123456/username   from a "http://stackoverflow.com/users/1234
 #hackernews:        username
 behance:           username
 
+featured: []
+
 jekyll-archives:
   enabled:
     - categories
     - tags
   layouts:
     category: archive
-    tag: tags
+    tag: archive
   permalinks:
     tag: '/:name/'
     category: '/:name/'

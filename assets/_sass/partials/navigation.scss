@@ -1,0 +1,33 @@
+.navigation-bar {
+
+    position: fixed;
+    width:100%;
+    padding: 10px;
+    z-index:10;
+
+    ul {
+
+        position: relative;
+        float: right;
+
+        li {
+
+            font-size: 18px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+            position: relative;
+            cursor: pointer;
+            float: right;
+            list-style: none;
+
+            a {
+                &:hover {
+                    border-bottom: 4px solid $white;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

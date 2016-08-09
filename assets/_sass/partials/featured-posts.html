@@ -1,0 +1,12 @@
+{% assign featured_posts = site.featured %}
+{% for post in site.posts %}
+    {% if post.featured %}
+        {% assign featured_posts = featured_posts | push: post %}{% unless forloop.last %},{% endunless %}
+    {% endif %}
+{% endfor %}
+
+<ul class="archive">
+    {% for post in featured_posts limit: 3 %}
+        {% include partials/post.html %}
+    {% endfor %}
+</ul>

@@ -5,7 +5,21 @@ layout: compress
 <!DOCTYPE html>
 <html>
     {% include partials/head.html %}
-    {% include partials/navigation.html %}
+
+    <div class="home archive-container">
+        <div class="content">
+            <div class="featured-posts">
+                <h1 class="home-section-title">featured posts</h1>
+                {% include partials/featured-posts.html %}
+            </div>
+
+            <div class="recent-posts">
+                <h1 class="home-section-title">recent posts</h1>
+                {% include partials/recent-posts.html %}
+            </div>
+
+        </div>
+    </div>
 
     {% include partials/footer.html %}
 
