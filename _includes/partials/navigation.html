@@ -6,7 +6,7 @@
         {% for item in (0..categories.size) %}{% unless forloop.last %}
 
         {% capture category %}{{ categories[item] | strip_newlines }}{% endcapture %}
-           <li><a href="{{ site.url }}/{{ category | replace:' ', '-'}}">{{ category }}</a></li>
+           <li {% if page.title == category %} class="current" {% endif %}><a href="{{ site.url }}/{{ category | replace:' ', '-'}}">{{ category }}</a></li>
         {% endunless %}{% endfor %}
     </ul>
 </div>

@@ -1,24 +1,22 @@
 .home {
-    .content {
-        h1.home-section-title {
-            letter-spacing: 7px;
-            position: relative;
-            margin: 2em 0;
+    h1.home-section-title {
+        letter-spacing: 7px;
+        position: relative;
+        margin: 2em 0;
 
-            &:after {
-                content: " ";
-                width: 150px;
-                background: $green;
-                height: 10px;
-                position: absolute;
-                bottom: -15px;
-                left: 0;
-            }
+        &:after {
+            content: " ";
+            width: 150px;
+            background: $green;
+            height: 10px;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
         }
+    }
 
-        .featured-posts {
-            padding: 50px 0;
-            border-bottom: 4px solid;
-        }
+    .featured-posts {
+        padding: 50px 0;
+        border-bottom: 4px solid;
     }
 }

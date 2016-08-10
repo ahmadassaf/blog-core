@@ -6,83 +6,104 @@
     position: relative;
     display: block;
 
-    .content {
-
-        z-index: 1;
-        width: 100%;
-        display: table;
+    .post-title-section {
         position: relative;
+        top: 110px;
 
-        .post-title-section {
+        .section-title {
             position: relative;
-            top: 110px;
+            left: auto;
+            bottom: auto;
+            text-transform: capitalize;
+            font-size: 80px;
+            word-wrap: break-word;
+            font-weight: 400;
+            line-height: 1.2em;
+            margin:0;
+        }
 
-            .section-title {
-                position: relative;
-                left: auto;
-                bottom: auto;
-                text-transform: capitalize;
-                font-size: 80px;
-                word-wrap: break-word;
-                font-weight: 400;
-                line-height: 1.2em;
-                margin:0;
-            }
+        .section-subtitle {
+            font-size: 40px;
+            color: rgba(0, 0, 0, 0.6);
+            margin: 20px 0 30px 0;
+            padding: 0 5px;
+            text-transform: capitalize;
+            font-weight: 400;
+            line-height: 1.2em;
+        }
 
-            .section-subtitle {
-                font-size: 40px;
-                color: rgba(0, 0, 0, 0.6);
-                margin: 20px 0 30px 0;
-                padding: 0 5px;
-                text-transform: capitalize;
-                font-weight: 400;
-                line-height: 1.2em;
-            }
+        .tags {
 
-            .tags {
+            margin: 0px 0px 0px 5px;
+            padding: 0;
+            cursor: pointer;
 
-                margin: 0px 0px 0px 5px;
-                padding: 0;
+            > li {
+                background: none;
+                display: inline-block;
+                border: 1px solid rgba($black, 0.4);
                 cursor: pointer;
+                padding: 7px 10px;
+                color: lighten($black, 28%);
+                font-size: 15px;
+                text-transform: uppercase;
+                margin: 0;
 
-                > li {
-                    background: none;
-                    display: inline-block;
-                    border: 1px solid rgba($black, 0.4);
-                    cursor: pointer;
-                    padding: 7px 10px;
-                    color: lighten($black, 28%);
-                    font-size: 15px;
-                    text-transform: uppercase;
-                    margin: 0;
+                a {
+                  color: $black;
+                }
+
+                &:hover {
+                    background: $green;
 
                     a {
-                      color: $black;
-                    }
-
-                    &:hover {
-                        background: $green;
-
-                        a {
-                            color: $white;
-                        }
+                        color: $white;
                     }
                 }
             }
+        }
 
-            .section-line {
-                color: $black;
-                position: relative;
-                display: -webkit-box;
-                display: -moz-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                align-items: center;
-                font-size: 25px;
-                margin-bottom: 20px;
+        .section-line {
+            color: $black;
+            position: relative;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            font-size: 25px;
+            margin-bottom: 20px;
 
-                &:after {
+            &:after {
+                content: '';
+                -webkit-box-flex: 1;
+                -moz-box-flex: 1;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                height: 3px;
+                background: $black;
+                margin-left: 10px;
+            }
+            a {
+                color: $green;
+                &.category {
+                    color: $black;
+                    font-weight: bold;
+                }
+                &:hover {
+                    color: #4dbe7a;
+                }
+            }
+            em {
+                display: inline-block;
+                margin: 0 10px;
+            }
+            &.reverse {
+                margin-top: 30px;
+
+                &:before {
                     content: '';
                     -webkit-box-flex: 1;
                     -moz-box-flex: 1;
@@ -91,62 +112,33 @@
                     flex: 1;
                     height: 3px;
                     background: $black;
-                    margin-left: 10px;
+                    margin-right: 10px;
                 }
-                a {
-                    color: $green;
-                    &.category {
-                        color: $black;
-                        font-weight: bold;
-                    }
-                    &:hover {
-                        color: #4dbe7a;
-                    }
-                }
-                em {
-                    display: inline-block;
-                    margin: 0 10px;
-                }
-                &.reverse {
-                    margin-top: 30px;
-
-                    &:before {
-                        content: '';
-                        -webkit-box-flex: 1;
-                        -moz-box-flex: 1;
-                        -webkit-flex: 1;
-                        -ms-flex: 1;
-                        flex: 1;
-                        height: 3px;
-                        background: $black;
-                        margin-right: 10px;
-                    }
-                    &:after {
-                        display: none;
-                    }
+                &:after {
+                    display: none;
                 }
             }
+        }
 
-            .date {
-                text-align: left;
-                margin: 10px 0;
-                padding: 0 10px;
-                color: darken($white, 40);
-                display: -webkit-box;
-                display: -moz-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                align-items: center;
-            }
+        .date {
+            text-align: left;
+            margin: 10px 0;
+            padding: 0 10px;
+            color: darken($white, 40);
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+        }
 
-            .share-buttons {
-                position: relative;
-                margin: 20px 5px;
+        .share-buttons {
+            position: relative;
+            margin: 20px 5px;
 
-                > .btn {
-                    margin-bottom: 0;
-                }
+            > .btn {
+                margin-bottom: 0;
             }
         }
     }

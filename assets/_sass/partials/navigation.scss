@@ -29,5 +29,12 @@
                 }
             }
         }
+
+        li.current {
+            a {
+                border-bottom: 4px solid $white;
+                color: $white;
+            }
+        }
     }
 }
