@@ -6,6 +6,19 @@
     position: relative;
     display: block;
 
+    .logo {
+        top: 20px;
+        position: absolute;
+
+        img {
+            width: 70px;
+            height: auto;
+        }
+        &:after {
+            display: none;
+        }
+    }
+
     .post-title-section {
         position: relative;
         top: 110px;

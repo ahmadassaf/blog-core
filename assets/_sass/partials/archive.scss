@@ -1,12 +1,11 @@
 .archive-container {
 
     display: table;
-    width: 80%;
-    height: 100%;
-    padding: 110px 0;
-    margin: 0 auto;
+    margin: 110px auto;
+    width:100%;
 
     ul.archive {
+
         > li {
             padding-bottom: 10px;
             border-bottom: 1px solid darken($white, 8.2353);
@@ -15,11 +14,14 @@
             &:last-child {
                 border: none;
             }
+
             h2 {
                 font-size: 25px;
                 font-weight: bold;
                 margin-bottom: 5px;
                 text-transform: capitalize;
+                line-height: 1.2em;
+
                 .subtitle {
                     display: block;
                     margin: 12px 0;
@@ -48,29 +50,33 @@
                     border-bottom: 1px solid $green;
                 }
             }
-        }
-        .tags li {
+            .tags  {
 
-            display: inline-block;
-            background: $light-gray;
-            padding: 7px 10px;
-            color: $dark-gray;
-            font-size: 11px;
-            text-transform: uppercase;
+                margin: 15px 0 0;
 
-            &:hover {
-                background: $green;
-                color: $white;
-                cursor: pointer;
+                li {
+                    display: inline-block;
+                    background: $light-gray;
+                    padding: 7px 10px;
+                    color: $dark-gray;
+                    font-size: 11px;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        background: $green;
+                        color: $white;
+                        cursor: pointer;
 
 
-                a {
-                    color: $white;
+                        a {
+                            color: $white;
+                        }
+                    }
                 }
             }
-        }
-        > a {
-            color: lighten($black, 28%);
+            > a {
+                color: lighten($black, 28%);
+            }
         }
     }
 }

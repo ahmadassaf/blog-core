@@ -18,12 +18,13 @@
         margin-bottom: 30px;
     }
     h1, h2, h3, h4, h5, h6 {
+        font-family: 'Open Sans';
         font-weight: bold;
         color: $black;
     }
     p {
         font-size: 20px;
-        line-height: 1.6;
+        line-height: 1.8em;
         color: $black;
         margin-bottom: 1.3em;
     }
@@ -71,18 +72,7 @@
     }
 }
 
-        .logo {
-            top: 20px;
-            position: absolute;
 
-            img {
-                width: 70px;
-                height: auto;
-            }
-            &:after {
-                display: none;
-            }
-        }
 
 @media screen and (max-width:950px) {
 

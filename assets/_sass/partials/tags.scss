@@ -1,6 +1,7 @@
 .tags-archive {
 
     .tag-heading {
+        font-family: 'Open Sans';
         font-size: 25px;
         color: $green;
         font-weight: 800;
@@ -18,7 +19,6 @@
         }
         h2.post-list-header {
             font-size: 22px;
-
             .date {
                 font-size: 15px;
             }
@@ -27,4 +27,22 @@
             display:none;
         }
     }
+}
+
+
+@media screen and (max-width:640px) {
+
+    .tags-archive {
+
+        .tag-heading {
+            font-size: 20px;
+        }
+
+        ul.archive {
+            h2 .subtitle {
+                display:none !important;
+            }
+        }
+    }
+
 }
