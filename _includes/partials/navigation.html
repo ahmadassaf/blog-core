@@ -1,11 +1,14 @@
 <div class="navigation-bar {% if page.layout == 'post' %} post-navigation {% endif %}">
 
-<div class="header-elements">
     {% if page.layout != 'post' %}
-        <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/images/{{ site.logo }}"></a>
-        <h1 class="section-title">{{ page.title}}</h1>
+        <div class="header-elements">
+                <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/images/{{ site.logo }}"></a>
+                {% if page.layout != 'error' %}
+                    <h1 class="section-title">{{ page.title}}</h1>
+                {% endif %}
+        </div>
     {% endif %}
-</div>
+
     <ul class="icon-navigation">
         <li class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></li>
         <li><i class="fa fa-search" aria-hidden="true"></i></li>
