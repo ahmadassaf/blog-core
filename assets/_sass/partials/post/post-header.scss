@@ -1,32 +1,19 @@
 .post-header {
 
-    margin: 0 0 120px 0;
-    width: 100%;
-    background: $white;
     position: relative;
-    display: block;
+    display: table;
 
     .logo {
-        top: 20px;
         position: absolute;
-
-        img {
-            width: 70px;
-            height: auto;
-        }
-        &:after {
-            display: none;
-        }
     }
 
     .post-title-section {
+
         position: relative;
-        top: 110px;
+        display: table;
+        margin: 100px 0 0;
 
         .section-title {
-            position: relative;
-            left: auto;
-            bottom: auto;
             text-transform: capitalize;
             font-size: 80px;
             word-wrap: break-word;
@@ -39,20 +26,13 @@
             font-size: 40px;
             color: rgba(0, 0, 0, 0.6);
             margin: 20px 0 30px 0;
-            padding: 0 5px;
             text-transform: capitalize;
-            font-weight: 400;
             line-height: 1.2em;
         }
 
         .tags {
 
-            margin: 0px 0px 0px 5px;
-            padding: 0;
-            cursor: pointer;
-
             > li {
-                background: none;
                 display: inline-block;
                 border: 1px solid rgba($black, 0.4);
                 cursor: pointer;
@@ -60,11 +40,7 @@
                 color: lighten($black, 28%);
                 font-size: 15px;
                 text-transform: uppercase;
-                margin: 0;
-
-                a {
-                  color: $black;
-                }
+                margin: 2px 0;
 
                 &:hover {
                     background: $green;
@@ -79,25 +55,17 @@
         .section-line {
             color: $black;
             position: relative;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
             align-items: center;
             font-size: 25px;
             margin-bottom: 20px;
+            @include flexbox;
 
             &:after {
                 content: '';
-                -webkit-box-flex: 1;
-                -moz-box-flex: 1;
-                -webkit-flex: 1;
-                -ms-flex: 1;
-                flex: 1;
                 height: 3px;
                 background: $black;
                 margin-left: 10px;
+                @include flex(1);
             }
             a {
                 color: $green;
@@ -113,42 +81,29 @@
                 display: inline-block;
                 margin: 0 10px;
             }
-            &.reverse {
-                margin-top: 30px;
 
-                &:before {
-                    content: '';
-                    -webkit-box-flex: 1;
-                    -moz-box-flex: 1;
-                    -webkit-flex: 1;
-                    -ms-flex: 1;
-                    flex: 1;
-                    height: 3px;
-                    background: $black;
-                    margin-right: 10px;
-                }
-                &:after {
-                    display: none;
-                }
+            &:before {
+                content: '';
+                height: 3px;
+                background: $black;
+                margin-right: 10px;
+                @include flex(1);
+            }
+            &:after {
+                display: none;
             }
         }
 
         .date {
-            text-align: left;
             margin: 10px 0;
-            padding: 0 10px;
             color: darken($white, 40);
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
             align-items: center;
+            @include flexbox;
         }
 
         .share-buttons {
             position: relative;
-            margin: 20px 5px;
+            margin: 20px 0;
 
             > .btn {
                 margin-bottom: 0;

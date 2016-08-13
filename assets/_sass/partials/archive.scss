@@ -60,6 +60,7 @@
                     padding: 7px 10px;
                     color: $dark-gray;
                     font-size: 11px;
+                    margin: 2px 0;
                     text-transform: uppercase;
 
                     &:hover {
@@ -79,6 +80,10 @@
             }
         }
     }
+}
+
+.home.archive-container {
+    margin: 0 auto;
 }
 
 @media screen and (max-width:640px) {

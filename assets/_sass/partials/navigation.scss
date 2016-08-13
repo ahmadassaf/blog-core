@@ -1,9 +1,19 @@
 .navigation-bar {
 
-    position: fixed;
-    width:100%;
+    width: 100%;
     padding: 10px;
-    z-index:10;
+    z-index: 10;
+    top: 0;
+    position: relative;
+    display: block;
+
+    .fa {
+        font-size: 20px;
+    }
+
+    .fa-bars {
+        display: none;
+    }
 
     .logo {
         top: 10px;
@@ -14,15 +24,16 @@
     h1.section-title {
         position: absolute;
         margin: 0;
-        top: 15px;
+        top: 35px;
         left: 140px;
-        font-size: 3em;
+        font-size: 1.5em;
     }
 
     ul {
 
-        position: relative;
-        float: right;
+        position: fixed;
+        right: 0;
+        z-index:11;
 
         li {
 
@@ -51,42 +62,122 @@
             }
         }
     }
-}
 
-.post-navigation {
+    ul.categories-list.responsive {
 
-    z-index: 10;
-    background: $white;
-    padding: 20px 0;
-    z-index: 10;
+        z-index: 10;
+        display: table;
+        padding: 2em 0 0 0;
 
-    ul {
+        .geometry-menu {
+            border-bottom: 700px solid $green;
+            border-right: 900px solid transparent;
+            border-left: 900px solid transparent;
+            position: absolute;
+            top: -100px;
+            right: -700px;
+            @include rotate(40);
+        }
+
+        li {
+            font-size: 25px;
+            color: $white;
+            text-align: center;
+            margin: 25px 0;
+            width: 100%;
+
+            a {
+                color: $white;
+            }
+        }
 
         li a:hover, li.current a{
-            border-bottom: 4px solid $green !important;
-            color: $green !important;
+            border-bottom: 4px solid $black !important;
+            color: $black !important;
         }
     }
 }
 
-@media screen and (max-width:950px) {
-  .navigation-bar {
+.post-navigation {
+
+    .fixed {
+        z-index: 10;
+        padding: 20px 0 30px 0;
+        position:fixed;
+    }
+
     ul {
-        li {
-            font-size: 15px;
-            a {
-                &:hover {
+        position: absolute;
+
+        li a:hover, li.current a{
+            border-bottom: 4px solid $white !important;
+            color: $white !important;
+        }
+    }
+}
+
+@media screen and (max-width:1300px) {
+
+    .navigation-bar {
+
+        .logo {
+            top: -5px;
+        }
+
+        h1.section-title {
+            display:none;
+        }
+
+        ul {
+
+            top: 30px;
+
+            li {
+                a {
+                    &:hover {
+                        border-bottom: 4px solid $black;
+                        color: $black !important;
+                    }
+                }
+            }
+
+            li.current {
+                a {
                     border-bottom: 4px solid $black;
                     color: $black !important;
                 }
             }
         }
-        li.current {
-            a {
-                border-bottom: 4px solid $black;
-                color: $black !important;
+    }
+}
+
+@media screen and (max-width:1050px) {
+  .navigation-bar ul li {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width:950px) {
+
+    .navigation-bar {
+
+        ul {
+            top: 10px;
+            .fa-bars {
+                display: block;
             }
         }
+
+        ul.categories-list {
+            display:none;
+        }
     }
-  }
+}
+
+@media screen and (max-width:640px) {
+    .navigation-bar .logo {
+        top: 0;
+        left: 10px;
+    }
 }

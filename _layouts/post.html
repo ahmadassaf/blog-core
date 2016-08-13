@@ -10,12 +10,17 @@ layout: compress
     {% include partials/post/header.html %}
 
     <div class="blog-post">
+
+         <blockquote>
+             <p>{{ page.excerpt }}</p>
+         </blockquote>
+
         {{ content }}
         <br>
         {% include partials/post/share.html %}
-        {% include partials/post/pagination.html %}
     </div>
 
+    {% include partials/post/pagination.html %}
     {% include partials/footer.html %}
 
 </html>
