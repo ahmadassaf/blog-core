@@ -40,3 +40,9 @@ cache
 
 # Optional REPL history
 .node_repl_history
+
+# Jekyll spcific gitignores
+_site/
+.sass-cache/
+.jekyll-metadata
+
