@@ -1,10 +1,10 @@
 'use strict';
 
-var $       = require('jquery');
-var fitVids = require('fitvids');
-var el      = require('elasticlunr');
-var popup   = require('magnific-popup');
-var _       = require('lodash');
+var $        = require('jquery');
+var fitVids  = require('fitvids');
+var el       = require('elasticlunr');
+var popup    = require('magnific-popup');
+var _        = require('lodash');
 
 // This will include the posts.json built in the _site by jekyll
 var posts   = require('../../../_site/posts.json');
@@ -55,7 +55,17 @@ var blog = {
      */
     addSearchTrigger: function() {
         $('.search-toggle, .search-close').on('click', function(){
+
             $('.search-container').toggle();
+            // Add the focus on the input box to start searching
+            $('input[type="search"]').focus();
+        });
+
+        // Add keypress listener to exit search interface on ESC
+        $(document).keyup(function(e) {
+             if (e.keyCode == 27) {
+                if ($('.search-container').is(':visible')) $('.search-container').toggle();
+            }
         });
 
         // We would like now to fetch the posts JSON data into lunr.js and build the index
