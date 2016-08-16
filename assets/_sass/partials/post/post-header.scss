@@ -9,6 +9,17 @@
         width: 100px;
     }
 
+    .contribute {
+        margin: 20px 0;
+
+        * {
+            color: $dark-gray;
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+
     .post-title-section {
 
         position: relative;

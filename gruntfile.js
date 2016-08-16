@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
-        clean: ['_site', '_site/assets/js/build/'],
+        clean: ['_site/assets/js/build/'],
 
         mkdir: {
             images: {
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
 
         concurrent: {
             serve: [
-                'mkdir:images', 'copy:images', 'bgShell:jekyllBuild', 'clean', 'browserify',
+                'mkdir:images', 'copy:images', 'bgShell:jekyllBuild', 'browserify',
                 'watch',
                 'bgShell:jekyllServe'
             ],

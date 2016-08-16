@@ -6,6 +6,10 @@
 	 	<h2 class="section-subtitle">{{ page.subtitle }}</h2>
         {% if page.layout != 'error' %}
 		 	<div class="date">{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}</div>
+            <div class="contribute">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <a target="_blank" href='{{site.github-repo}}blob/master/{{page.category | downcase | url_escape }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>Contribute to this post on Github</a>
+            </div>
 			<ul class="tags">
 				{% for tag in page.tags %}
     				<li><a href="{{ site.url }}/{{ tag | replace:' ', '-' }}">{{ tag }}</a></li>
