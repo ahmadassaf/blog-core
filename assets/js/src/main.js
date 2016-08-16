@@ -2,7 +2,12 @@
 
 var $       = require('jquery');
 var fitVids = require('fitvids');
+var el      = require('elasticlunr');
 var popup   = require('magnific-popup');
+var _       = require('lodash');
+
+// This will include the posts.json built in the _site by jekyll
+var posts   = require('../../../_site/posts.json');
 
 var blog = {
 
@@ -16,6 +21,7 @@ var blog = {
             blog.addFitVideos();
             blog.addMagnifiquePopup();
             blog.addResponsiveMenu();
+            blog.addSearchTrigger();
         });
     },
 
@@ -25,7 +31,6 @@ var blog = {
      */
 
     addResponsiveMenu: function() {
-
         // Add the click listener to toggle the responsive menu class
         $('.menu-toggle').on('click', function(){
             $('.categories-list').toggleClass('responsive');
@@ -44,6 +49,47 @@ var blog = {
         });
     },
 
+    /**
+     * Add the trigger to show/hide the search overyaly
+     * @addSeachTrigger
+     */
+    addSearchTrigger: function() {
+        $('.search-toggle, .search-close').on('click', function(){
+            $('.search-container').toggle();
+        });
+
+        // We would like now to fetch the posts JSON data into lunr.js and build the index
+        var index = el(function () {
+            this.addField('title', { boost: 10 });
+            this.addField('content', { boost: 5 });
+            this.addField('category');
+        });
+
+        _.each(posts, function(post){
+            index.addDoc(_.values(post)[0]);
+        });
+
+        // Add the listening function for the input box and execute the index search
+        $('input[type="search"]').on('input', function() {
+
+            var filter = $(this).val();
+
+            // Hit the search index if the length of the query is long enoughoooo
+            if (filter.length >= 3 ) {
+
+                $('.search-results').empty();
+
+                var results = index.search(filter);
+
+                results.forEach(function(result){
+
+                    var resultObject  = _.values(posts[--result.ref])[0];
+                    var resultElement = `<li><a href="${resultObject.url}">${resultObject.title}</a></li>`;
+                    $('.search-results').append(resultElement);
+                });
+            } else $('.search-results').empty();
+        });
+    },
     /**
      * Add CSS class to all image links by checking the href of <a> tags and known image extension types
      * the image-popup class is picked up by the magnific popup afterwards

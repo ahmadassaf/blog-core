@@ -3,36 +3,37 @@
     width: 100%;
     padding: 10px;
     z-index: 10;
-    top: 0;
     position: relative;
-    display: block;
+    display: table;
 
-    .fa {
-        font-size: 20px;
-    }
+    .header-elements {
+        position: relative;
 
-    .fa-bars {
-        display: none;
-    }
+        .logo {
+            top: 10px;
+            position: absolute;
+            left: 50px;
+            img {
+                width: 80px;
+                z-index: 10;
+                position: relative;
+            }
+        }
 
-    .logo {
-        top: 10px;
-        position: absolute;
-        left: 50px;
-    }
-
-    h1.section-title {
-        position: absolute;
-        margin: 0;
-        top: 35px;
-        left: 140px;
-        font-size: 1.5em;
+        h1.section-title {
+            position: absolute;
+            margin: 0;
+            top: 35px;
+            left: 140px;
+            font-size: 1.5em;
+        }
     }
 
     ul {
 
         position: fixed;
         right: 0;
+        right: 70px;
         z-index:11;
 
         li {
@@ -46,6 +47,12 @@
             cursor: pointer;
             float: right;
             list-style: none;
+
+            i {
+                &:hover {
+                    color: $blue;
+                }
+            }
 
             a {
                 &:hover {
@@ -63,6 +70,18 @@
         }
     }
 
+    ul.icon-navigation {
+
+        right: 0;
+
+        .fa {
+            font-size: 20px;
+        }
+        .menu-toggle {
+            display: none;
+        }
+    }
+
     ul.categories-list.responsive {
 
         z-index: 10;
@@ -70,11 +89,11 @@
         padding: 2em 0 0 0;
 
         .geometry-menu {
-            border-bottom: 700px solid $green;
+            border-bottom: 720px solid $green;
             border-right: 900px solid transparent;
             border-left: 900px solid transparent;
             position: absolute;
-            top: -100px;
+            top: -120px;
             right: -700px;
             @include rotate(40);
         }
@@ -92,8 +111,8 @@
         }
 
         li a:hover, li.current a{
-            border-bottom: 4px solid $black !important;
-            color: $black !important;
+            border-bottom: 4px solid $black;
+            color: $black;
         }
     }
 }
@@ -109,9 +128,12 @@
     ul {
         position: absolute;
 
+        li i:hover {
+            color: $blue;
+        }
         li a:hover, li.current a{
-            border-bottom: 4px solid $white !important;
-            color: $white !important;
+            border-bottom: 4px solid $black;
+            color: $black;
         }
     }
 }
@@ -120,7 +142,7 @@
 
     .navigation-bar {
 
-        .logo {
+        .header-elements .logo {
             top: -5px;
         }
 
@@ -130,9 +152,13 @@
 
         ul {
 
-            top: 30px;
-
             li {
+
+                i {
+                    &:hover {
+                        color: $blue;
+                    }
+                }
                 a {
                     &:hover {
                         border-bottom: 4px solid $black;
@@ -162,9 +188,9 @@
 
     .navigation-bar {
 
-        ul {
-            top: 10px;
-            .fa-bars {
+        ul.icon-navigation {
+
+            .menu-toggle {
                 display: block;
             }
         }
@@ -176,7 +202,7 @@
 }
 
 @media screen and (max-width:640px) {
-    .navigation-bar .logo {
+    .navigation-bar .header-elements .logo {
         top: 0;
         left: 10px;
     }
