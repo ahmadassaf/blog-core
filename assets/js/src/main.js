@@ -94,7 +94,7 @@ var blog = {
                 results.forEach(function(result){
 
                     var resultObject  = _.values(posts[--result.ref])[0];
-                    var resultElement = `<li><a href="${resultObject.url}">${resultObject.title}</a></li>`;
+                    var resultElement = '<li><a href="' + resultObject.url + '">${resultObject.title}</a></li>';
                     $('.search-results').append(resultElement);
                 });
             } else $('.search-results').empty();
@@ -107,12 +107,7 @@ var blog = {
      */
 
     addImageLightBox: function() {
-        return $(`a[href$='.jpg'],
-            a[href$='.jpeg'],
-            a[href$='.JPG'],
-            a[href$='.png'],
-            a[href$='.gif']`
-        ).addClass("image-popup");
+        return $("a[href$='.jpg'], a[href$='.jpeg'], a[href$='.JPG'], a[href$='.png'], a[href$='.gif']").addClass("image-popup");
     },
 
     /**
