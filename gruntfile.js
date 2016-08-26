@@ -54,19 +54,13 @@ module.exports = function(grunt) {
                 command: 'jekyll build'
             },
             jekyllServe: {
-                command: 'jekyll serve'
+                command: 'jekyll serve --host 0.0.0.0'
             }
         },
 
         bgShell: {
             jekyllBuild: {
-                cmd: 'jekyll build --config _config.yml,_config_dev.yml',
-                done: function() {
-                    console.log("Finished Building Jekyll Site");
-                }
-            },
-            jekyllBuildLive: {
-                cmd: 'jekyll build --config _config.yml',
+                cmd: 'jekyll build',
                 done: function() {
                     console.log("Finished Building Jekyll Site");
                 }
@@ -109,12 +103,6 @@ module.exports = function(grunt) {
 
     // Register the grunt serve task
     grunt.registerTask('serve', ['build', 'minified', 'concurrent:serve']);
-
-    // Register the grunt build task Live
-    grunt.registerTask('build_live', ['clean', 'mkdir:images', 'mkdir:js', 'copy:images', 'bgShell:jekyllBuildLive', 'browserify']);
-
-    // Register the grunt serve task
-    grunt.registerTask('serve_live', ['build_live', 'minified', 'concurrent:serve']);
 
     // Register build as the default task fallback
     grunt.registerTask('default', 'build');
