@@ -57,7 +57,6 @@ var blog = {
         $('.search-toggle, .search-close').on('click', function(){
 
             $('.search-container').toggle();
-            if ($('.search-container').is(':visible')) $('html').css('overflow', 'hidden');
             // Add the focus on the input box to start searching
             $('input[type="search"]').focus();
         });
