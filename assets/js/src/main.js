@@ -78,7 +78,7 @@ var blog = {
         _.each(posts, function(post){
             index.addDoc(_.values(post)[0]);
         });
-
+        console.log(posts);
         // Add the listening function for the input box and execute the index search
         $('input[type="search"]').on('input', function() {
 
@@ -90,11 +90,10 @@ var blog = {
                 $('.search-results').empty();
 
                 var results = index.search(filter);
-
                 results.forEach(function(result){
 
                     var resultObject  = _.values(posts[--result.ref])[0];
-                    var resultElement = '<li><a href="' + resultObject.url + '">${resultObject.title}</a></li>';
+                    var resultElement = `<li><a href="${resultObject.url}">${resultObject.title}</a></li>`;
                     $('.search-results').append(resultElement);
                 });
             } else $('.search-results').empty();
