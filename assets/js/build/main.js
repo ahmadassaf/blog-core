@@ -215,7 +215,7 @@ var blog = {
         _.each(posts, function(post){
             index.addDoc(_.values(post)[0]);
         });
-        console.log(posts);
+
         // Add the listening function for the input box and execute the index search
         $('input[type="search"]').on('input', function() {
 

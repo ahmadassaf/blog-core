@@ -66,7 +66,10 @@ module.exports = function(grunt) {
                 }
             },
             jekyllServe: {
-                cmd: 'jekyll serve'
+                cmd: 'bundle exec jekyll serve'
+            },
+            jekyllLocal: {
+                cmd: 'bundle exec jekyll serve --config _config.yml,_config.dev.yml'
             }
         },
 
@@ -79,6 +82,10 @@ module.exports = function(grunt) {
             serve: [
                 'watch',
                 'bgShell:jekyllServe'
+            ],
+            local: [
+                'watch',
+                'bgShell:jekyllLocal'
             ],
             options: {
                 logConcurrentOutput: true
@@ -103,6 +110,9 @@ module.exports = function(grunt) {
 
     // Register the grunt serve task
     grunt.registerTask('serve', ['build', 'minified', 'concurrent:serve']);
+
+    // Register the grunt serve task
+    grunt.registerTask('local', ['build', 'minified', 'concurrent:local']);
 
     // Register build as the default task fallback
     grunt.registerTask('default', 'build');
