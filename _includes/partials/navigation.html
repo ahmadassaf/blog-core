@@ -2,7 +2,7 @@
 
     {% if page.layout != 'post' %}
         <div class="header-elements">
-                <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/images/{{ site.logo }}"></a>
+                <a href="{{ site.url }}" class="logo"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
                 {% if page.layout != 'error' %}
                     <h1 class="section-title">{{ page.title}}</h1>
                 {% endif %}
@@ -21,7 +21,7 @@
         {% for item in (0..categories.size) %}{% unless forloop.last %}
 
         {% capture category %}{{ categories[item] | strip_newlines }}{% endcapture %}
-           <li {% if page.title == category or page.category == category %} class="current" {% endif %}><a href="{{ site.url }}/{{ category | replace:' ', '-'}}">{{ category }}</a></li>
+           <li {% if page.title == category or page.category == category %} class="current" {% endif %}><a href="{{ site.url }}/{{ category | downcase | replace:' ', '-'}}">{{ category }}</a></li>
         {% endunless %}{% endfor %}
     </ul>
 </div>
