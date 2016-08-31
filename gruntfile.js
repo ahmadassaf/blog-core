@@ -49,27 +49,18 @@ module.exports = function(grunt) {
             }
           },
 
-        shell: {
-            jekyllBuild: {
-                command: 'jekyll build'
-            },
-            jekyllServe: {
-                command: 'jekyll serve --host 0.0.0.0'
-            }
-        },
-
         bgShell: {
             jekyllBuild: {
-                cmd: 'jekyll build',
+                cmd: 'jekyll build --incremental',
                 done: function() {
                     console.log("Finished Building Jekyll Site");
                 }
             },
             jekyllServe: {
-                cmd: 'bundle exec jekyll serve'
+                cmd: 'bundle exec jekyll serve --incremental'
             },
             jekyllLocal: {
-                cmd: 'bundle exec jekyll serve --config _config.yml,_config.dev.yml'
+                cmd: 'bundle exec jekyll serve --incremental --config _config.yml,_config.dev.yml'
             }
         },
 
@@ -100,7 +91,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-bg-shell');
     grunt.loadNpmTasks('grunt-minified');
