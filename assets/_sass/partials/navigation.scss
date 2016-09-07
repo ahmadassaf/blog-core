@@ -82,6 +82,17 @@
         }
     }
 
+    ul.categories-list_home {
+
+        right:0;
+        left: 140px;
+        top: 50px;
+
+        li {
+            float:left;
+        }
+    }
+
     ul.categories-list.responsive {
 
         z-index: 10;

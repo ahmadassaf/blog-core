@@ -16,12 +16,26 @@
         top: -100px;
         right: -700px;
         @include rotate(40);
+
+        &_home {
+            border-left: 910px solid transparent;
+            top: -80px;
+            right: -950px;
+            @include rotate(110);
+        }
     }
+
 
     .geometry-inverted {
         border-bottom: 300px solid $green;
         right: -400px;
         @include rotate(10);
+
+        &_home {
+            border-bottom: 1630px solid #399f62;
+            left: -700px;
+            @include rotate(20);
+        }
     }
 }
 
