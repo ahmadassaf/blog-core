@@ -9,7 +9,7 @@
     transition-duration: 2s;
 
     .geometry {
-        border-bottom: 300px solid rgba(38,139,210,0.5);
+        border-bottom: 300px solid rgba(38,139,210,0.7);
         border-right: 750px solid transparent;
         border-left: 900px solid transparent;
         position: absolute;
@@ -21,7 +21,7 @@
             border-left: 910px solid transparent;
             top: -80px;
             right: -950px;
-            @include rotate(110);
+            @include rotate(100);
         }
     }
 
@@ -33,8 +33,8 @@
 
         &_home {
             border-bottom: 1630px solid #399f62;
-            left: -700px;
-            @include rotate(20);
+            left: -600px;
+            @include rotate(1);
         }
     }
 }

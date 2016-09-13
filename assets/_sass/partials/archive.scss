@@ -82,8 +82,34 @@
     }
 }
 
-.home.archive-container {
+
+
+.archive-container.main {
     margin: 0 auto;
+
+    div {
+        h1 {
+            letter-spacing: 7px;
+            position: relative;
+            margin: 2em 0;
+            font-weight:800;
+
+            &:after {
+                content: " ";
+                width: 150px;
+                background: $green;
+                height: 10px;
+                position: absolute;
+                bottom: -15px;
+                left: 0;
+            }
+        }
+    }
+
+    .featured-posts {
+        padding: 50px 0;
+        border-bottom: 1px solid $gray;
+    }
 }
 
 @media screen and (max-width:640px) {

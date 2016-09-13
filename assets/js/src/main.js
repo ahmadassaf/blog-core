@@ -1,10 +1,12 @@
 'use strict';
 
-var $        = require('jquery');
-var fitVids  = require('fitvids');
-var el       = require('elasticlunr');
-var popup    = require('magnific-popup');
-var _        = require('lodash');
+var $                =
+    global.jQuery    = require('jquery');
+var fitVids          = require('fitvids');
+var el               = require('elasticlunr');
+var popup            = require('magnific-popup');
+var typeIt           = require('typeit');
+var _                = require('lodash');
 
 // This will include the posts.json built in the _site by jekyll
 var posts   = require('../../../_site/posts.json');
@@ -22,9 +24,15 @@ var blog = {
             blog.addMagnifiquePopup();
             blog.addResponsiveMenu();
             blog.addSearchTrigger();
+            blog.addHomePageScripts();
         });
     },
 
+    addHomePageScripts: function() {
+        $('#profession').typeIt({
+             strings: ["Data Scientist", "Software Engineer", "Knowledge Seeker"], breakLines: false, speed: 150, loop: true, loopDelay: 10000, breakDelay: 10000, autoStart: false
+        });
+    },
     /**
      * Add handlers to apply the responsive menu bar and handle the show/close of the menu itself
      * @addResponsiveMenu
@@ -93,7 +101,7 @@ var blog = {
                 results.forEach(function(result){
 
                     var resultObject  = _.values(posts[--result.ref])[0];
-                    var resultElement = `<li><a href="${resultObject.url}">${resultObject.title}</a></li>`;
+                    var resultElement = '<li><a href="' + resultObject.url + '">' + resultObject.title + '</a></li>';
                     $('.search-results').append(resultElement);
                 });
             } else $('.search-results').empty();

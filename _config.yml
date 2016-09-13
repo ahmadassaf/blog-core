@@ -27,16 +27,12 @@ sass:
 google-analytics: UA-11075253-1
 
 # Social Links
-email        : ahmad.a.assaf@gmail.com
-google.plus  : ahmad.a.assaf
+google       : ahmad.a.assaf
 twitter      : ahmadaassaf
 facebook     : ahmad.a.assaf
 github       : ahmadassaf
 stackoverflow: 557821/ahmadassaf
 linkedin     : ahmadassaf
-instagram    : ahmadaassaf
-foursquare   : ahmadassaf
-youtube      : ahmad3ssaf
 hackernews   : ahmadassaf
 
 featured: []
@@ -51,6 +47,12 @@ jekyll-archives:
   permalinks:
     tag: '/:name/'
     category: '/:name/'
+
+# Comments
+comments: disqus
+disqus:
+  shortname: ahmadassaf
+
 
 # posts-list pagination
 paginate: 7

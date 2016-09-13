@@ -6,6 +6,7 @@
     position: relative;
     display: table;
 
+
     .header-elements {
         position: relative;
 
@@ -26,6 +27,7 @@
             top: 35px;
             left: 140px;
             font-size: 1.5em;
+            font-family: $header-font;
         }
     }
 
@@ -123,12 +125,17 @@
 
         li a:hover, li.current a{
             border-bottom: 4px solid $black;
-            color: $black;
         }
     }
 }
 
 .post-navigation {
+
+    position: fixed;
+    font-family: $base-font;
+    background: $white;
+    top: 0;
+    height: 55px;
 
     .fixed {
         z-index: 10;
@@ -143,8 +150,8 @@
             color: $blue;
         }
         li a:hover, li.current a{
-            border-bottom: 4px solid $black;
-            color: $black;
+            border-bottom: 4px solid $green;
+            color: $green;
         }
     }
 }
@@ -183,6 +190,22 @@
                     border-bottom: 4px solid $black;
                     color: $black !important;
                 }
+            }
+        }
+    }
+
+    .post-navigation {
+
+        ul {
+            li a:hover, li.current a{
+                border-bottom: 4px solid $green;
+                color: $green !important;
+            }
+        }
+
+        ul.responsive {
+            li a:hover, li.current a {
+                color: $black !important;
             }
         }
     }

@@ -17,6 +17,7 @@
     {% endif %}
 
     <ul class="categories-list {% if page.layout == 'main' %} categories-list_home{% endif %}">
+        <div class="geometry geometry-menu"></div>
         {% if page.layout != 'main' %}
             {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
             {% assign categories = site_categories | split:',' | uniq %}
