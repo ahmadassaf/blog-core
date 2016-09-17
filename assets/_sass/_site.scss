@@ -21,15 +21,21 @@
 .content {
     max-width: 1400px;
     display: block;
-    margin: 4em auto;
+    margin: 120px auto;
     width: 70%;
+    position: relative;
+
+    &.blog-home {
+        margin: 10px auto;
+    }
 }
 
 
-@media screen and (max-width:960px) {
+@media screen and (max-width:950px) {
 
     .content {
         width: 85%;
+        margin: 1em auto;
     }
 }
 

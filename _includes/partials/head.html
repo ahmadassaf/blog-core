@@ -20,4 +20,4 @@
     {% include partials/fixed-elements.html %}
     {% include partials/navigation.html %}
 
-    <div class="content">
+    <div class="content {% if page.title == 'blog-home' %} blog-home {% endif %}">

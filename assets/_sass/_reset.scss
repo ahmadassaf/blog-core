@@ -162,6 +162,10 @@ samp {
   font-family: $code-font;
 }
 
+code {
+    white-space: pre-wrap;
+}
+
 figure {
   margin: 0;
 }

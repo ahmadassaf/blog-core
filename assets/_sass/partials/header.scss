@@ -11,37 +11,36 @@
     .geometry {
         border-bottom: 300px solid rgba(38,139,210,0.7);
         border-right: 750px solid transparent;
-        border-left: 900px solid transparent;
+        border-left: 910px solid transparent;
         position: absolute;
-        top: -100px;
-        right: -700px;
-        @include rotate(40);
-
-        &_home {
-            border-left: 910px solid transparent;
-            top: -80px;
-            right: -950px;
-            @include rotate(100);
-        }
+        top: -80px;
+        right: -950px;
+        @include rotate(100);
     }
 
 
     .geometry-inverted {
-        border-bottom: 300px solid $green;
-        right: -400px;
-        @include rotate(10);
-
-        &_home {
-            border-bottom: 1630px solid #399f62;
-            left: -600px;
-            @include rotate(1);
-        }
+        border-bottom: 720px solid $green;
+        top: 470px;
+        right: -1050px;
+        @include rotate(115);
     }
 }
 
-@media screen and (max-width:1300px) {
-
+@media screen and (max-width:1500px) {
     .shapes {
-        top: -200px;
+        right: -30px;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .shapes {
+        right: -100px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .shapes {
+        display:none;
     }
 }
