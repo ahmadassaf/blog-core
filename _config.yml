@@ -10,7 +10,7 @@ background:
   default-post: images/logo-plain.png   # this image will be shown when post's front matter doesn't specify any image
 
 # Jekyll
-permalink:          /:title/
+permalink:          /:title
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
@@ -56,7 +56,7 @@ disqus:
 
 # posts-list pagination
 paginate: 7
-paginate_path: "blog/page/:num"
+paginate_path: "posts/page/:num"
 
 webrick:
   headers:

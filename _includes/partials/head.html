@@ -14,10 +14,10 @@
   {% feed_meta %}
 
 </head>
-<body class="{% if page.layout == 'main' %} homepage {% endif %}">
+<body class="{% if page.layout == 'home' %} homepage {% endif %}">
 
 
     {% include partials/fixed-elements.html %}
     {% include partials/navigation.html %}
 
-    <div class="content {% if page.title == 'blog-home' %} blog-home {% endif %}">
+    <div class="content {% if page.layout == 'blog-home' %} blog-home {% endif %}">

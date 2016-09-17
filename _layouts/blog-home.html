@@ -4,15 +4,10 @@ layout: compress
 
 <!DOCTYPE html>
 <html>
+
     {% include partials/head.html %}
 
-    <div class="main-title">
-        <h4> Hi, I am</h4>
-        <h1> Ahmad Assaf </h1>
-        <h2> I am a <span class="rotating-text" id=profession></span></h2>
-        {% include partials/social-links.html %}
-    </div>
-    <section class="posts archive-container main">
+    <div class="archive-container main">
         <div class="featured-posts">
             <h1>featured posts</h1>
             {% include partials/featured-posts.html %}
@@ -22,7 +17,8 @@ layout: compress
             <h1>recent posts</h1>
             {% include partials/recent-posts.html %}
         </div>
-    </section>
+    </div>
+
     {% include partials/footer.html %}
 
 </html>

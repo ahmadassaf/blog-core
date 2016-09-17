@@ -45,9 +45,11 @@ var blog = {
     */
     addStickyLogo: function() {
         $(window).scroll(function(){
-            if ($(window).scrollTop() > $('.post-title-section').offset().top) {
-                $('.post-logo').fadeIn('slow');
-            } else $('.post-logo').hide();
+            if ($('.post-title-section')) {
+                if ($(window).scrollTop() > $('.post-title-section').offset().top) {
+                    $('.post-logo').fadeIn('slow');
+                } else $('.post-logo').hide();
+            }
         });
     },
 
