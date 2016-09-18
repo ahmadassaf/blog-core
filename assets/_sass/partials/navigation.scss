@@ -141,19 +141,14 @@
 }
 
 @media screen and (max-width:1500px) {
-    ul.categories-list {
-        right: 20px;
-    }
-}
 
-@media screen and (max-width:1500px) {
    .section-title:not(.post-title) {
         display:none;
     }
-}
+    ul.categories-list {
+        right: 20px;
+    }
 
-
-@media screen and (max-width:1500px) {
     .navigation-bar ul li {
         padding: 0 15px;
     }
