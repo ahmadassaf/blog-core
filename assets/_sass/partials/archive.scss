@@ -113,7 +113,9 @@
 }
 
 @media screen and (max-width:640px) {
-
+    .archive-container {
+        width:100%;
+    }
     ul.archive {
         > li {
             .post-title {
