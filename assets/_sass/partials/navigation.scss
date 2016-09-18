@@ -132,6 +132,10 @@
         &.categories-list.home-menu {
             left: 150px;
             right: auto;
+
+            .reponsive-homepage-icon {
+                display:none;
+            }
         }
     }
 }
@@ -170,6 +174,14 @@
                         font-size: 25px;
                     }
                 }
+            }
+        }
+
+        ul.categories-list.home-menu {
+            right:0;
+            .reponsive-homepage-icon {
+                font-size:30px;
+                display:block !important;
             }
         }
     }

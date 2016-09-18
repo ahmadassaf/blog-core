@@ -1,7 +1,7 @@
 <div class="navigation-bar {% if page.layout == 'post' %} post-navigation {% endif %}">
 
     <div class="header-elements">
-            <a href="{{ site.url }}" class="logo {% if page.layout == 'post' %} post-logo {% endif %}"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
+            <a href=" {% if page.layout != 'home' %}{{ site.url }}/blog {% else %}{{ site.url }}{% endif %}" class="logo {% if page.layout == 'post' %} post-logo {% endif %}"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
             {% if page.layout != 'error' %}
             {% if page.layout != 'post' %}
                 <h1 class="section-title">{{ page.title}}</h1>
@@ -30,6 +30,7 @@
             <li><a href="">Papers</a></li>
             <li><a href="">Projects</a></li>
             <li><a href="">About</a></li>
+            <li class="reponsive-homepage-icon"><a alt="Archive" class="icon-menu-toggle" href="/blog"><i class="fa fa-archive" aria-hidden="true"></i></a></li>
         {% endif %}
     </ul>
 </div>
