@@ -10,7 +10,7 @@ background:
   default-post: images/logo-plain.png   # this image will be shown when post's front matter doesn't specify any image
 
 # Jekyll
-permalink:          /:title/
+permalink:          /:title
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
@@ -27,16 +27,12 @@ sass:
 google-analytics: UA-11075253-1
 
 # Social Links
-email        : ahmad.a.assaf@gmail.com
-google.plus  : ahmad.a.assaf
+google       : ahmad.a.assaf
 twitter      : ahmadaassaf
 facebook     : ahmad.a.assaf
 github       : ahmadassaf
 stackoverflow: 557821/ahmadassaf
 linkedin     : ahmadassaf
-instagram    : ahmadaassaf
-foursquare   : ahmadassaf
-youtube      : ahmad3ssaf
 hackernews   : ahmadassaf
 
 featured: []
@@ -52,9 +48,15 @@ jekyll-archives:
     tag: '/:name/'
     category: '/:name/'
 
+# Comments
+comments: disqus
+disqus:
+  shortname: ahmadassaf
+
+
 # posts-list pagination
 paginate: 7
-paginate_path: "blog/page/:num"
+paginate_path: "posts/page/:num"
 
 webrick:
   headers:

@@ -1,10 +1,12 @@
 'use strict';
 
-var $        = require('jquery');
-var fitVids  = require('fitvids');
-var el       = require('elasticlunr');
-var popup    = require('magnific-popup');
-var _        = require('lodash');
+var $                =
+    global.jQuery    = require('jquery');
+var fitVids          = require('fitvids');
+var el               = require('elasticlunr');
+var popup            = require('magnific-popup');
+var typeIt           = require('typeit');
+var _                = require('lodash');
 
 // This will include the posts.json built in the _site by jekyll
 var posts   = require('../../../_site/posts.json');
@@ -22,6 +24,32 @@ var blog = {
             blog.addMagnifiquePopup();
             blog.addResponsiveMenu();
             blog.addSearchTrigger();
+            blog.addHomePageScripts();
+            blog.addStickyLogo();
+        });
+    },
+
+    /**
+     * Add the scripts needed for the homepage script to function
+     * @addResponsiveMenu
+     */
+    addHomePageScripts: function() {
+        $('#profession').typeIt({
+             strings: ["Data Scientist", "Software Engineer", "Knowledge Seeker"], breakLines: false, speed: 150, loop: true, loopDelay: 10000, breakDelay: 10000, autoStart: false
+        });
+    },
+
+    /**
+     * Add function to make the logo in the posts page sticky when the user scrolls below the header
+     * @addResponsiveMenu
+    */
+    addStickyLogo: function() {
+        $(window).scroll(function(){
+            if ($('.post-title-section')) {
+                if ($(window).scrollTop() > $('.post-title-section').offset().top) {
+                    $('.post-logo').fadeIn('slow');
+                } else $('.post-logo').hide();
+            }
         });
     },
 
@@ -29,11 +57,18 @@ var blog = {
      * Add handlers to apply the responsive menu bar and handle the show/close of the menu itself
      * @addResponsiveMenu
      */
-
     addResponsiveMenu: function() {
+
         // Add the click listener to toggle the responsive menu class
-        $('.menu-toggle').on('click', function(){
+        $('.menu-toggle, .close-menu').on('click', function(){
             $('.categories-list').toggleClass('responsive');
+        });
+
+        // Add keypress listener to exit search interface on ESC
+        $(document).keyup(function(e) {
+             if (e.keyCode == 27) {
+                if ($('.categories-list').hasClass('responsive')) $('.categories-list').toggleClass('responsive');
+            }
         });
 
         // This will make sure that we submit the form to add emails when we click anywhere outside of the email input field
@@ -46,6 +81,18 @@ var blog = {
             {
                 $('.categories-list').removeClass('responsive');
             }
+        });
+
+        // Here we want to capture if the responsive menu was open and then the browser width has been resized greater than the responsive width
+        // if so, we remove the responsive class and revert back to the normal navigation menu
+        $(window).resize(function() {
+            if ($(window).width() > 1050 && $('.categories-list').hasClass('responsive')) {
+                $('.categories-list').toggleClass('responsive');
+            }
+
+            if ($(window).scrollTop() > $('.post-title-section').offset().top) {
+                $('.post-logo').fadeIn('slow');
+            } else $('.post-logo').hide();
         });
     },
 
@@ -93,7 +140,7 @@ var blog = {
                 results.forEach(function(result){
 
                     var resultObject  = _.values(posts[--result.ref])[0];
-                    var resultElement = `<li><a href="${resultObject.url}">${resultObject.title}</a></li>`;
+                    var resultElement = '<li><a href="' + resultObject.url + '">' + resultObject.title + '</a></li>';
                     $('.search-results').append(resultElement);
                 });
             } else $('.search-results').empty();

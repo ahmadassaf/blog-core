@@ -1,0 +1,113 @@
+$socialColours:
+(
+    angellist    : #000000,
+    behance      : #1769ff,
+    bitbucket    : #205081,
+    codeopen     : #000000,
+    delicious    : #3399ff,
+    digg         : #000000,
+    diigo        : #276bb2,
+    dropbox      : #007ee5,
+    evernote     : #2dbe60,
+    facebook     : #3b5998,
+    flickr       : #ff0084,
+    foursquare   : #0072b1,
+    github       : #333333,
+    google       : #dd4b39,
+    hackernews   : #dd4b39,
+    gravatar     : #1e8cbe,
+    gtalk        : #dd4b39,
+    instagram    : #125688,
+    last         : #d51007,
+    linkedin     : #007bb5,
+    picasa       : #9F5CBA,
+    pinterest    : #cb2027,
+    quora        : #a82400,
+    rdio         : #007dc3,
+    rss          : #ff6600,
+    skype        : #12A5F4,
+    slack        : #6ecadc,
+    slideshare   : #0077b5,
+    snapchat     : #fffc00,
+    soundcloud   : #ff8800,
+    spotify      : #2ebd59,
+    stackexchange: #195398,
+    stackoverflow: #fe7a15,
+    steam        : #000000,
+    stumbleupon  : #eb4924,
+    tumblr       : #32506d,
+    twitter      : #55acee,
+    vimeo        : #aad450,
+    vine         : #00bf8f,
+    vk           : #45668e,
+    wechat       : #7bb32e,
+    whatsapp     : #4dc247,
+    wordpress    : #21759b,
+    xing         : #026466,
+    yelp         : #af0606,
+    youtube      : #bb0000,
+);
+
+@function get-social-media-colour($colour) {
+
+  @if map-has-key($socialColours, $colour) {
+    $colour: map-get($socialColours, $colour);
+  } @else {
+    @if type-of($colour) != colour {
+      @error "Invalid colour name: `#{$colour}`.";
+    }
+  }
+
+  @return $colour;
+}
+
+
+.social-links li a i
+{
+  &.fa-angellist                { color: get-social-media-colour(angellist);}
+  &.fa-behance                  { color: get-social-media-colour(behance);}
+  &.fa-bitbucket                { color: get-social-media-colour(bitbucket);}
+  &.fa-codeopen                 { color: get-social-media-colour(codeopen);}
+  &.fa-delicious                { color: get-social-media-colour(delicious);}
+  &.fa-digg                     { color: get-social-media-colour(digg);}
+  &.fa-diigo                    { color: get-social-media-colour(diigo);}
+  &.fa-dropbox                  { color: get-social-media-colour(dropbox);}
+  &.fa-evernote                 { color: get-social-media-colour(evernote);}
+  &.fa-facebook-official        { color: get-social-media-colour(facebook);}
+  &.fa-flickr                   { color: get-social-media-colour(flickr);}
+  &.fa-foursquare               { color: get-social-media-colour(foursquare);}
+  &.fa-github                   { color: get-social-media-colour(github);}
+  &.fa-google                   { color: get-social-media-colour(google);}
+  &.fa-gravatar                 { color: get-social-media-colour(gravatar);}
+  &.fa-gtalk                    { color: get-social-media-colour(gtalk);}
+  &.fa-instagram                { color: get-social-media-colour(instagram);}
+  &.fa-last                     { color: get-social-media-colour(last);}
+  &.fa-linkedin                 { color: get-social-media-colour(linkedin);}
+  &.fa-picasa                   { color: get-social-media-colour(picasa);}
+  &.fa-pinterest                { color: get-social-media-colour(pinterest);}
+  &.fa-quora                    { color: get-social-media-colour(quora);}
+  &.fa-rdio                     { color: get-social-media-colour(rdio);}
+  &.fa-rss                      { color: get-social-media-colour(rss);}
+  &.fa-skype                    { color: get-social-media-colour(skype);}
+  &.fa-slack                    { color: get-social-media-colour(slack);}
+  &.fa-slideshare               { color: get-social-media-colour(slideshare);}
+  &.fa-snapchat                 { color: get-social-media-colour(snapchat);}
+  &.fa-soundcloud               { color: get-social-media-colour(soundcloud);}
+  &.fa-spotify                  { color: get-social-media-colour(spotify);}
+  &.fa-stackexchange            { color: get-social-media-colour(stackexchange);}
+  &.fa-stack-overflow           { color: get-social-media-colour(stackoverflow);}
+  &.fa-steam                    { color: get-social-media-colour(steam);}
+  &.fa-stumbleupon              { color: get-social-media-colour(stumbleupon);}
+  &.fa-tumblr                   { color: get-social-media-colour(tumblr);}
+  &.fa-twitter                  { color: get-social-media-colour(twitter); }
+  &.fa-vimeo                    { color: get-social-media-colour(vimeo);}
+  &.fa-vine                     { color: get-social-media-colour(vine);}
+  &.fa-vk                       { color: get-social-media-colour(vk);}
+  &.fa-wechat                   { color: get-social-media-colour(wechat);}
+  &.fa-whatsapp                 { color: get-social-media-colour(whatsapp);}
+  &.fa-wordpress                { color: get-social-media-colour(wordpress);}
+  &.fa-xing                     { color: get-social-media-colour(xing);}
+  &.fa-yelp                     { color: get-social-media-colour(yelp);}
+  &.fa-youtube                  { color: get-social-media-colour(youtube);}
+  &.fa-hacker-news              { color: get-social-media-colour(hackernews);}
+}

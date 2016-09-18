@@ -1,8 +1,8 @@
 <div class="post-header">
-	<a href="{{ site.url }}" class="logo"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
+	<a href="{{ site.url }}/blog" class="logo"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
 	<div class="post-title-section">
 	 	<div class="section-line"><a class="category capitalize" href="{{ site.url}}/{{page.category | downcase | replace:' ', '-' }}">{% if page.category %}{{page.category}}{% else %}Home{% endif %}</a><em>/</em></div>
-	 	<h1 class="section-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+	 	<h1 class="section-title post-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
 	 	<h2 class="section-subtitle">{{ page.subtitle }}</h2>
         {% if page.layout != 'error' %}
 		 	<div class="date">{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}</div>

@@ -134,8 +134,16 @@
     }
 }
 
-@media screen and (max-width:960px) {
+@media screen and (max-width:950px) {
     .share-buttons span {
         display: none;
+    }
+
+     .post-header .logo {
+        display: none;
+     }
+
+    .post-header .post-title-section {
+        margin: 140px 0 0;
     }
 }

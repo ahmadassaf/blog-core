@@ -6,18 +6,41 @@ layout: compress
 <html>
     {% include partials/head.html %}
 
-    <div class="home archive-container">
+    <div class="main-title">
+        <h4> Hi, I am</h4>
+        <h1> Ahmad Assaf </h1>
+        <h2 class="rotating"> I am a <span class="rotating-text" id=profession></span></h2>
+        <h4> Data Scientist / Knowledge Seeker</h4>
+        {% include partials/social-links.html %}
+    </div>
+
+    <ul class="currently">
+        <h4>I am currently</h4>
+        {% for currently in site.data.currently %}
+          <li>
+            <i class="fa fa-{{currently.icon}}" aria-hidden="true"></i>
+            {% if currently.url %}
+                <a href="{{ currently.url }}">
+                  {{ currently.title }}
+                </a>
+            {% else %}
+                {{ currently.title }}
+            {% endif %}
+          </li>
+        {% endfor %}
+    </ul>
+
+    <section class="posts archive-container main">
         <div class="featured-posts">
-            <h1 class="home-section-title">featured posts</h1>
+            <h1>featured posts</h1>
             {% include partials/featured-posts.html %}
         </div>
 
         <div class="recent-posts">
-            <h1 class="home-section-title">recent posts</h1>
+            <h1>recent posts</h1>
             {% include partials/recent-posts.html %}
         </div>
-    </div>
-
+    </section>
     {% include partials/footer.html %}
 
 </html>

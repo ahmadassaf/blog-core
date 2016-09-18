@@ -1,10 +1,4 @@
 ---
 layout: home
+description: Ahmad Assaf is currently a senior software engineer at Beamery in London, UK. He has deep interest in information retrieval, knowledge representation and machine learning. Ahmad Assaf holds a PhD degree from Telecom ParisTech with thesis about using Semantic Web technologies to enrich datasets on instance and metadata levels to facilitate self-service data provisioning.
 ---
-# About Theme
-
-This theme is Jekyll port of [vangeltzo.com](http://vangeltzo.com/) (by [Vangelis Tzortzis](https://github.com/srekoble)).
-
-To learn how to install and use this theme check out the [installation guide](http://taylantatli.me/Halve/halve-theme/) for more information.
-
-If you have a question, find a bug, or just want to say hi, please open an [issue on GitHub](https://github.com/TaylanTatli/Halve/issues/new).
