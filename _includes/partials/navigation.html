@@ -24,13 +24,13 @@
                <li {% if page.title == category or page.category == category %} class="current" {% endif %}><a href="{{ site.url }}/{{ category | downcase | replace:' ', '-'}}">{{ category }}</a></li>
             {% endunless %}{% endfor %}
         <li class="menu-toggle responsive"><i class="fa fa-bars" aria-hidden="true"></i></li>
-        <img class="close-menu" src="/images/close-menu.svg"/>
+        <img alt="close-menu" class="close-menu" src="/images/close-menu.svg"/>
         {% else %}
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="{{ site.url }}/blog">Blog</a></li>
             <li><a href="">Papers</a></li>
             <li><a href="">Projects</a></li>
             <li><a href="">About</a></li>
-            <li class="reponsive-homepage-icon"><a alt="Archive" class="icon-menu-toggle" href="/blog"><i class="fa fa-archive" aria-hidden="true"></i></a></li>
+            <li class="reponsive-homepage-icon"><a alt="Archive" class="icon-menu-toggle" href="{{ site.url }}/blog"><i class="fa fa-archive" aria-hidden="true"></i></a></li>
         {% endif %}
     </ul>
 </div>
