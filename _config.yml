@@ -7,10 +7,10 @@ logo: logo.svg
 locale: en_US
 
 background:
-  default-post: images/logo-plain.png   # this image will be shown when post's front matter doesn't specify any image
+  default-post: images/website-screenshot.png   # this image will be shown when post's front matter doesn't specify any image
 
 # Jekyll
-permalink:          /:title/
+permalink:          /posts/:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:

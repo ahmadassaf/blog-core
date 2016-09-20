@@ -8,59 +8,122 @@
     left: 0;
     display: none;
     -webkit-transform: translateZ(0);
-}
 
-.search-close {
-    position: absolute;
-    width: 30px;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
-}
+    .featured-posts {
+        display: table;
+        margin: 0 auto;
+        width: 80%;
 
-input[type="search"] {
-    position: relative;
-    height: 60px;
-    background: rgba(255,255,255,0.7);
-    border: none;
-    outline: none;
-    color: #000;
-    font-size: 60px;
-    margin: 100px auto;
-    padding: 50px;
-    width: 90%;
-    display: table;
+       h1 {
+            letter-spacing: 7px;
+            position: relative;
+            margin: 2em 0;
+            font-weight:800;
+            font-family: $header-font ;
+            color:$white;
 
-
-    @media screen and (max-width:960px) {
-        font-size: 40px;
-        padding: 40px;
-    }
-}
-
-ul.search-results {
-    width: 90%;
-    position: relative;
-    display: table;
-    margin: 0 auto;
-    list-style: none;
-    padding: 0 10px;
-
-    li {
-        margin: 25px 0;
-        font-size: 35px;
-
-        a {
-            color: white;
-            &:hover {
-                border-bottom: 1px dashed;
+            &:after {
+                content: " ";
+                width: 150px;
+                background: $white;
+                height: 10px;
+                position: absolute;
+                bottom: -15px;
+                left: 0;
             }
         }
-        &:hover {
-            color: $white;
+
+        ul.archive {
+            li {
+
+                list-style: none;
+
+                h2.post-list-header * {
+                    color: $white;
+                    font-weight: 800;
+                    text-transform: capitalize;
+                }
+
+                span.date {
+                    display: none;
+                }
+
+                span.subtitle {
+                    display: block;
+                    margin: 10px 0;
+                }
+
+                ul.tags {
+                    margin: 20px 0;
+                    li {
+                        display: inline-table;
+                        margin: 2px;
+                        background: $white;
+                        padding: 5px;
+                        font-size: 13px;
+                    }
+
+                  @media screen and (max-width:960px) {
+                        display:none;
+                    }
+                }
+            }
         }
+    }
+
+    .search-close {
+        position: absolute;
+        width: 30px;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+    }
+
+    input[type="search"] {
+        position: relative;
+        height: 60px;
+        background: rgba(255,255,255,0.7);
+        border: none;
+        outline: none;
+        color: #000;
+        font-size: 60px;
+        margin: 100px auto;
+        padding: 50px;
+        width: 90%;
+        display: table;
+        font-family: $header-font;
+
         @media screen and (max-width:960px) {
-            font-size: 25px;
+            font-size: 40px;
+            padding: 40px;
+        }
+    }
+
+    ul.search-results {
+        width: 90%;
+        position: relative;
+        display: table;
+        margin: 0 auto;
+        list-style: none;
+        padding: 0 10px;
+
+        li {
+            margin: 25px 0;
+            font-size: 35px;
+            font-family: $header-font;
+
+            a {
+                &:hover {
+                    color: $blue;
+                }
+            }
+            &:hover {
+                color: $white;
+            }
+            @media screen and (max-width:960px) {
+                font-size: 25px;
+            }
         }
     }
 }
+

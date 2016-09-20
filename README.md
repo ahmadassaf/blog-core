@@ -1,5 +1,10 @@
-# Halve  [![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/taylantatli/0usd)
+# Ahmad Assaf Personal Webspace
+## [Homepage](http://ahmadassaf.com) | [Blog](http://ahmadassaf.com/blog)
+
 [ ![Codeship Status for ahmadassaf/blog-core](https://codeship.com/projects/f898c400-4dca-0134-ded1-069048840640/status?branch=master)](https://codeship.com/projects/170632)
+<a href="#" id="status-image-popup" name="status-images" class="open-popup" title="Latest push build on default branch: passed" data-ember-action="1015">
+    <img src="https://travis-ci.org/ahmadassaf/blog-core.svg" alt="build:passed">
+</a>
 
 This theme is Jekyll port of [vangeltzo.com](http://vangeltzo.com/) (by [Vangelis Tzortzis](https://github.com/srekoble)).
 
