@@ -30,6 +30,17 @@ module.exports = function(grunt) {
             }
         },
 
+        imagemin: {
+            dynamic: {
+              files: [{
+                expand: true,
+                cwd: 'images/posts/',
+                src: ['**/*.{png,jpg,gif}'],
+                dest: 'images/posts/'
+              }]
+            }
+          },
+
         browserify: {
             dist: {
                 files: {
@@ -94,9 +105,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-bg-shell');
     grunt.loadNpmTasks('grunt-minified');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-newer');
 
     // Register the grunt build task
-    grunt.registerTask('build', ['clean', 'mkdir:images', 'mkdir:js', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'minified']);
+    grunt.registerTask('build', ['clean', 'mkdir:images', 'mkdir:js', 'copy:images', 'newer:imagemin' ,'bgShell:jekyllBuild', 'browserify', 'minified']);
 
     // Register the grunt serve task
     grunt.registerTask('serve', ['build', 'minified', 'concurrent:serve']);

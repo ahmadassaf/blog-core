@@ -136,20 +136,20 @@ This is straightforward as i just specify that i want to enable them on both cat
 
 Another special page i created is a tags archive page. This is done by creating a page in `/_pages` and a `tags-archive` template. The main code to bring all the blog tags and their posts is:
 
+```html
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags = site_tags | split:',' | sort %}
 
-    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-    {% assign tags = site_tags | split:',' | sort %}
-
-    {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture tag %}{{ tags[item] | strip_newlines }}{% endcapture %}
-       <h2 id="{{ tag }}" class="tag-heading">{{ tag }}</h2>
-       <ul class="archive">
-        {% for post in site.tags[tag] %}{% if post.title != null %}
-            {% include partials/post.html %}
-        {% endif %}{% endfor %}
-      </ul>
-    {% endunless %}{% endfor %}
-
+{% for item in (0..site.tags.size) %}{% unless forloop.last %}
+{% capture tag %}{{ tags[item] | strip_newlines }}{% endcapture %}
+   <h2 id="{{ tag }}" class="tag-heading">{{ tag }}</h2>
+   <ul class="archive">
+    {% for post in site.tags[tag] %}{% if post.title != null %}
+        {% include partials/post.html %}
+    {% endif %}{% endfor %}
+  </ul>
+{% endunless %}{% endfor %}
+```
 
 ### Data Files
 
@@ -166,6 +166,7 @@ There are various features powered by a set of JavaScript plugins and functions.
  - Embedding YouTube videos with `{% youtube {youtube-video-id} %}` where you pass the **id** of the YouTube video using [this gist](https://gist.github.com/joelverhagen/1805814)
  - Embedding Vimeo videos with `{% vimeo {vimeo-video-id} %}` where you pass the **id** of the Vimeo video using [jekyll-vimeo-plugin](https://github.com/gummesson/jekyll-vimeo-plugin)
  - Open Graph, Twitter and Schema.or annotation enabled
+ - Image compression using [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin)
 
 #### Dynamic Navigation Menu
 
@@ -434,7 +435,6 @@ The only thing i'd like to note if you are using the `jekyll serve` approach is 
 
  - [ ] Schema.org annotations
  - [ ] Lazy Load Disquss Comments
- - [ ] Add image compression to the grunt build
 
 ## Relevant References:
  - [jekyll-now - Build a Jekyll blog in minutes, without touching the command line](https://github.com/barryclark/jekyll-now)
