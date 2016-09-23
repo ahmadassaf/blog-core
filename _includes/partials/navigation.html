@@ -1,7 +1,7 @@
 <div class="navigation-bar {% if page.layout == 'post' %} post-navigation {% endif %}">
 
     <div class="header-elements">
-            <a href="{% if page.layout != 'home' %}{{ site.url }}/blog.html{% else %}{{ site.url }}{% endif %}" class="logo {% if page.layout == 'post' %} post-logo {% endif %}"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
+            <a href="{% if page.layout != 'home' %}{{ site.url }}/blog{% else %}{{ site.url }}{% endif %}" class="logo {% if page.layout == 'post' %} post-logo {% endif %}"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
             {% if page.layout != 'error' %}
             {% if page.layout != 'post' %}
                 <h1 class="section-title">{{ page.title}}</h1>
@@ -27,7 +27,7 @@
         <li class="menu-toggle responsive"><i class="fa fa-bars" aria-hidden="true"></i></li>
         <img alt="close-menu" class="close-menu" src="/images/close-menu.svg"/>
         {% else %}
-            <li><a href="{{ site.url }}/blog.html">Blog</a></li>
+            <li><a href="{{ site.url }}/blog">Blog</a></li>
             <li><a href="">Papers</a></li>
             <li><a href="">Projects</a></li>
             <li><a href="">About</a></li>
