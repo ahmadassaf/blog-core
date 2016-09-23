@@ -96,7 +96,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-minified');
 
     // Register the grunt build task
-    grunt.registerTask('build', ['clean', 'mkdir:images', 'mkdir:js', 'copy:images', 'bgShell:jekyllBuild', 'browserify']);
+    grunt.registerTask('build', ['clean', 'mkdir:images', 'mkdir:js', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'minified']);
 
     // Register the grunt serve task
     grunt.registerTask('serve', ['build', 'minified', 'concurrent:serve']);
