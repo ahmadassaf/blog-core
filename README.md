@@ -1,9 +1,10 @@
 # Ahmad Assaf Personal Webspace
-## [Homepage](http**://ahmadassaf.com) | [Blog](http**://ahmadassaf.com/blog)
 
-[ ![Codeship Status for ahmadassaf/blog-core](https**://codeship.com/projects/f898c400-4dca-0134-ded1-069048840640/status?branch=master)](https**://codeship.com/projects/170632)
+### [Homepage](http://ahmadassaf.com) | [Blog](http://ahmadassaf.com/blog)
+
+[![Codeship Status](https://codeship.com/projects/f898c400-4dca-0134-ded1-069048840640/status?branch=master)](https://codeship.com/projects/170632)
 <a href="#" id="status-image-popup" name="status-images" class="open-popup" title="Latest push build on default branch**: passed" data-ember-action="1015">
-    <img src="https**://travis-ci.org/ahmadassaf/blog-core.svg" alt="build**:passed">
+    <img src="https://travis-ci.org/ahmadassaf/blog-core.svg" alt="build**:passed">
 </a>
 
 Having had my blog on WordPress for a while now, i thought i need a lighter platform especially that my blog content is very lightweight and i don't really need a fully fledged CRM. Another reason to move away from WordPress was the need to have a collaborative effort and to write posts in Markdown. I have finally decided on [Jekyll](https**://jekyllrb.com/) for its simplicity and extensibility.
