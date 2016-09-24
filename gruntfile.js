@@ -109,13 +109,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-newer');
 
     // Register the grunt build task
-    grunt.registerTask('build', ['clean', 'mkdir:images', 'mkdir:js', 'copy:images', 'newer:imagemin' ,'bgShell:jekyllBuild', 'browserify', 'minified']);
+    grunt.registerTask('build', ['clean', 'mkdir:images', 'mkdir:js', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'minified']);
 
     // Register the grunt serve task
     grunt.registerTask('serve', ['build', 'minified', 'concurrent:serve']);
 
     // Register the grunt serve task
-    grunt.registerTask('local', ['build', 'minified', 'concurrent:local']);
+    grunt.registerTask('local', ['build', 'newer:imagemin', 'minified', 'concurrent:local']);
 
     // Register build as the default task fallback
     grunt.registerTask('default', 'build');
