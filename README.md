@@ -431,11 +431,6 @@ The only thing i'd like to note if you are using the `jekyll serve` approach is 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
-### ToDos:
-
- - [ ] Schema.org annotations
- - [ ] Lazy Load Disquss Comments
-
 ## Relevant References:
  - [jekyll-now - Build a Jekyll blog in minutes, without touching the command line](https://github.com/barryclark/jekyll-now)
  - [Website Continuous Integration with Travis CI, Jekyll, gulp, and GitHub](https://cesiumjs.org/2016/02/03/Cesium-Website-Continuous-Integration/)
