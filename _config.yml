@@ -4,10 +4,9 @@ description: Ahmad Assaf's blog about Software Engineering, Data Science, Produc
 url: http://ahmadassaf.com
 github-repo: https://github.com/ahmadassaf/blog/
 logo: logo.svg
-locale: en_US
+locale: en_USf
 
-background:
-  default-post: images/website-screenshot.png   # this image will be shown when post's front matter doesn't specify any image
+default-post-image: website-screenshot.png   # this image will be shown when post's front matter doesn't specify any image
 
 # Jekyll
 permalink:          /posts/:title/
@@ -69,6 +68,7 @@ gems:
   - jekyll-gist
   - jekyll-archives
   - jekyll-paginate
+  - jekyll-time-to-read
 
 # Exclude list
 include: [_pages]

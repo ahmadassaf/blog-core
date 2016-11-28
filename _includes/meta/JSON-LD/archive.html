@@ -1,0 +1,57 @@
+{% assign items = "" %}
+  {% for page in page.posts %}
+    {% capture list_item %}
+        {
+           "@context":"http://schema.org",
+           "@type":"BlogPosting",
+           "headline":"{{ page.title }}",
+           "genre":"{{ page.category }}",
+           "keywords":"{{ page.tags | join: ", " }}",
+           "url":"{{ site.url }}{{ page.url }}",
+           "datePublished":"{{ page.date | date: '%Y-%m-%d' }}",
+           "author":{
+              "@type": "Person",
+              "name": "Ahmad Assaf",
+              "jobTitle": "Senior Data Scientist @Beamery",
+              "affiliation": "Beamery",
+              "url": "http://www.ahmadassaf.com",
+              "telephone": "(+44) 742-9204-600",
+              "email": "me@ahmadassaf.com",
+              "sameAs": [
+                    "https://ahmadassaf.com",
+                    "https://twitter.com/ahmadaassaf",
+                    "https://github.com/ahmadassaf",
+                    "https://plus.google.com/u/1/+AhmadAssafA",
+                    "https://linkedin.com/in/ahmadassaf",
+                    "https://facebook.com/ahmad.a.assaf",
+                    "http://stackoverflow.com/users/557821/ahmadassaf",
+                    "https://www.quora.com/profile/Ahmad-Assaf",
+                    "https://www.instagram.com/ahmadaassaf/",
+                    "https://news.ycombinator.com/user?id=ahmadassaf"
+                ]
+           },
+           "image":{
+              "@type":"ImageObject",
+              "contentUrl":"{{ page.image }}",
+              "url":"http://ahmadassaf.com/blog"
+           },
+           "mainEntityOfPage":{
+              "@type":"WebPage",
+              "@id":"https://ahmadassaf.com/blog"
+           }
+        }
+    {% endcapture %}
+    {% assign items = items | append: list_item | append: "|||" %}
+  {% endfor %}
+
+  {% assign items = items | split: "|||" | join: ',' %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {{ items }}
+  ]
+}
+</script>

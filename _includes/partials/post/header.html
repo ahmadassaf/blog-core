@@ -1,18 +1,27 @@
 <div class="post-header">
 	<a href="{{ site.url }}/blog" class="logo"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
+
+    <!-- Article Schema.org Metadata -->
+    <meta itemprop="thumbnailUrl" content="{{ site.url }}/{{ page.image }}" />
+    <meta itemprop="url" content="{{ site.url }}{{ post.url }}"/>
+    <meta itemprop="description" content="{{ page.excerpt }}"/>
+    <meta itemprop="wordCount" content="{{ content | number_of_words }}"/>
+    <!-- End Article Metadata -->
+
 	<div class="post-title-section">
 	 	<div class="section-line"><a class="category capitalize" href="{{ site.url}}/{{page.category | downcase | replace:' ', '-' }}">{% if page.category %}{{page.category}}{% else %}Home{% endif %}</a><em>/</em></div>
-	 	<h1 class="section-title post-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+	 	<h1 itemprop="name headline" class="section-title post-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
 	 	<h2 class="section-subtitle">{{ page.subtitle }}</h2>
         {% if page.layout != 'error' %}
-		 	<div class="date">{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}</div>
+		 	<div itemprop='dateCreated' class="date">{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}</div>
+            <div class="reading-time"><i class="fa fa-clock-o" aria-hidden="true"></i>Reading Time: {{ content | reading_time_as_i }}</div>
             <div class="contribute">
                 <i class="fa fa-github" aria-hidden="true"></i>
-                <a target="_blank" href='{{site.github-repo}}blob/master/{{page.category | downcase | url_escape }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>Contribute to this post on Github</a>
+                <a itemprop="sameAs" target="_blank" href='{{site.github-repo}}blob/master/{{page.category | downcase | url_escape }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>Contribute to this post on Github</a>
             </div>
 			<ul class="tags">
 				{% for tag in page.tags %}
-    				<li><a href="{{ site.url }}/{{ tag | downcase | replace:' ', '-' }}">{{ tag }}</a></li>
+    				<li><a itemprop='articleSection keywords' href="{{ site.url }}/{{ tag | downcase | replace:' ', '-' }}">{{ tag }}</a></li>
     				{% unless forloop.last %}{% endunless %}
 				{% endfor %}
 			</ul>
