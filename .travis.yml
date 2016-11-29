@@ -1,13 +1,19 @@
 language: ruby
 rvm:
 - 2.2
-script:
-- bundle exec jekyll build
-- bundle exec htmlproofer ./_site --disable-external
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+addons:
+  ssh_known_hosts: ahmadassaf.com
 sudo: false
 before_install:
-- openssl aes-256-cbc -K $encrypted_7bbee2d42c21_key -iv $encrypted_7bbee2d42c21_iv
-  -in deploy-key.enc -out deploy-key -d
+- nvm install 4.2.2
+- nvm use 4.2.2
+- npm install grunt-cli -g
+- bash _scripts/install.sh
+script:
+  - bash _scripts/build.sh
+  - bash _scripts/test.sh
+after_success:
+  - bash _scripts/deploy.sh
