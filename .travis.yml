@@ -1,15 +1,13 @@
 language: ruby
 rvm:
 - 2.2
-
-# Assume bundler is being used, therefore
-# the `install` step will run `bundle install` by default.
 script:
-  - bundle exec jekyll build
-  - bundle exec htmlproofer ./_site --disable-external
-
+- bundle exec jekyll build
+- bundle exec htmlproofer ./_site --disable-external
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
-sudo: false # route your build to the container-based infrastructure for a faster build
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+sudo: false
+before_install:
+- openssl aes-256-cbc -K $encrypted_7bbee2d42c21_key -iv $encrypted_7bbee2d42c21_iv
+  -in deploy-key.enc -out deploy-key -d
