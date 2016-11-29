@@ -8,6 +8,7 @@ addons:
   ssh_known_hosts: ahmadassaf.com
 sudo: false
 before_install:
+- bundle install
 - nvm install 4.2.2
 - nvm use 4.2.2
 - npm install grunt-cli -g
