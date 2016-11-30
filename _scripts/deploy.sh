@@ -5,7 +5,7 @@ set -x
 cd _site
 git init
 
-git remote add deploy "ssh://hal@178.62.50.198.com:8028/var/www/blog"
+git remote add deploy "ssh://hal@178.62.50.198:8028/var/www/blog"
 git config user.name "Travis CI"
 git config user.email "ahmad.a.assaf+travisCI@gmail.com"
 
