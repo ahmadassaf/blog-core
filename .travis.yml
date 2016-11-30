@@ -17,5 +17,5 @@ before_install:
 script:
   - bash _scripts/build.sh
   - bash _scripts/test.sh
-after_success:
+deploy:
   - bash _scripts/deploy.sh
