@@ -5,10 +5,12 @@ set -x
 cd _site
 git init
 
-git remote add deploy "ssh://hal@ahmadassaf.com:/var/www/blog"
+git remote add deploy "ssh://hal@ahmadassaf.com:8028/var/www/blog"
 git config user.name "Travis CI"
 git config user.email "ahmad.a.assaf+travisCI@gmail.com"
 
 git add .
 git commit -m "Deploy"
 git push --force deploy master
+
+
