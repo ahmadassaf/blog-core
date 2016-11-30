@@ -1,5 +1,8 @@
 language: ruby
-cache: bundler
+cache:
+  bundler: true
+  directories:
+  - node_modules
 rvm:
 - 2.2
 env:
@@ -18,5 +21,5 @@ before_install:
 script:
   - bash _scripts/build.sh
   - bash _scripts/test.sh
-deploy:
+after_success:
   - bash _scripts/deploy.sh
