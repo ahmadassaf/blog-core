@@ -5,7 +5,7 @@ if [ $TRAVIS_BRANCH == 'master' ] ; then
     cd _site
     git init
 
-    git remote add deploy "hal@ahmadassaf.com:/var/www/blog"
+    git remote add deploy "ssh://hal@ahmadassaf.com:/var/www/blog"
     git config user.name "Travis CI"
     git config user.email "ahmad.a.assaf+travisCI@gmail.com"
 
