@@ -8,6 +8,7 @@
    "wordCount":"{{ page.content | number_of_words }}",
    "url":"{{ site.url }}{{ page.url }}",
    "datePublished":"{{ page.date | date: '%Y-%m-%d' }}",
+   "dateModified": "{{ page.date | date: '%Y-%m-%d' }}",
    "author":{
       "@type": "Person",
       "name": "Ahmad Assaf",
@@ -38,31 +39,11 @@
             "https://www.quora.com/profile/Ahmad-Assaf",
             "https://www.instagram.com/ahmadaassaf/",
             "https://news.ycombinator.com/user?id=ahmadassaf"
-        ],
-        "logo": {
-        "@type": "ImageObject",
-        "contentUrl": "http://ahmadassaf.com/images/logo.svg",
-          "url": "https://ahmadassaf.com"
-        }
+        ]
    },
    "publisher":{
-      "@type": "Person",
+      "@type": "Organization",
       "name": "Ahmad Assaf",
-      "jobTitle": "Senior Data Scientist @Beamery",
-      "affiliation": "Beamery",
-      "alumniOf": "SAP",
-      "alumniOf": "Universty of St.Andrews",
-      "alumniOf": "EURECOM",
-      "alumniOf": "Telecom ParisTech",
-      "url": "http://www.ahmadassaf.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "144 Octavia House, 213 Townmead Road",
-        "addressLocality": "London",
-        "addressRegion": "United Kingdom",
-        "postalCode": "SW6 2FJ"
-      },
-      "telephone": "(+44) 742-9204-600",
       "email": "me@ahmadassaf.com",
       "sameAs": [
             "https://ahmadassaf.com",
@@ -85,12 +66,14 @@
    "image":{
       "@type":"ImageObject",
       "contentUrl":"{{ page.image }}",
-      "url":"http://ahmadassaf.com/blog"
+      "url":"http://ahmadassaf.com/images/{{ page.image }}",
+      "width": 450,
+      "height": 250
+
    },
    "mainEntityOfPage":{
       "@type":"WebPage",
       "@id":"https://ahmadassaf.com/blog"
-   },
-   "articleBody":"{{ page.content | strip_html | xml_escape | normalize_whitepace | strip_newlines | strip }}"
+   }
 }
 </script>

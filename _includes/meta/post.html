@@ -1,0 +1,20 @@
+<meta itemprop="thumbnailUrl" content="{{ site.url }}/{{ post.image || site.default-post-image }}" />
+<div itemscope itemtype="http://schema.org/ImageObject" itemprop="image">
+        <meta itemprop="url" content="{{ site.url }}/{{ post.image || site.default-post-image }}" />
+        <meta itemprop="height" content="250"/>
+        <meta itemprop="width" content="450"/>
+</div>
+<meta itemprop="description" content="{{ page.excerpt }}"/>
+<meta itemprop="wordCount" content="{{ content | number_of_words }}"/>
+<meta itemprop="mainEntityOfPage" content="http://ahmadassaf.com/blog"/>
+<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Ahmad Assaf"/>
+</div>
+<div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Ahmad Assaf"/>
+    <div itemscope itemtype="http://schema.org/ImageObject" itemprop="logo">
+        <meta itemprop="url" content="{{ site.url }}/images/logo-plain.png"/>
+        <meta itemprop="height" content="95"/>
+        <meta itemprop="width" content="95"/>
+    </div>
+</div>

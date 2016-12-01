@@ -2,11 +2,7 @@
 	<a href="{{ site.url }}/blog" class="logo"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
 
     <!-- Article Schema.org Metadata -->
-    <meta itemprop="thumbnailUrl image" content="{{ site.url }}/{{ page.image || site.default-post-image }}" />
-    <meta itemprop="url" content="{{ site.url }}{{ post.url }}"/>
-    <meta itemprop="description" content="{{ page.excerpt }}"/>
-    <meta itemprop="wordCount" content="{{ content | number_of_words }}"/>
-    <meta itemprop="mainEntityOfPage"  content="http://ahmadassaf.com/blog"/>
+    {% include meta/post.html %}
     <!-- End Article Metadata -->
 
 	<div class="post-title-section">

@@ -1,11 +1,7 @@
 <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 
     <!-- Article Schema.org Metadata -->
-    <meta itemprop="thumbnailUrl image" content="{{ site.url }}/{{ page.image || site.default-post-image }}" />
-    <meta itemprop="description" content="{{ page.excerpt }}"/>
-    <meta itemprop="author publisher" itemscope itemtype="http://schema.org/Person" content="Ahmad Assaf"/>
-    <meta itemprop="wordCount" content="{{ content | number_of_words }}"/>
-    <meta itemprop="mainEntityOfPage" content="http://ahmadassaf.com/blog"/>
+    {% include meta/post.html %}
     <!-- End Article Metadata -->
 
     <h2 class="post-list-header">
