@@ -2,11 +2,11 @@
 	<a href="{{ site.url }}/blog" class="logo"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
 
     <!-- Article Schema.org Metadata -->
-    <meta itemtype="http://schema.org/BlogPosting" itemprop="thumbnailUrl" content="{{ site.url }}/{{ page.image }}" />
+    <meta itemtype="http://schema.org/BlogPosting" itemprop="thumbnailUrl image" content="{{ site.url }}/{{ page.image || site.default-post-image }}" />
     <meta itemtype="http://schema.org/BlogPosting" itemprop="url" content="{{ site.url }}{{ post.url }}"/>
     <meta itemtype="http://schema.org/BlogPosting" itemprop="description" content="{{ page.excerpt }}"/>
     <meta itemtype="http://schema.org/BlogPosting" itemprop="wordCount" content="{{ content | number_of_words }}"/>
-    <meta itemtype="http://schema.org/BlogPosting" itemprop="image" content="{{ page.image || site.default-post-image}}"/>
+    <meta itemprop="mainEntityOfPage" itemscope itemtype="http://schema.org/WebPage" content="http://ahmadassaf.com/blog"/>
     <!-- End Article Metadata -->
 
 	<div class="post-title-section">

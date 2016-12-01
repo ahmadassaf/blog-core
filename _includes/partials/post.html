@@ -1,11 +1,11 @@
 <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 
     <!-- Article Schema.org Metadata -->
-    <meta itemtype="http://schema.org/BlogPosting" itemprop="thumbnailUrl" content="{{ site.url }}/{{ page.image }}" />
+    <meta itemtype="http://schema.org/BlogPosting" itemprop="thumbnailUrl image" content="{{ site.url }}/{{ page.image || site.default-post-image }}" />
     <meta itemtype="http://schema.org/BlogPosting" itemprop="description" content="{{ page.excerpt }}"/>
-    <meta itemtype="http://schema.org/BlogPosting" itemprop="author publisher" content="Ahmad Assaf"/>
+    <meta itemtype="http://schema.org/BlogPosting" itemprop="author publisher" itemscope itemtype="http://schema.org/Person" content="Ahmad Assaf"/>
     <meta itemtype="http://schema.org/BlogPosting" itemprop="wordCount" content="{{ content | number_of_words }}"/>
-    <meta itemtype="http://schema.org/BlogPosting" itemprop="image" content="{{ page.image || site.default-post-image}}"/>
+    <meta itemprop="mainEntityOfPage" itemscope itemtype="http://schema.org/WebPage" content="http://ahmadassaf.com/blog" />
     <!-- End Article Metadata -->
 
     <h2 class="post-list-header">
