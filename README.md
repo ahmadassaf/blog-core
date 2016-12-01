@@ -3,8 +3,10 @@
 ### [Homepage](http://ahmadassaf.com) | [Blog](http://ahmadassaf.com/blog)
 
 <a href="#" id="status-image-popup" name="status-images" class="open-popup" title="Latest push build on default branch**: passed" data-ember-action="1015">
-    <img src="https://travis-ci.org/ahmadassaf/blog-core.svg" alt="build**:passed">
+    <img src="https://travis-ci.org/ahmadassaf/blog-core.svg" alt="build**:passed"/>
 </a>
+<a class="badge" href="https://david-dm.org/ahmadassaf/blog-core" data-reactid="35"><img src="https://david-dm.org/ahmadassaf/blog-core/status.svg" alt="dependencies status" data-reactid="36"></a>
+<a class="badge" href="https://david-dm.org/ahmadassaf/blog-core" data-reactid="35" data-type="dev"><img src="https://david-dm.org/ahmadassaf/blog-core/dev-status.svg" alt="devDependencies status" data-reactid="36"></a>
 
 Having had my blog on WordPress for a while now, i thought i need a lighter platform especially that my blog content is very lightweight and i don't really need a fully fledged CRM. Another reason to move away from WordPress was the need to have a collaborative effort and to write posts in Markdown. I have finally decided on [Jekyll](https**://jekyllrb.com/) for its simplicity and extensibility.
 
@@ -13,6 +15,8 @@ Jekyll takes your content written in Markdown, passes it through your templates 
 Jekyll uses the Liquid templating language to process templates. There are two important things to know about using Liquid.
 First, a YAML front-matter block is at the beginning of every content file. It specifies the layout of the page and other variables, like title, date and tags. It may include custom page variables that you’ve created, too.
 Liquid template tags are used to execute loops and conditional statements and to output content.
+
+> For more details you can check out [my blog post](ahmadassaf.com/posts/power-up-a-hero-blog-with-jekyll/)
 
 ### Directory Structure
 

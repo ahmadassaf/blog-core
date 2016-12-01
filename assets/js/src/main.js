@@ -5,7 +5,7 @@ var $                =
 var fitVids          = require('fitvids');
 var el               = require('elasticlunr');
 var popup            = require('magnific-popup');
-var typeIt           = require('typeit');
+var typed            = require('typed.js');
 var _                = require('lodash');
 
 // This will include the posts.json built in the _site by jekyll
@@ -34,8 +34,12 @@ var blog = {
      * @addResponsiveMenu
      */
     addHomePageScripts: function() {
-        $('#profession').typeIt({
-             strings: ["Data Scientist", "Software Engineer", "Knowledge Seeker"], breakLines: false, speed: 150, loop: true, loopDelay: 10000, breakDelay: 10000, autoStart: false
+
+        $('#profession').typed({
+            strings: ["Data Scientist", "Software Engineer", "Knowledge Seeker"],
+            typeSpeed: 100,
+            backDelay: 3500,
+            loop: true,
         });
     },
 

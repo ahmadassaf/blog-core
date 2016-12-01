@@ -57,6 +57,10 @@
 
             a {
                 color: $home-gray;
+
+                &:hover {
+                    color: $blue
+                }
             }
         }
     }
