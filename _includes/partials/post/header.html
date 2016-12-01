@@ -6,6 +6,7 @@
     <meta itemtype="http://schema.org/BlogPosting" itemprop="url" content="{{ site.url }}{{ post.url }}"/>
     <meta itemtype="http://schema.org/BlogPosting" itemprop="description" content="{{ page.excerpt }}"/>
     <meta itemtype="http://schema.org/BlogPosting" itemprop="wordCount" content="{{ content | number_of_words }}"/>
+    <meta itemtype="http://schema.org/BlogPosting" itemprop="image" content="{{ page.image || site.default-post-image}}"/>
     <!-- End Article Metadata -->
 
 	<div class="post-title-section">
@@ -13,7 +14,7 @@
 	 	<h1 itemprop="name headline" class="section-title post-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
 	 	<h2 class="section-subtitle">{{ page.subtitle }}</h2>
         {% if page.layout != 'error' %}
-		 	<div itemprop='dateCreated' class="date">{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}</div>
+		 	<div itemprop='dateCreated dateModified datePublished' class="date">{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}</div>
             <div class="reading-time"><i class="fa fa-clock-o" aria-hidden="true"></i>Reading Time: {{ content | reading_time_as_i }}</div>
             <div class="contribute">
                 <i class="fa fa-github" aria-hidden="true"></i>
