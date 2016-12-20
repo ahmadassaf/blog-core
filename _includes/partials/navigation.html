@@ -9,10 +9,12 @@
             {% endif %}
     </div>
 
-    <img alt="close-menu" class="close-menu" src="/images/close-menu.svg"/>
-    <div class="geometry geometry-menu"></div>
     <ul class="categories-list {% if page.layout == 'home' %} home-menu {% endif %}">
         {% if page.layout != 'home' %}
+
+        <img alt="close-menu" class="close-menu" src="/images/close-menu.svg"/>
+        <div class="geometry geometry-menu"></div>
+
         <li class="icon-menu-toggle search-toggle responsive"><i class="fa fa-search" aria-hidden="true"></i></li>
         <li class="icon-menu-toggle archive-toggle responsive"><a class="icon-menu-toggle" href="{{ site.url }}/posts"><i class="fa fa-archive" aria-hidden="true"></i></a></li>
         <li class="icon-menu-toggle archive-toggle responsive"><a class="icon-menu-toggle" href="{{ site.url }}/tags"><i class="fa fa-bookmark" aria-hidden="true"></i></a></li>
