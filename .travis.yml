@@ -28,3 +28,5 @@ script:
 - bash _scripts/test.sh
 after_success:
 - bash _scripts/deploy.sh
+notifications:
+  slack: snarc:Gg5ax4SydLjIhkl9IU3N4V29
