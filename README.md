@@ -2,7 +2,7 @@
 
 ### [Homepage](http://ahmadassaf.com) | [Blog](http://ahmadassaf.com/blog)
 
-<a href="#" id="status-image-popup" name="status-images" class="open-popup" title="Latest push build on default branch**: passed" data-ember-action="1015">
+<a href="https://travis-ci.org/ahmadassaf/blog-core" id="status-image-popup" name="status-images" class="open-popup" title="Latest push build on default branch**: passed" data-ember-action="1015">
     <img src="https://travis-ci.org/ahmadassaf/blog-core.svg" alt="build**:passed"/>
 </a>
 <a class="badge" href="https://david-dm.org/ahmadassaf/blog-core" data-reactid="35"><img src="https://david-dm.org/ahmadassaf/blog-core/status.svg" alt="dependencies status" data-reactid="36"></a>

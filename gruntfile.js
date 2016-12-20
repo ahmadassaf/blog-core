@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 
         watch: {
             files: ['assets/js/**/*.js'],
-            tasks: ['browserify']
+            tasks: ['copy', 'browserify']
         },
 
         concurrent: {
