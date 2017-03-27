@@ -163,12 +163,16 @@
 @media screen and (max-width:650px) {
 
     .homepage .main-title {
+
+      	margin: 130px 0 50px;
+
         h1 {
-            font-size: 2.5em;
+            font-size: 1.7em;
             text-align:center;
         }
 
         h4 {
+        	text-transform: none;
             display:block;
         }
     }
