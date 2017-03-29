@@ -652,7 +652,7 @@ The post-receive hook will just need to be executable, so that it actually can d
 $ chmod +x post-receive
 ```
 
-## Setting up Travis CI
+## Setting up TravisCI
 
 Everything now is ready for Travis to start doing its magic. However, we have a slight problem of granting Travis access to the private key. If our Github repo is private this can be a solution although this is definitely not a recommended approach.
 
