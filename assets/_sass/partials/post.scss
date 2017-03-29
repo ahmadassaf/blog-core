@@ -17,13 +17,25 @@
         font-size: 40px;
         line-height: 70px;
         margin-bottom: 50px;
+        width: 100%;
+    	margin: 70px 0;
+    	padding: 20px 0 0;
     }
+
     h2 {
         font-size: 30px;
         line-height: 1.5em;
         margin-top: 20px;
         margin-bottom: 30px;
+        border-bottom: 7px solid #399f62;
+    	padding: 5px 0;
     }
+
+    h3, h4 {
+	    color: #fff !important;
+	    background: #399f62;
+	}
+
     p {
         font-size: 20px;
         line-height: 1.8em;
@@ -58,6 +70,19 @@
     }
 }
 
+.comments-disabled {
+	display: table;
+	width: 100%;
+	background: $green;
+	text-align: center;
+
+	h2 {
+		color: $white;
+		margin: 0 auto;
+		padding: 10px;
+	}
+}
+
 @media screen and (max-width:950px) {
 
     .blog-post {
@@ -73,11 +98,14 @@
 
         h1 {
             font-size: 40px;
-            margin-bottom: 20px;
+            padding: 0;
+            letter-spacing: 1px;
+            font-weight: 400;
         }
         h2 {
             font-size: 30px;
             margin: 40px 0;
+            font-weight: 400;
         }
         p, li {
             font-size: 16px;

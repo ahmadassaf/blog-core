@@ -13,8 +13,18 @@
 		 	<div itemprop='dateCreated dateModified datePublished' class="date">{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}</div>
             <div class="reading-time"><i class="fa fa-clock-o" aria-hidden="true"></i>Reading Time: {{ content | reading_time_as_i }}</div>
             <div class="contribute">
-                <i class="fa fa-github" aria-hidden="true"></i>
-                <a itemprop="sameAs" target="_blank" href='{{site.github-repo}}blob/master/{{page.category | downcase | url_escape }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>Contribute to this post on Github</a>
+
+            	<span class="contribution">
+	                <i class="fa fa-github" aria-hidden="true"></i>
+	                <a itemprop="sameAs" target="_blank" href='{{site.github-repo}}blob/master/{{page.category | downcase | url_escape }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>Contribute to this post on Github</a>
+                </span>
+                {% if page.hackerNews %}
+                	<span class="contribution">
+	                	<i class="fa fa-hacker-news" aria-hidden="true"></i>
+	                	<a target="_blank" href='{{ page.hackerNews }}'>Discuss on HackerNews</a>
+	                </span>
+                {% endif %}
+
             </div>
 			<ul class="tags">
 				{% for tag in page.tags %}

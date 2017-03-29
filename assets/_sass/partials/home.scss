@@ -130,10 +130,13 @@
 @media screen and (max-width:850px) {
 
     .navigation-bar .header-elements .logo {
-        left: 30px;
+        left: 60px;
     }
 
     .homepage {
+	    .navigation-bar .header-elements .logo {
+        	left: 30px;
+    	}
         .fixed-sidebar {
             width: 10px !important;
         }
@@ -161,6 +164,10 @@
 }
 
 @media screen and (max-width:650px) {
+
+    .navigation-bar .header-elements .logo {
+        left: 40px;
+    }
 
     .homepage .main-title {
 
