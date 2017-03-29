@@ -17,6 +17,7 @@
 
 			&:hover {
 
+				border-top: 1px solid $green;
                 border-color: $green;
 
                 .post-title span {
@@ -30,6 +31,14 @@
                 		color: $white;
                 	}
                 }
+            }
+
+
+            &:first-child {
+
+            	&:hover {
+                	border-top: none;
+            	}
             }
 
             h2 {
