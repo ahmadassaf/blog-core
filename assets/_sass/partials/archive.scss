@@ -98,7 +98,11 @@
     }
 }
 
-
+.homepage .archive-container ul.archive  > li {
+	&:hover {
+		border:none;
+	}
+}
 
 .archive-container.main {
     margin: 0 auto;

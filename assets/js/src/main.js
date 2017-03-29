@@ -49,7 +49,7 @@ var blog = {
     */
     addStickyLogo: function() {
         $(window).scroll(function(){
-            if ($('.post-title-section')) {
+            if (!!$('.post-title-section').length) {
                 if ($(window).scrollTop() > $('.post-title-section').offset().top) {
                     $('.post-logo').fadeIn('slow');
                 } else $('.post-logo').hide();
