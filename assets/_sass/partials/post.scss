@@ -1,41 +1,47 @@
 @import "post/post-header";
 
-.blog-post {
+div[itemprop="blogPost"] {
+    display: table;
+    width: 90%;
+    margin: 0 auto;
+}
 
+.blog-post {
     a:not(.btn) {
         color: $green;
         border-bottom: 1px dashed;
     }
-
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: 'Open Sans';
         font-weight: 800;
         color: $black;
     }
-
     h1 {
         font-size: 40px;
         line-height: 70px;
         margin-bottom: 50px;
         width: 100%;
-    	margin: 70px 0;
-    	padding: 20px 0 0;
+        margin: 70px 0;
+        padding: 20px 0 0;
     }
-
     h2 {
         font-size: 30px;
         line-height: 1.5em;
         margin-top: 20px;
         margin-bottom: 30px;
         border-bottom: 7px solid #399f62;
-    	padding: 5px 0;
+        padding: 5px 0;
     }
-
-    h3, h4 {
-	    color: #fff !important;
-	    background: #399f62;
-	}
-
+    h3,
+    h4 {
+        color: #fff !important;
+        background: #399f62;
+    }
     p {
         font-size: 20px;
         line-height: 1.8em;
@@ -53,16 +59,15 @@
         margin-bottom: 10px;
         display: block;
     }
-    ul, ol {
+    ul,
+    ol {
         padding-left: 30px;
         margin: 30px 0;
-
-        > li {
+        >li {
             position: relative;
             margin-bottom: 10px;
             font-size: 20px;
             line-height: 1.6em;
-
             &:first-child {
                 margin-top: 20px;
             }
@@ -71,31 +76,27 @@
 }
 
 .comments-disabled {
-	display: table;
-	width: 100%;
-	background: $green;
-	text-align: center;
-
-	h2 {
-		color: $white;
-		margin: 0 auto;
-		padding: 10px;
-	}
+    display: table;
+    width: 100%;
+    background: $green;
+    text-align: center;
+    h2 {
+        color: $white;
+        margin: 0 auto;
+        padding: 10px;
+    }
 }
 
 @media screen and (max-width:950px) {
-
     .blog-post {
         .align-right {
-            display:none;
+            display: none;
         }
     }
 }
 
 @media screen and (max-width:640px) {
-
     .blog-post {
-
         h1 {
             font-size: 40px;
             padding: 0;
@@ -107,28 +108,25 @@
             margin: 40px 0;
             font-weight: 400;
         }
-        p, li {
+        p,
+        li {
             font-size: 16px;
             line-height: 24px;
         }
-        ul > li {
+        ul>li {
             margin-bottom: 10px;
             font-size: 16px;
         }
-
-        p, li {
+        p,
+        li {
             font-size: 16px !important;
             line-height: 24px !important;
         }
     }
-
     .post-header {
-
         .post-title-section {
-
             .section-title {
                 font-size: 40px;
-
             }
             .section-subtitle {
                 font-size: 25px;
@@ -137,7 +135,6 @@
                 display: none;
             }
         }
-
         .date {
             margin: 80px 0 40px;
         }

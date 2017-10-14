@@ -3,7 +3,6 @@
     display: table;
     margin: 110px auto;
     width:90%;
-
     ul.archive {
 
         > li {
@@ -16,9 +15,6 @@
             }
 
 			&:hover {
-
-				border-top: 1px solid $green;
-                border-color: $green;
 
                 .post-title span {
                 	color: $green;

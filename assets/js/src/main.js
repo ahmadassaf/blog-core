@@ -1,15 +1,15 @@
 'use strict';
 
-var $                =
-    global.jQuery    = require('jquery');
-var fitVids          = require('fitvids');
-var el               = require('elasticlunr');
-var popup            = require('magnific-popup');
-var typed            = require('typed.js');
-var _                = require('lodash');
+const $ = global.jQuery = require('jquery');
+const fitVids = require('fitvids');
+const el = require('elasticlunr');
+const popup = require('magnific-popup');
+const typed = require('typed.js');
+const AOS = require('aos');
+const _ = require('lodash');
 
 // This will include the posts.json built in the _site by jekyll
-var posts   = require('../../../_site/posts.json');
+var posts = require('../../../_site/posts.json');
 
 var blog = {
 
@@ -18,8 +18,10 @@ var blog = {
         var blog = this;
 
         this.addImageLightBox();
+        $('.blog-post > *').attr("data-aos", "fade-in");
 
         $(document).ready(function() {
+            AOS.init();
             blog.addFitVideos();
             blog.addMagnifiquePopup();
             blog.addResponsiveMenu();
@@ -34,22 +36,23 @@ var blog = {
      * @addResponsiveMenu
      */
     addHomePageScripts: function() {
-
-        $('#profession').typed({
-            strings: ["Data Scientist", "Software Engineer", "Knowledge Seeker"],
-            typeSpeed: 100,
-            backDelay: 3500,
-            loop: true,
-        });
+        if ($('#profession').length) {
+            var professionRotator = new typed('#profession', {
+                strings: ["Data Scientist", "Software Engineer", "Knowledge Seeker"],
+                typeSpeed: 100,
+                backDelay: 3500,
+                loop: true,
+            });
+        }
     },
 
     /**
      * Add function to make the logo in the posts page sticky when the user scrolls below the header
      * @addResponsiveMenu
-    */
+     */
     addStickyLogo: function() {
-        $(window).scroll(function(){
-            if (!!$('.post-title-section').length) {
+        $(window).scroll(function() {
+            if ($('.post-title-section').length) {
                 if ($(window).scrollTop() > $('.post-title-section').offset().top) {
                     $('.post-logo').fadeIn('slow');
                 } else $('.post-logo').hide();
@@ -64,13 +67,13 @@ var blog = {
     addResponsiveMenu: function() {
 
         // Add the click listener to toggle the responsive menu class
-        $('.menu-toggle, .close-menu').on('click', function(){
+        $('.menu-toggle, .close-menu').on('click', function() {
             $('.categories-list').toggleClass('responsive');
         });
 
         // Add keypress listener to exit search interface on ESC
         $(document).keyup(function(e) {
-             if (e.keyCode == 27) {
+            if (e.keyCode == 27) {
                 if ($('.categories-list').hasClass('responsive')) $('.categories-list').toggleClass('responsive');
             }
         });
@@ -81,7 +84,8 @@ var blog = {
             var container = $(".navigation-bar");
 
             if (!container.is(e.target) // if the target of the click isn't the container...
-                && container.has(e.target).length === 0) // ... nor a descendant of the container
+                &&
+                container.has(e.target).length === 0) // ... nor a descendant of the container
             {
                 $('.categories-list').removeClass('responsive');
             }
@@ -94,9 +98,11 @@ var blog = {
                 $('.categories-list').toggleClass('responsive');
             }
 
-            if ($(window).scrollTop() > $('.post-title-section').offset().top) {
-                $('.post-logo').fadeIn('slow');
-            } else $('.post-logo').hide();
+            if ($('.post-title-section').length) {
+                if ($(window).scrollTop() > $('.post-title-section').offset().top) {
+                    $('.post-logo').fadeIn('slow');
+                } else $('.post-logo').hide();
+            }
         });
     },
 
@@ -105,7 +111,7 @@ var blog = {
      * @addSeachTrigger
      */
     addSearchTrigger: function() {
-        $('.search-toggle, .search-close').on('click', function(){
+        $('.search-toggle, .search-close').on('click', function() {
 
             $('.search-container').toggle();
             // Add the focus on the input box to start searching
@@ -114,40 +120,40 @@ var blog = {
 
         // Add keypress listener to exit search interface on ESC
         $(document).keyup(function(e) {
-             if (e.keyCode == 27) {
+            if (e.keyCode == 27) {
                 if ($('.search-container').is(':visible')) $('.search-container').toggle();
             }
         });
 
         // We would like now to fetch the posts JSON data into lunr.js and build the index
-        var index = el(function () {
+        var index = el(function() {
             this.addField('title', { boost: 10 });
             this.addField('content', { boost: 5 });
             this.addField('category');
         });
 
-        _.each(posts, function(post){
+        _.each(posts, function(post) {
             index.addDoc(_.values(post)[0]);
         });
 
-        // Add the listening function for the input box and execute the index search
-        $('input[type="search"]').on('input', function() {
+        $('input[type="search"]').keyup(function() {
+            var filter = this.value;
 
-            var filter = $(this).val();
-
-            // Hit the search index if the length of the query is long enoughoooo
-            if (filter.length >= 3 ) {
-
+            // Hit the search index if the length of the query is long enough
+            if (filter.length >= 3) {
+    
                 $('.search-results').empty();
-
+    
                 var results = index.search(filter);
-                results.forEach(function(result){
-
-                    var resultObject  = _.values(posts[--result.ref])[0];
+                // If we have any results just hide the featured posts
+                
+                results.forEach(function(result) {
+                    var resultObject = _.values(posts[--result.ref])[0];
                     var resultElement = '<li><a href="' + resultObject.url + '">' + resultObject.title + '</a></li>';
                     $('.search-results').append(resultElement);
                 });
             } else $('.search-results').empty();
+            
         });
     },
     /**
@@ -197,18 +203,18 @@ var blog = {
     addMagnifiquePopup: function() {
         if (!!$('.image-popup').length) {
             $('.image-popup').magnificPopup({
-                type    : 'image',
+                type: 'image',
                 tLoading: 'Loading image #%curr%...',
-                gallery : {
-                  enabled           : true,
-                  navigateByImgClick: true,
-                  preload           : [0,1]
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1]
                 },
                 image: {
-                  tError      : '<a href="%url%">Image #%curr%</a> could not be loaded.',
+                    tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
                 },
                 removalDelay: 300,
-                mainClass   : 'mfp-fade'
+                mainClass: 'mfp-fade'
             });
         }
     }

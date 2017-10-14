@@ -61,8 +61,8 @@ webrick:
   headers:
     "Access-Control-Allow-Origin": "*"
 
-# Gems
-gems:
+# Gems/plugins
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist

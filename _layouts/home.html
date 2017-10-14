@@ -6,7 +6,7 @@ layout: compress
 <html>
     {% include partials/head.html %}
 
-    <div class="main-title">
+    <div class="main-title" data-aos="fade-up" data-aos-delay="100">
         <h4> Hi, I am</h4>
         <h1> Ahmad Assaf </h1>
         <h2 class="rotating"> I am a <span class="rotating-text" id=profession></span></h2>
@@ -14,7 +14,7 @@ layout: compress
         {% include partials/social-links.html %}
     </div>
 
-    <ul class="currently">
+    <ul class="currently" data-aos="fade-up" data-aos-delay="500">
         <h4>I am currently</h4>
         {% for currently in site.data.currently %}
           <li>
@@ -31,12 +31,12 @@ layout: compress
     </ul>
 
     <section class="posts archive-container main">
-        <div class="featured-posts">
+        <div class="featured-posts" data-aos="fade-in">
             <h1>featured posts</h1>
             {% include partials/featured-posts.html %}
         </div>
 
-        <div class="recent-posts">
+        <div class="recent-posts" data-aos="fade-in">
             <h1>recent posts</h1>
             {% include partials/recent-posts.html %}
         </div>

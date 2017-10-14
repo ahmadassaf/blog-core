@@ -32,14 +32,14 @@ module.exports = function(grunt) {
 
         imagemin: {
             dynamic: {
-              files: [{
-                expand: true,
-                cwd: 'images/posts/',
-                src: ['**/*.{png,jpg,gif}'],
-                dest: 'images/posts/'
-              }]
+                files: [{
+                    expand: true,
+                    cwd: 'images/posts/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'images/posts/'
+                }]
             }
-          },
+        },
 
         browserify: {
             dist: {
@@ -58,20 +58,20 @@ module.exports = function(grunt) {
                 src: ['assets/js/build/main.js'],
                 dest: '_site/assets/js/build/'
             }
-          },
+        },
 
         bgShell: {
             jekyllBuild: {
-                cmd: 'jekyll build --incremental',
+                cmd: 'jekyll build --incremental --quiet',
                 done: function() {
-                    console.log("Finished Building Jekyll Site");
+                    console.log('Finished Building Jekyll Site');
                 }
             },
             jekyllServe: {
-                cmd: 'bundle exec jekyll serve --incremental'
+                cmd: 'bundle exec jekyll serve --incremental --quiet'
             },
             jekyllLocal: {
-                cmd: 'bundle exec jekyll serve --incremental --config _config.yml,_config.dev.yml'
+                cmd: 'bundle exec jekyll serve --incremental --quiet --config _config.yml,_config.dev.yml'
             }
         },
 

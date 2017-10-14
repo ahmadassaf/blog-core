@@ -1,10 +1,10 @@
-- title: Senior Data Scientist @Beamery
+- title: Director of Data @Beamery
   url: http://beamery.com
   icon: building
 
 - title: Reviewing Python Data Science and PHP Data Structures books
   icon: paperclip
 
-- title: Working on a new bookmark enhancement Chrome Extension
+- title: Working on Knowledge Aggregation/Minning Browser Extension
   url: http://github.com/ahmadassaf/booklight
   icon: chrome
