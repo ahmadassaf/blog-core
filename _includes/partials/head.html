@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <link rel="shortcut icon" type="image/png" href="{{ site.url }}/images/favicon.png" />
   <link rel="shortcut icon" href="{{ site.url }}/images/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/deploy/main.css">
 
   {% include meta/twitter.html %}
   {% include meta/openGraph.html %}
@@ -14,10 +14,5 @@
   {% feed_meta %}
 
 </head>
-<body class="{% if page.layout == 'home' %} homepage {% endif %}">
-
-
-    {% include partials/fixed-elements.html %}
+<body class="container bordered">
     {% include partials/navigation.html %}
-
-    <div class="content {% if page.layout == 'blog-home' %} blog-home {% endif %}">

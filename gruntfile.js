@@ -4,17 +4,12 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
-        clean: ['assets/js/build/'],
+        clean: ['_site', 'assets/deploy/**/*'],
 
         mkdir: {
             images: {
                 options: {
                     create: ['images/posts']
-                }
-            },
-            js: {
-                options: {
-                    create: ['assets/js/build']
                 }
             }
         },
@@ -27,7 +22,12 @@ module.exports = function(grunt) {
                     src: ['**'],
                     dest: 'images/posts/'
                 }]
-            }
+            },
+            styles:{
+                files: {
+                    'assets/deploy/main.css': '_site/assets/deploy.css'             
+                }
+            } 
         },
 
         imagemin: {
@@ -41,10 +41,21 @@ module.exports = function(grunt) {
             }
         },
 
+        sass: {
+            options: {
+                sourceMap: true
+            },
+            dist: {
+                files: {
+                    'assets/deploy/main.css': 'assets/sass/main.scss'
+                }
+            }
+        },
+
         browserify: {
             dist: {
                 files: {
-                    'assets/js/build/main.js': ['assets/js/src/**/*.js']
+                    'assets/deploy/main.js': ['assets/js/src/**/*.js']
                 },
                 options: {
                     debug: true,
@@ -55,8 +66,12 @@ module.exports = function(grunt) {
 
         minified: {
             files: {
-                src: ['assets/js/build/main.js'],
-                dest: '_site/assets/js/build/'
+                src: ['assets/deploy/main.js'],
+                dest: 'assets/deploy/'
+            },
+            options : {
+                sourcemap: true,
+                ext: '.min.js'
             }
         },
 
@@ -76,8 +91,8 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            files: ['assets/js/**/*.js'],
-            tasks: ['copy', 'browserify']
+            files: ['assets/js/**/*', 'assets/sass/**/*'],
+            tasks: ['sass', 'copy', 'browserify']
         },
 
         concurrent: {
@@ -107,9 +122,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-minified');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-newer');
+    grunt.loadNpmTasks('grunt-sass');
 
     // Register the grunt build task
-    grunt.registerTask('build', ['clean', 'mkdir:images', 'mkdir:js', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'minified']);
+    grunt.registerTask('build', ['clean', 'mkdir:images', 'sass', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'minified']);
 
     // Register the grunt serve task
     grunt.registerTask('serve', ['build', 'minified', 'concurrent:serve']);

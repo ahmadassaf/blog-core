@@ -1,0 +1,60 @@
+// Base
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+
+.image {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  & + & {
+    margin-top: $spacing-large;
+
+    @include mq(medium-up) {
+      margin-top: 3rem;
+    }
+
+    @include mq(large-up) {
+      margin-top: 4rem;
+    }
+  }
+}
+
+// Misc
+.image-full {
+  max-width: none;
+  width: 100%;
+}
+
+figure {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  max-width: 1000px;
+  @include clearfix();
+
+  figcaption {
+      margin-bottom: 0.5em;
+      color: lighten($black, 50%);
+      font-size: 0.85em;
+      width: 100%;
+      text-align: center;
+  }
+  img {
+      display: table;
+  }
+  > a {
+      display: block;
+      border: none;
+  }
+}

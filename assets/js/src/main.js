@@ -18,7 +18,6 @@ var blog = {
         var blog = this;
 
         this.addImageLightBox();
-        $('.blog-post > *').attr("data-aos", "fade-in");
 
         $(document).ready(function() {
             AOS.init();

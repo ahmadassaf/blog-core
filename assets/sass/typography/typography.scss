@@ -1,0 +1,121 @@
+@import "../../fonts/font-awesome/font-awesome";
+
+@font-face {
+  font-family: 'sleek';
+  src: url('../fonts/sleek/sleek.eot');
+  src: url('../fonts/sleek/sleek.eot?#iefix') format('embedded-opentype'), url('../fonts/sleek/sleek.woff2') format('woff2'), url('../fonts/sleek/sleek.woff') format('woff'), url('../fonts/sleek/sleek.ttf') format('truetype'), url('../fonts/sleek/sleek.svg#weblysleek_uilight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'liberation';
+  src: url('../fonts/liberation/liberation.eot');
+  src: url('../fonts/liberation/liberation.eot?#iefix') format('embedded-opentype'), url('../fonts/liberation/liberation.woff') format('woff'), url('../fonts/liberation/liberation.ttf') format('truetype'), url('../fonts/liberation/liberation.svg#LiberationMonoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tauri';
+  src: url('../fonts/tauri/tauri.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: $sans-serif-font-family;
+  font-weight: $font-weight-regular;
+  line-height: $base-line-height;
+  letter-spacing: $base-letter-spacing;
+  color: $black;
+  -webkit-font-smoothing: antialiased;
+
+  @include mq(medium-up) {
+    line-height: $base-line-height * 1.1;
+  }
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,{
+  margin: 0 0 $spacing-medium 0;
+  font-family: $sans-serif-font-family;
+  font-weight: $font-weight-bold;
+  color: $black;
+  line-height: $heading-line-height;
+  letter-spacing: $sans-serif-font-letter-spacing;
+
+}
+
+// adds spacing between headings and paragraphs
+h2:not(:first-of-type) {
+  margin-top: $spacing-xx-large;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 17px; // fix this later
+  font-weight: $font-weight-bold;
+}
+
+p {
+  margin: 0 0 $spacing-medium 0;
+  font-size: 17px; // fix this later
+
+  @include mq(small-up) {
+    // @include vertical-padding(4rem);
+    margin-bottom: $spacing-large;
+  }
+
+  @include mq(medium-up) {
+    // @include vertical-padding(6rem);
+    margin-bottom: $spacing-large;
+  }
+
+  @include mq(large-up) {
+    // @include vertical-padding(8rem);
+    margin-bottom: $spacing-large;
+  }
+
+  @include mq(x-large-up) {
+    // @include vertical-padding(10rem);
+    margin-bottom: $spacing-large;
+  }
+}
+
+strong {
+  font-weight: $font-weight-bold;
+  color: $black;
+}
+
+
+// Headings
+
+h1,
+.h1 {
+  @include font-size($h1-font-size);
+}
+
+h2,
+.h2 {
+  @include font-size($h2-font-size);
+}
+
+h3,
+.h3 {
+  @include font-size($h3-font-size);
+}
+
+h4,
+.h4 {
+  @include font-size($h4-font-size);
+}
+
+h5,
+.h5 {
+  @include font-size($h5-font-size);
+}

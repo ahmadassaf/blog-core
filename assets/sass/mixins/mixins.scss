@@ -1,0 +1,39 @@
+@import "transition";
+@import "transform";
+@import "box-shadow";
+@import "flex";
+@import "clearfix";
+@import "box-shadow";
+@import "responsive";
+@import "fontsize";
+// Vertical padding
+
+@mixin vertical-padding($padding-top, $padding-bottom) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
+
+
+// Cover
+
+@mixin cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+// Square
+
+@mixin square($width) {
+  width: $width;
+  height: $width;
+}
+
+// Transitions
+
+@mixin transition{
+  transition: all $animation-time $animation-curve;
+}
