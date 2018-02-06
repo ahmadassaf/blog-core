@@ -1,0 +1,43 @@
+.publications {
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 5rem auto;
+
+  li {
+    @include font-size($h5-font-size);
+    margin: 1rem;
+    max-width: 30%;
+    letter-spacing: 0.6px;
+    font-family: "liberation";
+
+      .me {
+        font-weight: $font-weight-bold;
+        color: $white;
+      }
+      .title {
+        font-weight: $font-weight-bold;
+      }
+      .award {
+        display: block;
+        color: $yellow;
+      }
+  }
+}
+
+
+.publications-links .link a, .publications-links .link i {
+  color: #fff;
+}
+
+.publications-links .link {
+  letter-spacing: 0.5px;
+  margin: 0px 10px;
+}
+
+.publications-links {
+  display: block;
+  width: 90%;
+  margin: 1rem auto 0;
+  text-align: right;
+}

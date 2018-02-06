@@ -7,11 +7,11 @@ layout: compress
 
     {% include partials/head.html %}
 
-    <div itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <div itemprop="blogPost" class="container__post" itemscope itemtype="http://schema.org/BlogPosting">
 
         {% include partials/post/header.html %}
 
-        <div class="blog-post">
+        <div class="post">
 
              <blockquote>
                  <p>{{ page.excerpt }}</p>
@@ -22,13 +22,13 @@ layout: compress
             {% include partials/post/share.html %}
         </div>
 
+        {% include partials/post/comments.html %}
+
     </div>
 
     {% include meta/author.html %}
     {% include meta/JSON-LD/post.html %}
 
-    {% include partials/post/pagination.html %}
-	{% include partials/post/comments.html %}
     {% include partials/footer.html %}
 
 </html>

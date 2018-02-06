@@ -1,0 +1,13 @@
+.biography {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  margin: $spacing-large auto 0;
+  width: 70%;
+  
+  p {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin: 40px;
+  }
+}

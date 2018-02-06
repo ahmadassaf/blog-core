@@ -1,6 +1,5 @@
 .navigation {
   position: fixed;
-  height: 60px;
   top: 0;
   left: 0;
   width: 100%;
@@ -8,10 +7,10 @@
   z-index: 1;  
   padding: $spacing-large calc(2* #{$spacing-large});
   
-  .navigation__container {
+  .navigation-container {
     align-items: center;
 
-    .navigation__items {
+    .navigation-items {
       align-items: center;
       flex-direction: row-reverse;
     
@@ -19,7 +18,7 @@
         display: inline-flex;
         position: relative;
         transition: all $animation-time $animation-curve;
-        font-weight: $font-weight-light;
+        font-weight: $font-weight-bold;
         text-transform: uppercase;
         opacity: 1;
         padding: 0 $spacing-large;

@@ -6,11 +6,11 @@
   display: inline-block;
 }
 
-.hide {
+.hidden {
   display: none !important;
 }
 
-.hide-visually {
+.hidden-visually {
   margin: -1px !important;
   padding: 0 !important;
   width: 1px !important;
@@ -20,14 +20,19 @@
   position: absolute !important;
 }
 
+.inactive {
+  pointer-events: none;
+  pointer: default;
+}
+
 .cover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.bordered {
-  border-left: 25px solid $green
+.rounded {
+  border-radius: 50%;
 }
 
 // Hide/show
@@ -54,6 +59,22 @@
   @include mq(medium-up) {
     display: none !important;
   }
+}
+
+// alignment
+.align-left {
+  @include clearfix();
+  float: left;
+}
+
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.align-right {
+  @include clearfix();
+  float: right;
 }
 
 

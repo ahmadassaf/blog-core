@@ -1,0 +1,27 @@
+<div class="publications-links">
+    <span class="back">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        back
+    </span>
+    <span class="link">
+        <i class="fa fa-file-archive" aria-hidden="true"></i>
+        <a href="http://papers.ahmadassaf.com">Papers Archive</a>
+    </span>
+    <span class="link">
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        <a href="https://scholar.google.gr/citations?user=gJ-kXmkAAAAJ&hl=en">Google Scholar Profile</a>
+    </span>
+</div>
+<ul class="publications list flex">
+    {% for publication in site.data.publications %}
+        <li>
+            {{ publication.authors }}, <span class="title">{{ publication.title }}</span>, {{ publication.venue }}
+            {% if publication.award %}
+                <span class="award">
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    {{ publication.award }}
+                </span>
+            {% endif %}    
+        </li>
+    {% endfor %}
+</ul>

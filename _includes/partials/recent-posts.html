@@ -1,5 +1,12 @@
-<ul class="archive">
-    {% for post in site.posts limit: 4 %}
-        {% include partials/post.html %}
-    {% endfor %}
-</ul>
+<section id="recent-posts" data-aos="fade-up">
+
+    <h3>recent posts</h3>
+    
+    <ul class="list posts">
+        {% for post in site.posts limit: 4 %}
+            {% include partials/post.html %}
+        {% endfor %}
+    </ul>
+
+</section>
+    

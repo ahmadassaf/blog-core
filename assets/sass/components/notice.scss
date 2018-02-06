@@ -1,0 +1,54 @@
+@mixin notice($notice-color) {
+  margin: 2em 0 !important;
+  padding: 1em;
+  font-size: 1.1em !important;
+  text-indent: initial;
+  background-color: mix($white, $notice-color, 90%);
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba($notice-color, 0.25);
+
+  h4 {
+      margin-top: 0 !important;
+      margin-bottom: 0.75em;
+  }
+  p {
+      &:last-child {
+          margin-bottom: 0 !important;
+      }
+  }
+  h4 + p {
+      margin-top: 0;
+      padding-top: 0;
+  }
+  a {
+      color: $notice-color;
+
+      &:hover {
+          color: mix($black, $notice-color, 40%);
+      }
+  }
+  code {
+      background-color: mix($white, $notice-color, 95%)
+  }
+  ul {
+      &:last-child {
+          margin-bottom: 0;
+      }
+  }
+}
+.notice {
+  @include notice(darken($white, 30%));
+
+  &_info {
+      @include notice($aqua);
+  }
+  &_warning {
+      @include notice($yellow);
+  }
+  &_success {
+      @include notice($green);
+  }
+  &_danger {
+      @include notice($red);
+  }
+}

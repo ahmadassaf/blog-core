@@ -1,0 +1,31 @@
+<ul class="navigation-items flex" data-aos="fade-up" data-aos-delay="500">
+    <svg class="hidden">
+            <defs>
+                <symbol id="icon-search" viewBox="0 0 24 24">
+                    <title>search</title>
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </symbol>
+                <symbol id="icon-cross" viewBox="0 0 24 24">
+                    <title>cross</title>
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </symbol>
+            </defs>
+        </svg>
+        <div class="search-wrap">
+            <button id="btn-search" class="btn btn--search"><svg class="icon icon--search"><use xlink:href="#icon-search"></use></svg></button>
+        </div>
+        <img alt="close-menu" class="close-menu" src="/images/close-menu.svg"/>
+        <li class="icon-menu-toggle search-toggle responsive"><i class="fa fa-search" aria-hidden="true"></i></li>
+        <li class="icon-menu-toggle archive-toggle responsive"><a class="icon-menu-toggle" href="{{ site.url }}/posts"><i class="fa fa-archive" aria-hidden="true"></i></a></li>
+        <li class="icon-menu-toggle archive-toggle responsive"><a class="icon-menu-toggle" href="{{ site.url }}/tags"><i class="fa fa-bookmark" aria-hidden="true"></i></a></li>
+        <li class="special-menu-item"><a href="/posts">Archive</a></li>
+            {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+            {% assign categories = site_categories | split:',' | uniq %}
+        
+            {% for item in (0..categories.size) %}{% unless forloop.last %}
+        
+            {% capture category %}{{ categories[item] | strip_newlines }}{% endcapture %}
+                <li data-aos="fade-up" data-aos-delay="100" {% if page.title == category or page.category == category %} class="current" {% endif %}><a href="{{ site.url }}/{{ category | downcase | replace:' ', '-'}}">{{ category }}</a></li>
+            {% endunless %}{% endfor %}
+        <li class="menu-toggle responsive"><i class="fa fa-bars" aria-hidden="true"></i></li>    
+</ul>

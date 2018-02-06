@@ -1,9 +1,3 @@
-// Generic
-
-.section {
-  position: relative;
-
-  &.home--container {
-    padding: calc(6* #{$spacing-large}) $spacing-large;
-  }
+section {
+  margin: calc(4 * #{$spacing-large}) 0;
 }

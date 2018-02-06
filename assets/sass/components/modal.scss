@@ -1,0 +1,8 @@
+.modal {
+  position: fixed;
+  @include square(100%);
+  background: rgba(57, 159, 98, 0.97);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

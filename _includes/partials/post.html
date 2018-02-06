@@ -1,16 +1,16 @@
-<li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+<li class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 
     <!-- Article Schema.org Metadata -->
     {% include meta/post.html %}
     <!-- End Article Metadata -->
-    <h2 class="post-list-header">
+    <h4 class="post-header">
       <a itemprop="url" href="{% if post.type == 'project' %}{{ post.link }} {% else %} {{ site.url }}{{ post.url }} {% endif %}" class="post-title">
         <span itemprop="name headline">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</span>
         {% if post.subtitle %} <span class="subtitle">{{ post.subtitle }}</span>{% endif %}
       </a>
-      <span itemprop="dateCreated datePublished dateModified" class="date">{{ post.date | date: '%d %b %Y' }}</span>
-    </h2>
-    <ul class="tags">
+      <span itemprop="dateCreated datePublished dateModified" class="hidden">{{ post.date | date: '%d %b %Y' }}</span>
+    </h4>
+    <ul class="tags list flex">
         {% for tag in post.tags %}
           <li itemprop='articleSection keywords'><a href="{{ site.url }}/{{ tag | downcase | replace:' ', '-' }}">{{ tag }}</a></li>
           {% unless forloop.last %}

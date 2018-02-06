@@ -1,0 +1,36 @@
+.introduction {
+  h1 {
+    @include font-size($home-title-size);
+    letter-spacing: $letter-spacing-x-large;
+  }
+
+  h2 {
+    @include font-size($h2-font-size);
+    font-family: $primary-font-family;
+      .rotating-text {
+        border-bottom: 7px solid $blue;
+        margin: 0 $spacing-large 0;
+      }
+  }
+
+  h4 {
+    color: $grey-800;
+  }
+}
+
+.currently {
+  flex-direction: column;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    color: $grey-600;
+    margin: 5px 0;
+    letter-spacing: $letter-spacing-small;
+    @include font-size($h4-font-size);
+
+    i {
+      margin: 0 10px 0 0;
+    }
+  }
+}

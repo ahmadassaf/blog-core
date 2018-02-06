@@ -1,41 +1,53 @@
-<div class="post-header">
-	<a href="{{ site.url }}" class="logo"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
+<div>
 
     <!-- Article Schema.org Metadata -->
     {% include meta/post.html %}
     <!-- End Article Metadata -->
 
-	<div class="post-title-section">
-	 	<div class="section-line"><a class="category capitalize" href="{{ site.url}}/{{page.category | downcase | replace:' ', '-' }}">{% if page.category %}{{page.category}}{% else %}Home{% endif %}</a><em>/</em></div>
-	 	<h1 itemprop="name headline" class="section-title post-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
-	 	<h2 class="section-subtitle">{{ page.subtitle }}</h2>
+    <div class="post__header">
+
+        <h1 itemprop="name headline" class="post-title">
+            {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
+        </h1>
+        <h3 class="post-subtitle">
+            {{ page.subtitle }}
+		</h3>
+		
         {% if page.layout != 'error' %}
-		 	<div itemprop='dateCreated dateModified datePublished' class="date">{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}</div>
-            <div class="reading-time"><i class="fa fa-clock-o" aria-hidden="true"></i>Reading Time: {{ content | reading_time_as_i }}</div>
-            <div class="contribute">
+			<div itemprop='dateCreated dateModified datePublished' class="post-date">
+				{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}
+			</div>
+			<div class="post-reading-time">
+				<i class="far fa-clock" aria-hidden="true"></i>
+				Reading Time: {{ content | reading_time_as_i }}
+			</div>
+			
+			<div class="contribution__container">
 
-            	<span class="contribution">
-	                <i class="fa fa-github" aria-hidden="true"></i>
-	                <a itemprop="sameAs" target="_blank" href='{{site.github-repo}}blob/master/{{page.category | downcase | url_escape }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>Contribute to this post on Github</a>
-                </span>
-                {% if page.hackerNews %}
-                	<span class="contribution">
-	                	<i class="fa fa-hacker-news" aria-hidden="true"></i>
-	                	<a target="_blank" href='{{ page.hackerNews }}'>Discuss on HackerNews</a>
-	                </span>
-                {% endif %}
+				<span class="contribution">
+					<i class="fab fa-github" aria-hidden="true"></i>
+					<a itemprop="sameAs" target="_blank" 
+						href='{{site.github-repo}}blob/master/{{page.category | downcase | url_escape }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>
+						Contribute to this post on Github
+					</a>
+					</span> {% if page.hackerNews %}
+				<span class="contribution">
+					<i class="fab fa-hacker-news-square" aria-hidden="true"></i>
+					<a target="_blank" href='{{ page.hackerNews }}'>Discuss on HackerNews</a>
+				</span> {% endif %}
 
-            </div>
-			<ul class="tags">
+			</div>
+			
+			<ul class="tags list flex">
 				{% for tag in page.tags %}
-    				<li><a itemprop='articleSection keywords' href="{{ site.url }}/{{ tag | downcase | replace:' ', '-' }}">{{ tag }}</a></li>
-    				{% unless forloop.last %}{% endunless %}
-				{% endfor %}
+				<li>
+					<a itemprop='articleSection keywords' href="{{ site.url }}/{{ tag | downcase | replace:' ', '-' }}">{{ tag }}</a>
+				</li>
+				{% unless forloop.last %}{% endunless %} {% endfor %}
 			</ul>
 			<div class="share-buttons">
 				{% include partials/post/share.html %}
 			</div>
         {% endif %}
-		<div class="section-line reverse"><a href="{{ site.url }}/blog">Back to posts</a> <em>/</em></div>
-	</div>
+    </div>
 </div>

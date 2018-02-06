@@ -1,11 +1,10 @@
-<div class="navigation flex">
-    <div class="navigation__container flex">
+<div class="navigation">
+    <div class="navigation-container flex">
         <a href="{{ site.url }}" class="logo block"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
-        <ul class="navigation__items" data-aos="fade-up" data-aos-delay="500">
-            <li><a href="{{ site.url }}/blog">Blog</a></li>
-            <li><a href="http://papers.ahmadassaf.com">Papers</a></li>
-            <li><a href="http://ahmadassaf.com/projects">Projects</a></li>
-            <li><a href="">About</a></li>
-        </ul>
+        {% if page.layout == 'home' %}
+            {% include partials/navigation/home.html %}
+        {% else %}
+            {% include partials/navigation/blog.html %}
+        {% endif %}
     </div>
 </div>

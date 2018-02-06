@@ -7,17 +7,9 @@ layout: compress
 
     {% include partials/head.html %}
 
-    <div class="archive-container main">
-
-        <div class="recent-posts" data-aos="fade-in">
-            <h1>recent posts</h1>
-            {% include partials/recent-posts.html %}
-        </div>
-
-        <div class="featured-posts" data-aos="fade-in">
-            <h1>featured posts</h1>
-            {% include partials/featured-posts.html %}
-        </div>
+    <div class="container__blog">
+        {% include partials/recent-posts.html %}
+        {% include partials/featured-posts.html %}
     </div>
 
     {% include meta/author.html %}

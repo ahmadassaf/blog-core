@@ -1,0 +1,28 @@
+.post {
+  margin: $spacing-large 0;
+
+    .post-header {
+      margin-bottom: 5px;
+      width: 100%;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      
+      .subtitle {
+        font-weight: $font-weight-regular;
+        font-family: $primary-font-family;
+        margin: $spacing-medium 0;
+        color: $grey-800;
+        display: block;
+      }
+      &:hover {
+        color: $green;
+      }
+    }
+
+    &__header {
+      .post-subtitle {
+        font-family: $primary-font-family;
+      }
+    }
+}
+

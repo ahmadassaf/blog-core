@@ -52,6 +52,7 @@ a {
 }
 
 a:active,
+a:focus
 a:hover {
   outline: 0;
 }
@@ -145,6 +146,10 @@ button {
   font-size: inherit;
   line-height: normal;
   outline: 0;
+
+  &:focus {
+    outline:0;
+  }
 }
 
 button,

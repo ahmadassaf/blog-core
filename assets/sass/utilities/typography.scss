@@ -22,19 +22,19 @@
   }
 }
 
-.text-lead {
-  @include mq(medium-up) {
-    font-size: 1.15em;
-  }
-}
-
-
-// Colors
-
-.text-contrast {
-  color: $white !important;
+.capitalize {
+  text-transform: capitalize;
 }
 
 .text-underline {
-  border-bottom: 1px solid currentColor;
+  border-bottom: 2px solid $green;
+}
+
+.underlined {
+  content: "";
+  bottom: -15px;
+  left: 2px;
+  background: $green;
+  height: 15px;
+  position: absolute;
 }

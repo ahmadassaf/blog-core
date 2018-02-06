@@ -1,10 +1,10 @@
 - title: Director of Data @Beamery
   url: http://beamery.com
-  icon: building
+  icon: fa fa-building
 
 - title: Reviewing Python Data Science and PHP Data Structures books
-  icon: paperclip
+  icon: fa fa-paperclip
 
 - title: Working on Knowledge Aggregation/Minning Browser Extension
   url: http://github.com/ahmadassaf/booklight
-  icon: chrome
+  icon: fab fa-chrome

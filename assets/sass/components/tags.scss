@@ -1,0 +1,18 @@
+.tags {
+  margin: $spacing-large 0;
+
+  li {
+    display: inline-flex;
+    font-size: 0.8em;
+    background: $grey-400;
+    padding: 7px 10px;
+    color: $grey-800;
+    margin: 0 3px;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $green;
+      color: $white;
+    }
+  }
+}

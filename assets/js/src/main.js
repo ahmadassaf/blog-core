@@ -29,7 +29,6 @@ var blog = {
             blog.addStickyLogo();
         });
     },
-
     /**
      * Add the scripts needed for the homepage script to function
      * @addResponsiveMenu
@@ -37,7 +36,7 @@ var blog = {
     addHomePageScripts: function() {
         if ($('#profession').length) {
             var professionRotator = new typed('#profession', {
-                strings: ["Data Scientist", "Software Engineer", "Knowledge Seeker"],
+                strings: ["Knowledge Seeker", "Researcher", "Software Engineer", "Data Scientist"],
                 typeSpeed: 100,
                 backDelay: 3500,
                 loop: true,

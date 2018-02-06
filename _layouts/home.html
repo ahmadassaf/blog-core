@@ -6,19 +6,19 @@ layout: compress
 <html>
     {% include partials/head.html %}
     
-    <div class="section home--container">
+    <div class="container__home">
 
         <div class="introduction" data-aos="fade-up" data-aos-delay="100">
             <h1>Ahmad Assaf</h1>
             <h2>I am a<span id="profession" class="rotating-text"></span></h2>
             {% include partials/social-links.html %}
-            <h3>I am currently</h3>
+            <h4>I am currently</h4>
         </div>
     
-        <ul class="currently flex" data-aos="fade-up" data-aos-delay="500">
+        <ul class="currently list flex" data-aos="fade-up" data-aos-delay="500">
             {% for currently in site.data.currently %}
               <li>
-                <i class="fa fa-{{currently.icon}}" aria-hidden="true"></i>
+                <i class="{{currently.icon}}" aria-hidden="true"></i>
                 {% if currently.url %}
                     <a href="{{ currently.url }}">
                       {{ currently.title }}
@@ -29,19 +29,15 @@ layout: compress
               </li>
             {% endfor %}
         </ul>
-    
-        <section class="posts archive-container main">
-            <div class="featured-posts" data-aos="fade-in">
-                <h1>featured posts</h1>
-                {% include partials/featured-posts.html %}
-            </div>
-    
-            <div class="recent-posts" data-aos="fade-in">
-                <h1>recent posts</h1>
-                {% include partials/recent-posts.html %}
-            </div>
-        </section>
+        
+        {% include partials/biography.html %}
+        {% include partials/skills.html %}
+        <!-- {% include partials/projects.html %} -->
+        {% include partials/featured-posts.html %}
+
     </div>
+
+    <!-- <div id="modal-publications" class="modal">{% include partials/publications.html %}</div> -->
 
     {% include meta/author.html %}
     {% include meta/JSON-LD/author.html %}

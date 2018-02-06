@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'sleek';
+  src: url('../fonts/sleek/sleek.eot');
+  src: url('../fonts/sleek/sleek.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/sleek/sleek.woff2') format('woff2'),
+       url('../fonts/sleek/sleek.woff') format('woff'), 
+       url('../fonts/sleek/sleek.ttf') format('truetype'),
+       url('../fonts/sleek/sleek.svg#weblysleek_uilight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'liberation';
+  src: url('../fonts/liberation/liberation.eot');
+  src: url('../fonts/liberation/liberation.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/liberation/liberation.woff') format('woff'),
+       url('../fonts/liberation/liberation.ttf') format('truetype'),
+       url('../fonts/liberation/liberation.svg#LiberationMonoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tauri';
+  src: url('../fonts/tauri/tauri.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

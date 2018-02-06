@@ -1,12 +1,20 @@
-{% assign featured_posts = site.featured %}
-{% for post in site.posts %}
-    {% if post.featured %}
-        {% assign featured_posts = featured_posts | push: post %}{% unless forloop.last %}{% endunless %}
-    {% endif %}
-{% endfor %}
+<section id="featured-posts" data-aos="fade-up">
 
-<ul class="archive">
-    {% for post in featured_posts limit: 3 %}
-        {% include partials/post.html %}
+    <h3>featured posts</h3>
+
+    {% assign featured_posts = site.featured %}
+    {% for post in site.posts %}
+        {% if post.featured %}
+            {% assign featured_posts = featured_posts | push: post %}{% unless forloop.last %}{% endunless %}
+        {% endif %}
     {% endfor %}
-</ul>
+    
+    <ul class="list posts">
+        {% for post in featured_posts limit: 4 %}
+            {% include partials/post.html %}
+        {% endfor %}
+    </ul>
+
+</section>
+    
+        
