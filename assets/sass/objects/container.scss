@@ -26,6 +26,19 @@ body.container {
       position: relative;
     }
     
+    &__main {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        background: rgba(0,0,0,0.3);
+        z-index: 100;
+        @include square(100%);
+      }
+    }
     &__home {
       padding: calc(6 * #{$spacing-large}) $spacing-large $spacing-medium;
 

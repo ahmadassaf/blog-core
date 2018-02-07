@@ -12,3 +12,26 @@ input, select, textarea {
   resize: vertical;
   padding: 0;
 }
+
+input {
+   /* WebKit, Blink, Edge */
+  &:-webkit-input-placeholder {
+    color: $grey-600;
+  }
+  /* Mozilla Firefox 19+ */
+  &::-moz-placeholder {
+    opacity: 1;
+    color: $grey-600;
+  }
+  /* Internet Explorer 10-11 */
+  &:-ms-input-placeholder {
+    color: $grey-600;
+  }
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  &::-ms-clear {
+    display: none;
+  }
+}

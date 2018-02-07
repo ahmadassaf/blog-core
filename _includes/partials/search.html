@@ -1,2 +1,13 @@
 <div class="search">
+  <form class="search__form" action="">
+    <input class="search__input" name="search" type="search" placeholder="Find..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    <span class="search__info">Hit enter to search or ESC to close</span>
+  </form>
+  <div class="search__related">
+    <h3>May We Suggest?</h3>
+    <div class="search__suggestion">
+      {% include partials/featured-posts.html %}
+    </div>
+  </div>
+  <button id="btn-search-close" class="btn btn--hidden btn--search-close" aria-label="Close search form"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
 </div>
