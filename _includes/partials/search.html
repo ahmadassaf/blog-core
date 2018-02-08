@@ -4,10 +4,15 @@
     <span class="search__info">Hit enter to search or ESC to close</span>
   </form>
   <div class="search__related">
-    <h3>May We Suggest?</h3>
+    <h3>May I Suggest?</h3>
     <div class="search__suggestion">
       {% include partials/featured-posts.html %}
     </div>
   </div>
-  <button id="btn-search-close" class="btn btn--hidden btn--search-close" aria-label="Close search form"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+  <button id="btn-search-close" class="btn btn--hidden btn--search-close" aria-label="Close search form">
+    <svg class="icon icon--cross">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    </svg>
+  </button>
 </div>
+

@@ -1,5 +1,5 @@
 <div class="navigation">
-    <div class="navigation-container flex">
+    <div class="navigation-container flex {% if page.layout != 'home' %} navigation-container--blog {% endif %}">
         <a href="{{ site.url }}" class="logo block"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
         {% if page.layout == 'home' %}
             {% include partials/navigation/home.html %}

@@ -331,7 +331,6 @@ var blog = {
             blog.addResponsiveMenu();
             blog.addSearchTrigger();
             blog.addHomePageScripts();
-            blog.addStickyLogo();
 
             var mainContainer = document.querySelector('.container__main'),
             openCtrl = document.getElementById('btn-search'),
@@ -342,7 +341,6 @@ var blog = {
   
     
         function initEvents() {
-            console.log("init events ...");
             openCtrl.addEventListener('click', openSearch);
             closeCtrl.addEventListener('click', closeSearch);
             document.addEventListener('keyup', function(ev) {
@@ -386,20 +384,6 @@ var blog = {
                 loop: true,
             });
         }
-    },
-
-    /**
-     * Add function to make the logo in the posts page sticky when the user scrolls below the header
-     * @addResponsiveMenu
-     */
-    addStickyLogo: function() {
-        $(window).scroll(function() {
-            if ($('.post-title-section').length) {
-                if ($(window).scrollTop() > $('.post-title-section').offset().top) {
-                    $('.post-logo').fadeIn('slow');
-                } else $('.post-logo').hide();
-            }
-        });
     },
 
     /**
