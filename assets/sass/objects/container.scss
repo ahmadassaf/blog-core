@@ -1,17 +1,5 @@
 // Container
 
-body.container {
-  
-  &:before {
-    content: "";
-    border-left: 25px solid $green;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    z-index: 10;
-  }
-}
-
 .container {
   display: flex;
   overflow-x: hidden;
@@ -22,52 +10,31 @@ body.container {
   padding-right: $spacing-large;
   margin: 0 auto;
 
-    h3 {
-      position: relative;
-    }
-    
-    &__main {
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        pointer-events: none;
-        background: rgba(0,0,0,0.3);
-        z-index: 100;
-        @include square(100%);
-      }
-    }
-    &__home {
+    &--home {
       padding: calc(6 * #{$spacing-large}) $spacing-large $spacing-medium;
-
-        h3 {
-          &:before {
-            @extend .underlined;
-            width: 300px;
-            top: -25px;
-            left: 0;
-          }
-        }
     }
-    &__blog {
-      margin: calc(2 * #{$spacing-large}) $spacing-large;
-      
-        h3 {
-          margin: calc(3 * #{$spacing-large}) 0;
-      
-          &:after {
-            @extend .underlined;
-            width: 150px;
-          }
-        }
+    &--blog {
+      margin: calc(5 * #{$spacing-large}) auto;
+      width: 60%;
     }
-    &__archive {
-      margin: calc(4 * #{$spacing-large}) $spacing-large;
+    &--archive {
+      margin: calc(4 * #{$spacing-large}) auto;
+      width: 60%;
     }
-    &__post {
-      width: 70%;
+    &--post {
       margin: calc(5 * #{$spacing-large}) $spacing-large;
+      width: 70%;
     }
+}
+
+body.container {
+  
+  &:before {
+    content: "";
+    border-left: 25px solid $green;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 10;
+  }
 }

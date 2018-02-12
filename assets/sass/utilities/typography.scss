@@ -30,6 +30,11 @@
   border-bottom: 2px solid $green;
 }
 
+.text-horizontal {
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+}
+
 .underlined {
   content: "";
   bottom: -15px;

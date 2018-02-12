@@ -1,19 +1,18 @@
 .introduction {
-  h1 {
+  &__title {
     @include font-size($home-title-size);
     letter-spacing: $letter-spacing-x-large;
   }
 
-  h2 {
+  &__subtitle {
     @include font-size($h2-font-size);
     font-family: $primary-font-family;
-      .rotating-text {
+      &--rotating {
         border-bottom: 7px solid $blue;
-        margin: 0 $spacing-large 0;
       }
   }
 
-  h4 {
+  &__footer {
     color: $grey-800;
   }
 }
@@ -21,7 +20,7 @@
 .currently {
   flex-direction: column;
 
-  li {
+  &__item {
     display: inline-flex;
     align-items: center;
     color: $grey-600;

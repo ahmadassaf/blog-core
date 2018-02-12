@@ -1,3 +1,30 @@
-section {
-  margin: calc(4 * #{$spacing-large}) 0;
+.section {
+  margin: $spacing-x-large 0;
+
+  &__title {
+    position: relative;
+    &:before {
+      @extend .underlined;
+      width: 300px;
+      top: -25px;
+      left: 0;
+    }
+  }
+}
+
+.container--blog .section__title {
+  margin: $spacing-x-large 0;
+  &:before {
+    display: none;
+  }
+  &:after {
+    @extend .underlined;
+    width: 150px;
+  }
+}
+
+.container--home {
+  .section {
+    padding: $spacing-large 0;
+  }
 }

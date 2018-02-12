@@ -6,18 +6,23 @@ layout: compress
 <html>
     {% include partials/head.html %}
     
-    <div class="container__home">
+    <div class="container--home">
 
         <div class="introduction" data-aos="fade-up" data-aos-delay="100">
-            <h1>Ahmad Assaf</h1>
-            <h2>I am a<span id="profession" class="rotating-text"></span></h2>
+            <h1 class="introduction__title">
+                Ahmad Assaf
+            </h1>
+            <h2 class="introduction__subtitle">
+                I am a
+                <span id="profession" class="introduction__subtitle--rotating"></span>
+            </h2>
             {% include partials/social-links.html %}
-            <h4>I am currently</h4>
+            <h4 class="introduction__footer">I am currently</h4>
         </div>
     
         <ul class="currently list flex" data-aos="fade-up" data-aos-delay="500">
             {% for currently in site.data.currently %}
-              <li>
+              <li class="currently__item">
                 <i class="{{currently.icon}}" aria-hidden="true"></i>
                 {% if currently.url %}
                     <a href="{{ currently.url }}">
@@ -32,8 +37,8 @@ layout: compress
         
         {% include partials/biography.html %}
         {% include partials/skills.html %}
-        <!-- {% include partials/projects.html %} -->
         {% include partials/featured-posts.html %}
+        {% include partials/projects.html %}
 
     </div>
 

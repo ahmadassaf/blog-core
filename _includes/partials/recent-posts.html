@@ -1,8 +1,8 @@
 <section id="recent-posts" data-aos="fade-up">
 
-    <h3>recent posts</h3>
+    <h3 class="section__title">recent posts</h3>
     
-    <ul class="list posts">
+    <ul class="list post-list">
         {% for post in site.posts limit: 4 %}
             {% include partials/post.html %}
         {% endfor %}

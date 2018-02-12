@@ -22,6 +22,13 @@
       color: $black;
       font-weight: $font-weight-bold;
   }
+    &--search-close {
+        @include font-size($h2-font-size);
+        position: absolute;
+        z-index: 1001;
+        top: 1.25em;
+        right: 1.25em;
+    }
   &_info {
       background-color: lighten($aqua, 10%);
 

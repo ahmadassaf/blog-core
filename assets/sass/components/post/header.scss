@@ -1,0 +1,41 @@
+.container--post {
+  .post__header {
+    border-bottom: 2px solid;
+    padding: $spacing-base 0;
+
+    &__subtitle {
+      font-family: $primary-font-family;
+    }
+    &__date {
+      color: $grey-600;
+      margin: $spacing-base 0;
+    }
+    &__reading-time {
+      color: $grey-800;
+      margin: $spacing-small 0;
+    }
+    &__contributions {
+      color: $grey-800;
+      &__entry {
+        margin: 0 $spacing-smallest 0 0;
+      }
+    }
+    &__tags-list {
+      margin: $spacing-base 0;
+      &__tag {
+        cursor: pointer;
+        padding: $spacing-smallest $spacing-small;
+        border: 1px solid $grey-600;
+        color:$black;
+        font-size: $small-font-size;
+        text-transform: uppercase;
+        margin: 0 $spacing-smallest 0 0;
+
+          &:hover {
+            background: $green;
+            color: $white;
+          }
+      }
+    }
+  }
+}

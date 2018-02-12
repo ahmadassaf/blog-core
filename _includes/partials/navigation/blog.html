@@ -1,19 +1,19 @@
-<ul class="navigation-items flex" data-aos="fade-up" data-aos-delay="500">
+<ul class="navigation__list flex" data-aos="fade-up" data-aos-delay="500">
 
-    <li id="btn-search" class="btn btn--search icon-menu-toggle search-toggle responsive">
+    <li id="button-search" class="navigation__list__item button--search">
         <i class="fa fa-search" aria-hidden="true"></i>
     </li>
-    <li>
+    <li class="navigation__list__item">
         <a href="{{ site.url }}/posts">
             <i class="fa fa-archive" aria-hidden="true"></i>
         </a>
     </li>
-    <li>
+    <li class="navigation__list__item">
         <a href="{{ site.url }}/tags">
             <i class="fa fa-bookmark" aria-hidden="true"></i>
         </a>
     </li>
-    <li>
+    <li class="navigation__list__item hidden">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </li>
 
@@ -21,7 +21,7 @@
     {% assign categories = site_categories | split:',' | uniq %}
     {% for item in (0..categories.size) %}{% unless forloop.last %}
         {% capture category %}{{ categories[item] | strip_newlines }}{% endcapture %}
-        <li {% if page.title == category or page.category == category %} class="current" {% endif %}>
+        <li class="navigation__list__item" {% if page.title == category or page.category == category %} class="current" {% endif %}>
             <a href="{{ site.url }}/{{ category | downcase | replace:' ', '-'}}">{{ category }}</a>
         </li>
     {% endunless %}{% endfor %}

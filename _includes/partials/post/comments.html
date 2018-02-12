@@ -1,5 +1,5 @@
 {% if page.comments != false %}
-	<div id="disqus_thread"></div>
+	<div id="disqus"></div>
 	<script>
 	    var disqus_config = function () {
 	        this.page.url = '{{ site.url }}/posts/{{ page.url }}';
@@ -11,7 +11,7 @@
 
 	        s.src = '//{{ site.disqus.shortname }}.disqus.com/embed.js';
 
-	        s.setAttribute('data-timestamp', +new Date());
+	        s.setAttribute('data-timestamp', + new Date());
 	        (d.head || d.body).appendChild(s);
 	    })();
 	</script>

@@ -1,24 +1,24 @@
-.navigation {
+.navigation-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: $white;
   z-index: 1;  
-  padding: $spacing-large calc(2* #{$spacing-large});
+  padding: $spacing-large $spacing-xx-large;
   
-  .navigation-container {
+  .navigation {
     align-items: center;
 
     &--blog {
       justify-content: space-between;
     }
 
-    .navigation-items {
+    &__list {
       align-items: center;
       flex-direction: row-reverse;
     
-      li {
+      &__item {
         display: inline-flex;
         position: relative;
         transition: all $animation-time $animation-curve;

@@ -1,0 +1,36 @@
+.projects {
+    margin: $spacing-xxxx-large 0;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      margin: 1.3em 0;
+
+      &:hover {
+        color: $green;
+      }
+
+        &__language {
+          margin: 0 $spacing-large;
+          border-radius: 4px;
+          padding: 3px 5px;
+          font-size: 0.75em;
+          color: $white;
+          background: $black;
+          white-space: nowrap;
+        }
+        &__title {
+          @include font-size($h5-font-size);
+          font-family: $titles-font-family;
+          text-transform: capitalize;
+        
+            i {
+              @include font-size($h6-font-size);
+              font-family: $primary-font-family;
+              font-style: normal;
+              margin: 0 0 0 10px;
+            }
+        }
+    }
+
+}

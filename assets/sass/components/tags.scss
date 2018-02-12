@@ -8,11 +8,17 @@
     padding: 7px 10px;
     color: $grey-800;
     margin: 0 3px;
+    border: 1px solid transparent;
     text-transform: uppercase;
 
     &:hover {
-      background: $green;
-      color: $white;
+      @extend .tags--hovered;
     }
   }
+}
+
+.tags--hovered {
+  border: 1px solid $green;
+  background: $green;
+  color: $white;
 }

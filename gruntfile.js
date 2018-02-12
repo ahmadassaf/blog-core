@@ -7,9 +7,9 @@ module.exports = function(grunt) {
         clean: ['_site', 'assets/deploy/**/*'],
 
         mkdir: {
-            images: {
+            deployment: {
                 options: {
-                    create: ['images/posts']
+                    create: ['images/posts', 'assets/deploy']
                 }
             }
         },
@@ -59,22 +59,29 @@ module.exports = function(grunt) {
                 },
                 options: {
                     debug: true,
+                    transform: ['stringify', ['babelify', { 'presets': ['es2015', 'es2016', 'react'] }]],
                     standalone: pkg['export-symbol']
+                  }
+            }
+        },
+
+        uglify: {
+            options: {
+                mangle: false,
+                sourceMap: {
+                    root: '.'
+                },
+                compress: {
+                    drop_console: true
                 }
-            }
-        },
-
-        minified: {
-            files: {
-                src: ['assets/deploy/main.js'],
-                dest: 'assets/deploy/'
             },
-            options : {
-                sourcemap: true,
-                ext: '.min.js'
+            min: {
+              files: {
+                'assets/deploy/main.min.js' : ['assets/deploy/main.js']
+              }
             }
         },
-
+        
         bgShell: {
             jekyllBuild: {
                 cmd: 'jekyll build --incremental --quiet',
@@ -112,26 +119,26 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-mkdir');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-mkdir');
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-bg-shell');
-    grunt.loadNpmTasks('grunt-minified');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-sass');
 
     // Register the grunt build task
-    grunt.registerTask('build', ['clean', 'mkdir:images', 'sass', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'minified']);
+    grunt.registerTask('build', ['clean', 'mkdir:deployment', 'sass', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'uglify']);
 
     // Register the grunt serve task
-    grunt.registerTask('serve', ['build', 'minified', 'concurrent:serve']);
+    grunt.registerTask('serve', ['build', 'uglify', 'concurrent:serve']);
 
     // Register the grunt serve task
-    grunt.registerTask('local', ['build', 'newer:imagemin', 'minified', 'concurrent:local']);
+    grunt.registerTask('local', ['build', 'newer:imagemin', 'uglify', 'concurrent:local']);
 
     // Register build as the default task fallback
     grunt.registerTask('default', 'build');

@@ -38,6 +38,11 @@ a {
   font-weight: inherit;
 }
 
+strong {
+  font-weight: $font-weight-bold;
+  font-family: $titles-font-family;
+  font-size: $small-font-size;
+}
 p {
   margin: 0 0 $spacing-medium 0;
   font-size: $base-font-size;

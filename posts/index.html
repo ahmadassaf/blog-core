@@ -7,8 +7,8 @@ title: Archive
 <html>
     {% include partials/head.html %}
 
-    <div class="archive-container">
-        <ul class="archive">
+    <div class="container--archive archive--posts">
+        <ul class="list post-list">
         {% for post in paginator.posts %}
             {% include partials/post.html %}
         {% endfor %}

@@ -26,44 +26,8 @@ var blog = {
             blog.addResponsiveMenu();
             blog.addSearchTrigger();
             blog.addHomePageScripts();
-
-            var mainContainer = document.querySelector('.container__main'),
-            openCtrl = document.getElementById('btn-search'),
-            closeCtrl = document.getElementById('btn-search-close'),
-            searchContainer = document.querySelector('.search'),
-            inputSearch = searchContainer.querySelector('.search__input');
-    
-  
-    
-        function initEvents() {
-            openCtrl.addEventListener('click', openSearch);
-            closeCtrl.addEventListener('click', closeSearch);
-            document.addEventListener('keyup', function(ev) {
-                // escape key.
-                if( ev.keyCode == 27 ) {
-                    closeSearch();
-                }
-            });
-        }
-    
-        function openSearch() {
-            mainContainer.classList.add('container__main--overlay');
-            closeCtrl.classList.remove('btn--hidden');
-            searchContainer.classList.add('search--open');
-            setTimeout(function() {
-                inputSearch.focus();
-            }, 500);
-        }
-    
-        function closeSearch() {
-            mainContainer.classList.remove('container__main--overlay');
-            closeCtrl.classList.add('btn--hidden');
-            searchContainer.classList.remove('search--open');
-            inputSearch.blur();
-            inputSearch.value = '';
-        }
-    
-        initEvents();
+            const projects = require('./projects');
+            document.querySelectorAll('.post--archive').forEach((e) => e.addEventListener('click', function() {window.open(e.getAttribute('data-link'), '_self')}, false))
         });
     },
     /**
@@ -141,7 +105,7 @@ var blog = {
 
         // Add keypress listener to exit search interface on ESC
         $(document).keyup(function(e) {
-            if (e.keyCode == 27) {
+            if (e.keyCode === 27) {
                 if ($('.search-container').is(':visible')) $('.search-container').toggle();
             }
         });

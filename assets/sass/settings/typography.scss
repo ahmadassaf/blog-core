@@ -21,6 +21,7 @@ $letter-spacing-small: 1px;
 
 // Font sizes
 $small-font-size: 0.85em;
+$x-small-font-size: 0.6em;
 
 $regular-font-size: (
   null: 16px,
@@ -34,6 +35,27 @@ $home-title-size: (
   $medium: 2em,
   $large: 2.2em,
   $x-large: 10em
+);
+
+$h1-post-font-size: (
+  null: 1.5em,
+  $medium: 1.8em,
+  $large: 2em,
+  $x-large: 2em
+);
+
+$h2-post-font-size: (
+  null: 1em,
+  $medium: 1.1em,
+  $large: 1.3,
+  $x-large: 1.5em
+);
+
+$h3-post-font-size: (
+  null: 1em,
+  $medium: 1em,
+  $large: 1.1,
+  $x-large: 1.2em
 );
 
 $h1-font-size: (
@@ -63,9 +85,9 @@ $h4-font-size: (
 );
 
 $h5-font-size: (
-  null: 1.2em
+  null: 1.3em
 );
 
 $h6-font-size: (
-  null: 1.1em
+  null: 1em
 );

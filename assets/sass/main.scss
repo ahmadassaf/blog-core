@@ -31,18 +31,23 @@
 @import "components/image";
 @import "components/link";
 @import "components/list";
+@import "components/loader";
 @import "components/logo";
 @import "components/modal";
 @import "components/navigation";
 @import "components/notice";
-@import "components/post";
-@import "components/publication";
-@import "components/quote";
-@import "components/search";
-@import "components/section";
-@import "components/skills";
 @import "components/table";
 @import "components/tags";
+@import "components/quote";
+@import "components/search";
+@import "components/pagination";
+@import "components/section";
+@import "components/archive";
+@import "components/post";
+  @import "components/post/header";
+@import "components/publication";
+@import "components/projects";
+@import "components/skills";
 
 // Utilities
 

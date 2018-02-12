@@ -6,46 +6,46 @@
 
     <div class="post__header">
 
-        <h1 itemprop="name headline" class="post-title">
+        <h1 itemprop="name headline" class="post__header__title">
             {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
         </h1>
-        <h3 class="post-subtitle">
+        <h3 class="post__header__subtitle">
             {{ page.subtitle }}
 		</h3>
 		
         {% if page.layout != 'error' %}
-			<div itemprop='dateCreated dateModified datePublished' class="post-date">
+			<div itemprop='dateCreated dateModified datePublished' class="post__header__date">
 				{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}
 			</div>
-			<div class="post-reading-time">
+			<div class="post__header__reading-time">
 				<i class="far fa-clock" aria-hidden="true"></i>
 				Reading Time: {{ content | reading_time_as_i }}
 			</div>
 			
-			<div class="contribution__container">
+			<div class="post__header__contributions">
 
-				<span class="contribution">
+				<span class="post__header__contributions__entry">
 					<i class="fab fa-github" aria-hidden="true"></i>
 					<a itemprop="sameAs" target="_blank" 
 						href='{{site.github-repo}}blob/master/{{page.category | downcase | url_escape }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>
 						Contribute to this post on Github
 					</a>
 					</span> {% if page.hackerNews %}
-				<span class="contribution">
+				<span class="post__header__contributions__entry">
 					<i class="fab fa-hacker-news-square" aria-hidden="true"></i>
 					<a target="_blank" href='{{ page.hackerNews }}'>Discuss on HackerNews</a>
 				</span> {% endif %}
 
 			</div>
 			
-			<ul class="tags list flex">
+			<ul class="post__header__tags-list list flex">
 				{% for tag in page.tags %}
-				<li>
+				<li class="post__header__tags-list__tag">
 					<a itemprop='articleSection keywords' href="{{ site.url }}/{{ tag | downcase | replace:' ', '-' }}">{{ tag }}</a>
 				</li>
 				{% unless forloop.last %}{% endunless %} {% endfor %}
 			</ul>
-			<div class="share-buttons">
+			<div class="post__header__share-buttons">
 				{% include partials/post/share.html %}
 			</div>
         {% endif %}

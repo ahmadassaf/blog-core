@@ -1,6 +1,6 @@
-<section id="featured-posts" data-aos="fade-up">
+<section class="section" id="featured-posts" data-aos="fade-up">
 
-    <h3>featured posts</h3>
+    <h3 class="section__title">featured posts</h3>
 
     {% assign featured_posts = site.featured %}
     {% for post in site.posts %}
@@ -9,7 +9,7 @@
         {% endif %}
     {% endfor %}
     
-    <ul class="list posts">
+    <ul class="list post-list">
         {% for post in featured_posts limit: 4 %}
             {% include partials/post.html %}
         {% endfor %}
