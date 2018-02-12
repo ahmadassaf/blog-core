@@ -16,10 +16,16 @@
     &--blog {
       margin: calc(5 * #{$spacing-large}) auto;
       width: 60%;
+      @include mq(large-up) {
+        width: 80%;
+      }
     }
     &--archive {
       margin: calc(4 * #{$spacing-large}) auto;
       width: 60%;
+      @include mq(large-up) {
+        width: 80%;
+      }
     }
     &--post {
       margin: calc(5 * #{$spacing-large}) $spacing-large;

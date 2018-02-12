@@ -48,22 +48,18 @@ p {
   font-size: $base-font-size;
 
   @include mq(small-up) {
-    // @include vertical-padding(4rem);
     margin-bottom: $spacing-large;
   }
 
   @include mq(medium-up) {
-    // @include vertical-padding(6rem);
     margin-bottom: $spacing-large;
   }
 
   @include mq(large-up) {
-    // @include vertical-padding(8rem);
     margin-bottom: $spacing-large;
   }
 
   @include mq(x-large-up) {
-    // @include vertical-padding(10rem);
     margin-bottom: $spacing-large;
   }
 }

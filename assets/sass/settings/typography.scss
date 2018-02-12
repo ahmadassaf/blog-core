@@ -23,6 +23,13 @@ $letter-spacing-small: 1px;
 $small-font-size: 0.85em;
 $x-small-font-size: 0.6em;
 
+$navigation-font-size: (
+  null: 18px,
+  $medium: 14px,
+  $large: 16.5px,
+  $x-large: 18px
+);
+
 $regular-font-size: (
   null: 16px,
   $medium: 17px,

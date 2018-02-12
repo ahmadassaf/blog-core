@@ -20,16 +20,19 @@
     
       &__item {
         display: inline-flex;
+        @include font-size($navigation-font-size);
         position: relative;
         transition: all $animation-time $animation-curve;
         font-weight: $font-weight-bold;
         text-transform: uppercase;
         opacity: 1;
         padding: 0 $spacing-large;
-        font-size: 18px;
         cursor: pointer;
         letter-spacing: 2px;
-      
+        @include mq(large-up) {
+          padding: 0 1.5em;
+        }
+
         &:hover {
           color: $green;
         }
@@ -37,6 +40,7 @@
         &.is-active {
           color: $green;
         }
+
       }
     }
   }
