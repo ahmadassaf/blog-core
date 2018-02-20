@@ -38,7 +38,7 @@
 
 			</div>
 			
-			<ul class="post__header__tags-list list flex">
+			<ul class="flex post__header__tags-list list">
 				{% for tag in page.tags %}
 				<li class="post__header__tags-list__tag">
 					<a itemprop='articleSection keywords' href="{{ site.url }}/{{ tag | downcase | replace:' ', '-' }}">{{ tag }}</a>

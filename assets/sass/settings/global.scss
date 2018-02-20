@@ -15,18 +15,18 @@ $spacing-medium: $spacing-base;
 $spacing-large: $spacing-base * 2;
 $spacing-x-large: $spacing-base * 3;
 $spacing-xx-large: $spacing-base * 4;
-$spacing-xxx-large: $spacing-base * 5;
-$spacing-xxxx-large: $spacing-base * 6;
+$spacing-xxx-large: $spacing-base * 6;
+$spacing-xxxx-large: $spacing-base * 8;
 
 
 // Media queries
 $width-name: max-device-width;
 
-$small: 600px;
-$medium: 890px;
+$x-small: 670px;
+$small: 800px;
+$medium: 1024px;
 $large: 1100px;
 $x-large: 1500px;
-$xx-large: 1700px;
 
 
 // Timing

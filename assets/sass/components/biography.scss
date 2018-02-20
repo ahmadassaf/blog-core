@@ -3,11 +3,22 @@
   -moz-columns: 2;
   columns: 2;
   margin: $spacing-large auto 0;
-  width: 70%;
-  
+  width: 80%;
+  @include breakpoint-max(x-large) {
+    width: 100%;
+  }
+  @include breakpoint-max(medium) {
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+  }
+
   p {
     font-size: 1.1rem;
     letter-spacing: 1px;
     margin: 40px;
+    @include breakpoint-max(medium) {
+      margin: 0 0 40px 0;
+    }
   }
 }

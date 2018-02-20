@@ -1,5 +1,4 @@
-<ul class="navigation__list flex" data-aos="fade-up" data-aos-delay="500">
-
+<ul class="flex navigation__list hide--medium show--medium-min" data-aos="fade-up" data-aos-delay="500">
     <li id="button-search" class="navigation__list__item button--search">
         <i class="fa fa-search" aria-hidden="true"></i>
     </li>
@@ -13,9 +12,7 @@
             <i class="fa fa-bookmark" aria-hidden="true"></i>
         </a>
     </li>
-    <li class="navigation__list__item hidden">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </li>
+    <i id="closeNavigationMenu" class="fas fa-times menu--responsive__toggle--close" aria-hidden="true"></i>
 
     {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
     {% assign categories = site_categories | split:',' | uniq %}

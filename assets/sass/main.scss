@@ -16,9 +16,13 @@
 
 // Objects
 @import "objects/container";
-@import "objects/grid";
 @import "objects/icon";
 @import "objects/list";
+
+// Utilities
+
+@import "utilities/display";
+@import "utilities/typography";
 
 // Components
 
@@ -48,12 +52,6 @@
 @import "components/publication";
 @import "components/projects";
 @import "components/skills";
-
-// Utilities
-
-@import "utilities/display";
-@import "utilities/typography";
-@import "utilities/widths";
 
 // External Dependencies
 @import "vendor/aos/aos";

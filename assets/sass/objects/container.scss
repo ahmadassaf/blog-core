@@ -6,29 +6,35 @@
   width: 100%;
   height: 100%;
   position: relative;
-  padding-left: $spacing-large;
-  padding-right: $spacing-large;
   margin: 0 auto;
 
     &--home {
-      padding: calc(6 * #{$spacing-large}) $spacing-large $spacing-medium;
+      width: 100%;
+      padding: $spacing-xx-large;
+      margin: $spacing-xxx-large 0 0;
+      @include breakpoint-max(small) {
+        margin: calc(2 * #{$spacing-xxxx-large}) 0 0;
+      }
+      @include breakpoint-max(medium) {
+        margin: $spacing-xxx-large 0 0;
+      }
     }
     &--blog {
-      margin: calc(5 * #{$spacing-large}) auto;
+      margin: $spacing-xxx-large auto 0;
       width: 60%;
-      @include mq(large-up) {
+      @include breakpoint-max(large) {
         width: 80%;
       }
     }
     &--archive {
-      margin: calc(4 * #{$spacing-large}) auto;
+      margin: $spacing-xx-large auto 0;
       width: 60%;
-      @include mq(large-up) {
+      @include breakpoint-max(large) {
         width: 80%;
       }
     }
     &--post {
-      margin: calc(5 * #{$spacing-large}) $spacing-large;
+      margin: $spacing-xxx-large $spacing-large 0;
       width: 70%;
     }
 }
@@ -42,5 +48,8 @@ body.container {
     position: fixed;
     left: 0;
     z-index: 10;
+    @include breakpoint-max(medium) {
+      border-left: 15px solid $green;
+    }
   }
 }

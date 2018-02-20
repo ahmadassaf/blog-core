@@ -53,18 +53,29 @@
         font-size: $x-small-font-size;
         text-transform: uppercase;
         font-family: $primary-font-family;
+        @include breakpoint-max(medium) {
+          float: none;
+          display: block;
+        }
       }
+
       &__subtitle {
         font-weight: $font-weight-regular;
         font-family: $primary-font-family;
         color: $grey-600;
         display: block;
+        @include breakpoint-max(x-small) {
+          margin: 10px 0;
+        }
       }
+
       &__tags-list {
         margin: $spacing-base 0;
       }
+
       &__github-link {
         cursor: pointer;
+
         &:hover {
           color: $green;
         }

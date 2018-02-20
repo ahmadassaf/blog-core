@@ -16,12 +16,6 @@
   text-align: justify !important;
 }
 
-.text-right--large-up {
-  @include mq(large-up) {
-    text-align: right !important;
-  }
-}
-
 .capitalize {
   text-transform: capitalize;
 }

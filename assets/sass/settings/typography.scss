@@ -9,9 +9,9 @@ $font-weight-regular: 400;
 $font-weight-bold: 700;
 $font-weight-bolder: 800;
 
-$base-line-height: 1.5;
-$heading-line-height: 1.5;
-$heading-line-height-tight: 1.15;
+$base-line-height: 1.8;
+$heading-line-height: 2;
+$heading-line-height-tight: 1.5;
 
 $base-letter-spacing: 0.2px;
 $letter-spacing-x-large: 12px;
@@ -20,75 +20,49 @@ $letter-spacing-medium: 3px;
 $letter-spacing-small: 1px;
 
 // Font sizes
+
 $small-font-size: 0.85em;
 $x-small-font-size: 0.6em;
 
-$navigation-font-size: (
-  null: 18px,
-  $medium: 14px,
-  $large: 16.5px,
-  $x-large: 18px
-);
-
 $regular-font-size: (
-  null: 16px,
-  $medium: 17px,
+  $x-large: 18px,
   $large: 18px,
-  $x-large: 18.5px
+  $medium: 17px,
+  $small: 16px,
+  null: 18.5px
 );
 
-$home-title-size: (
-  null: 1.5em,
-  $medium: 2em,
-  $large: 2.2em,
-  $x-large: 10em
-);
-
-$h1-post-font-size: (
-  null: 1.5em,
-  $medium: 1.8em,
-  $large: 2em,
-  $x-large: 2em
-);
-
-$h2-post-font-size: (
-  null: 1em,
-  $medium: 1.1em,
-  $large: 1.3,
-  $x-large: 1.5em
-);
-
-$h3-post-font-size: (
-  null: 1em,
-  $medium: 1em,
-  $large: 1.1,
-  $x-large: 1.2em
-);
 
 $h1-font-size: (
-  null: 1.5em,
+  $x-large: 2.2em,
   $medium: 2em,
   $large: 2.2em,
-  $x-large: 4em
+  $small: 2em,
+  null: 4em
 );
 
 $h2-font-size: (
-  null: 1.2em,
-  $medium: 1.3em,
-  $large: 1.4em,
-  $x-large: 3em
+  $x-large: 2em,
+  $large: 2em,
+  $medium: 2em,
+  $small: 1.8em,
+  null: 3em
 );
 
 $h3-font-size: (
-  null: 1.2em,
-  $large: 1.3em,
-  $x-large: 2em
+  $x-large: 2em,
+  $large: 2em,
+  $medium: 1.8em,
+  $small: 1.5em,
+  null: 2em
 );
 
 $h4-font-size: (
-  null: 1em,
-  $medium: 1.1em,
-  $large: 1.5em
+  $x-large: 1.5em,
+  $large: 1.5em,
+  $medium: 1.4em,
+  $small: 1.2em,
+  null: 1.5em
 );
 
 $h5-font-size: (
@@ -97,4 +71,66 @@ $h5-font-size: (
 
 $h6-font-size: (
   null: 1em
+);
+
+// Navigation sizes
+
+$navigation-font-size: (
+  $x-large: 18px,
+  $large: 18px,
+  $medium: 18px,
+  $small: 18px,
+  null: 18px
+);
+
+// Home sizes
+
+$home-title-size: (
+  $x-large: 7.6em,
+  $large: 7.6em,
+  $medium: 6em,
+  $small: 5em,
+  null: 10em
+);
+
+$home-subtitle-size: (
+  $x-large: 2.5em,
+  $large: 2.5em,
+  $medium: 2em,
+  $small: 1.8em,
+  null: 3em
+);
+
+$home-icons-size: (
+  $x-large: 2em,
+  $large: 2em,
+  $medium: 1.8em,
+  $small: 1.8em,  
+  null: 2em
+);
+
+// Post sizes
+
+$h1-post-font-size: (
+  $x-large: 2em,
+  $large: 2em,
+  $medium: 1.8em,
+  $small: 1.8em,
+  null: 2em
+);
+
+$h2-post-font-size: (
+  $x-large: 1.3em,
+  $large: 1.3,
+  $medium: 1.1em,
+  $small: 1.1em,
+  null: 1.5em
+);
+
+$h3-post-font-size: (
+  $x-large: 1.1em,
+  $large: 1.1,
+  $medium: 1em,
+  $small: 1em,
+  null: 1.2em
 );

@@ -10,10 +10,6 @@ body {
   letter-spacing: $base-letter-spacing;
   color: $black;
   -webkit-font-smoothing: antialiased;
-
-  @include mq(medium-up) {
-    line-height: $base-line-height * 1.1;
-  }
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,{
@@ -24,6 +20,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,{
   text-transform: uppercase;
   letter-spacing: $letter-spacing-large;
   line-height: $heading-line-height;
+  @include breakpoint-max(x-small) {
+    line-height: $heading-line-height-tight;
+  }
 }
 
 // adds spacing between headings and paragraphs
@@ -46,21 +45,8 @@ strong {
 p {
   margin: 0 0 $spacing-medium 0;
   font-size: $base-font-size;
-
-  @include mq(small-up) {
-    margin-bottom: $spacing-large;
-  }
-
-  @include mq(medium-up) {
-    margin-bottom: $spacing-large;
-  }
-
-  @include mq(large-up) {
-    margin-bottom: $spacing-large;
-  }
-
-  @include mq(x-large-up) {
-    margin-bottom: $spacing-large;
+  @include breakpoint-max(small) {
+    font-size: 16px;
   }
 }
 

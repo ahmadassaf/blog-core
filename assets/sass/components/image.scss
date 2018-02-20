@@ -17,11 +17,11 @@ img {
   & + & {
     margin-top: $spacing-large;
 
-    @include mq(medium-up) {
+    @include breakpoint-max(medium) {
       margin-top: 3rem;
     }
 
-    @include mq(large-up) {
+    @include breakpoint-max(large) {
       margin-top: 4rem;
     }
   }

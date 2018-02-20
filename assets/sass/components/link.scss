@@ -71,8 +71,11 @@ $socialColours:
 }
 
 .social-links {
-    margin: $spacing-xxxx-large 0;
+    margin: $spacing-xx-large 0;
     padding: 0;
+    @include breakpoint-max(small) {
+        justify-content: center;
+    }
 
     li {
         display: inline-flex;
@@ -81,8 +84,11 @@ $socialColours:
         &:first-of-type {
             padding-left: 0;
         }
+        @include breakpoint-max(x-small) {
+            padding: 1.5em;
+        }
         a {
-            @include font-size($h3-font-size);
+            @include font-size($home-icons-size);
             i {
                 &.fa-angellist:hover {
                     color: get-social-media-colour(angellist);

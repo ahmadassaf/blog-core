@@ -6,7 +6,7 @@
       font-size: $fs-font-size;
     }
     @else {
-      @media screen and (min-width: $fs-breakpoint) {
+      @media screen and (max-width: $fs-breakpoint) {
         font-size: $fs-font-size;
       }
     }

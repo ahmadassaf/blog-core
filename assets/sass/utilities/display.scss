@@ -22,7 +22,7 @@
 
 .inactive {
   pointer-events: none;
-  pointer: default;
+  cursor: default;
 }
 
 .cover {
@@ -37,27 +37,35 @@
 
 // Hide/show
 
-.hide--large-down {
-  @include mq(large-down) {
+.hide--medium {
+  @include breakpoint-max(medium) {
+    visibility: hidden;
+  }
+}
+
+.hide--small {
+  @include breakpoint-max(small) {
+    display: none;
+  }
+}
+
+.hide--x-small {
+  @include breakpoint-max(x-small) {
     display: none !important;
   }
 }
 
-.hide--large-up {
-  @include mq(large-up) {
-    display: none !important;
+.show--medium-max {
+  @include breakpoint-max(medium) {
+    display: block !important;
+    visibility: visible !important;
   }
 }
 
-.hide--medium-down {
-  @include mq(medium-down) {
-    display: none !important;
-  }
-}
-
-.hide--medium-up {
-  @include mq(medium-up) {
-    display: none !important;
+.show--medium-min {
+  @media (min-width: $medium) {
+    display: block !important;
+    visibility: visible !important;
   }
 }
 
@@ -82,6 +90,9 @@
 
 .flex {
   display: flex;
+  @include breakpoint-max(x-small) {
+    flex-wrap: wrap;
+  }
 }
 
 .clickthrough {

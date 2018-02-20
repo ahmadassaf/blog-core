@@ -1,10 +1,25 @@
-.skills {
+.skill-list {
   margin: $spacing-large 0;
   
-  li {
+  &__entry {
     margin: $spacing-medium 0;
+      &__title {
+        &:after {
+          content: ':';
+          @include breakpoint-max(small) {
+            content: none;
+          }
+        }
+        @include breakpoint-max(small) {
+          display: block;
+        }
+      }
       p {
         display: inline;
+        strong {
+          font-weight: $font-weight-light;
+          margin: 0 5px 0 0;
+        }
       }
   }
 }

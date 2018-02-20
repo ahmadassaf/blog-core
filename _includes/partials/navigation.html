@@ -1,11 +1,12 @@
 <div class="navigation-container">
-    <div class="navigation flex {% if page.layout != 'home' %} navigation--blog {% endif %}">
+    <div class="flex navigation {% if page.layout != 'home' %} navigation--blog {% endif %}">
         <a href="{{ site.url }}" class="logo block"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
         {% if page.layout == 'home' %}
             {% include partials/navigation/home.html %}
         {% else %}
             {% include partials/navigation/blog.html %}
         {% endif %}
+        <i id="openNavigationMenu" class="fa fa-bars menu--responsive__toggle--open show--medium-max" aria-hidden="true"></i>
     </div>
     {% include partials/search.html %}
 </div>

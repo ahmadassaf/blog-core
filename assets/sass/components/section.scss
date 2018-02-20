@@ -10,6 +10,11 @@
       left: 0;
     }
   }
+  &__subtitle {
+    @include breakpoint-max(small) {
+      line-height: $heading-line-height;
+    }
+  }
 }
 
 .container--blog .section__title {

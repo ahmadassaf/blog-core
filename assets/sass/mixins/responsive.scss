@@ -1,61 +1,35 @@
 // Media queries
 
-@mixin mq($size) {
+@mixin breakpoint-max($size) {
 
-  // XX-large
+  @if $size == xx-large {
+    @media (max-width: $xx-large + 1) { @content ; }
+  } @else if $size == x-large {
+    @media (max-width: $x-large + 1) { @content ; }
+  } @else if $size == large {
+    @media (max-width: $large + 1) { @content ; }
+  } @else if $size == medium {
+    @media (max-width: $medium + 1) { @content ; }
+  } @else if $size == small {
+    @media (max-width: $small + 1) { @content ; }
+  } @else if $size == x-small {
+    @media (max-width: $x-small + 1) { @content ; }
+  }
+}
 
-  @if $size == xx-large-up {
+@mixin breakpoint-min($size) {
+
+  @if $size == xx-large {
     @media (min-width: $xx-large) { @content ; }
-  }
-
-  // X-large
-
-  @if $size == x-large-up {
+  } @else if $size == x-large {
     @media (min-width: $x-large) { @content ; }
-  }
-
-
-  // Large
-
-  @if $size == large-down {
-    @media (max-width: $large - 1) { @content ; }
-  }
-
-  @if $size == large-only {
-    @media (min-width: $large) and (max-width: $x-large - 1) { @content ; }
-  }
-
-  @if $size == large-up {
+  } @else if $size == large {
     @media (min-width: $large) { @content ; }
-  }
-
-
-  // Medium
-
-  @if $size == medium-down {
-    @media (max-width: $medium - 1) { @content ; }
-  }
-
-  @if $size == medium-only {
-    @media (min-width: $medium) and (max-width: $large - 1) { @content ; }
-  }
-
-  @if $size == medium-up {
+  } @else if $size == medium {
     @media (min-width: $medium) { @content ; }
-  }
-
-
-  // Small
-
-  @if $size == small-down {
-    @media (max-width: $small - 1) { @content ; }
-  }
-
-  @if $size == small-only {
-    @media (min-width: $small) and (max-width: $medium - 1) { @content ; }
-  }
-
-  @if $size == small-up {
+  } @else if $size == small {
     @media (min-width: $small) { @content ; }
+  } @else if $size == x-small {
+    @media (min-width: $x-small) { @content ; }
   }
 }

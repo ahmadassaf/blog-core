@@ -11,6 +11,9 @@
           font-weight: $font-weight-bold;
           top: 4px;
           left: -45px;
+          @include breakpoint-max(large) {
+            content: none;
+          }
         }
         &::after {
           content: "";
@@ -20,6 +23,9 @@
           position: absolute;
           left: -40px;
           top: 0;
+          @include breakpoint-max(large) {
+            content: none;
+          }
         }
       }
     }
@@ -44,6 +50,13 @@
         background: $green;
         left: -20px;
         top:0;
+        @include breakpoint-max(x-small) {
+          height: 10px;
+          width: 100%;
+          bottom: -10px;
+          left: 0;
+          top: auto;
+        }
       }
     }
   }

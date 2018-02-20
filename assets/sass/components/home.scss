@@ -2,18 +2,39 @@
   &__title {
     @include font-size($home-title-size);
     letter-spacing: $letter-spacing-x-large;
+    @include breakpoint-max(large) {
+      letter-spacing: 8px;
+    }
+    @include breakpoint-max(medium) {
+      letter-spacing: 4px;
+      line-height: 1.3em;
+    }
   }
 
   &__subtitle {
-    @include font-size($h2-font-size);
+    @include font-size($home-subtitle-size);
     font-family: $primary-font-family;
       &--rotating {
         border-bottom: 7px solid $blue;
       }
   }
-
+  &__greetings {
+    &--title {
+      text-align: center;
+      color: $grey-600;
+    }
+    @include breakpoint-max(x-small) {
+      text-align: center;
+    }
+  }
   &__footer {
     color: $grey-800;
+  }
+
+  &__title, &__subtitle {
+    @include breakpoint-max(small) {
+     text-align: center; 
+    }
   }
 }
 
@@ -22,7 +43,7 @@
 
   &__item {
     display: inline-flex;
-    align-items: center;
+    align-items: baseline;
     color: $grey-600;
     margin: 5px 0;
     letter-spacing: $letter-spacing-small;

@@ -27,7 +27,10 @@ var blog = {
             blog.addSearchTrigger();
             blog.addHomePageScripts();
             const projects = require('./projects');
-            document.querySelectorAll('.post--archive').forEach((e) => e.addEventListener('click', function() {window.open(e.getAttribute('data-link'), '_self')}, false))
+            document.querySelectorAll('.post--archive').forEach((e) => e.addEventListener('click', function() {window.open(e.getAttribute('data-link'), '_self')}, false));
+            document.getElementById('openNavigationMenu').addEventListener('click', function() {document.querySelector('.navigation__list').style.visibility = 'visible'});
+            document.getElementById('closeNavigationMenu').addEventListener('click', function() {document.querySelector('.navigation__list').style.visibility = 'hidden'});
+
         });
     },
     /**
