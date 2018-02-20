@@ -19,7 +19,7 @@
     {% for item in (0..categories.size) %}{% unless forloop.last %}
         {% capture category %}{{ categories[item] | strip_newlines }}{% endcapture %}
         <li class="navigation__list__item" {% if page.title == category or page.category == category %} class="current" {% endif %}>
-            <a href="{{ site.url }}/{{ category | downcase | replace:' ', '-'}}">{{ category }}</a>
+            <a href="{{ site.url }}/{{ category | downcase | replace:' ', '-' | replace:'&-', ''}}">{{ category }}</a>
         </li>
     {% endunless %}{% endfor %}
     

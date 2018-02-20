@@ -6,36 +6,30 @@
   width: 100%;
   height: 100%;
   position: relative;
+  flex-flow: wrap;
   margin: 0 auto;
 
     &--home {
       width: 100%;
-      padding: $spacing-xx-large;
-      margin: $spacing-xxx-large 0 0;
-      @include breakpoint-max(small) {
-        margin: calc(2 * #{$spacing-xxxx-large}) 0 0;
-      }
-      @include breakpoint-max(medium) {
-        margin: $spacing-xxx-large 0 0;
-      }
+      padding: 0 $spacing-xx-large;
     }
     &--blog {
-      margin: $spacing-xxx-large auto 0;
+      margin: 0 auto;
       width: 60%;
       @include breakpoint-max(large) {
         width: 80%;
       }
     }
     &--archive {
-      margin: $spacing-xx-large auto 0;
+      margin: 0 auto $spacing-x-large;
       width: 60%;
       @include breakpoint-max(large) {
         width: 80%;
       }
     }
     &--post {
-      margin: $spacing-xxx-large $spacing-large 0;
       width: 70%;
+      padding: 0 $spacing-xx-large;
     }
 }
 

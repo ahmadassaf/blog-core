@@ -64,7 +64,7 @@
 
 .show--medium-min {
   @media (min-width: $medium) {
-    display: block !important;
+    display: block;
     visibility: visible !important;
   }
 }

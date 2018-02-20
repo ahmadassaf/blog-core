@@ -1,8 +1,12 @@
 .container--post {
+
   .post__header {
     border-bottom: 2px solid;
     padding: $spacing-base 0;
 
+    &__title {
+      line-height: $heading-line-height-tight;
+    }
     &__subtitle {
       font-family: $primary-font-family;
     }

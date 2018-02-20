@@ -362,32 +362,26 @@ h6,
   width: 100%;
   height: 100%;
   position: relative;
+  flex-flow: wrap;
   margin: 0 auto; }
   .container--home {
     width: 100%;
-    padding: 4rem;
-    margin: 6rem 0 0; }
-    @media (max-width: 801px) {
-      .container--home {
-        margin: calc(2 * 8rem) 0 0; } }
-    @media (max-width: 1025px) {
-      .container--home {
-        margin: 6rem 0 0; } }
+    padding: 0 4rem; }
   .container--blog {
-    margin: 6rem auto 0;
+    margin: 0 auto;
     width: 60%; }
     @media (max-width: 1101px) {
       .container--blog {
         width: 80%; } }
   .container--archive {
-    margin: 4rem auto 0;
+    margin: 0 auto 3rem;
     width: 60%; }
     @media (max-width: 1101px) {
       .container--archive {
         width: 80%; } }
   .container--post {
-    margin: 6rem 2rem 0;
-    width: 70%; }
+    width: 70%;
+    padding: 0 4rem; }
 
 body.container:before {
   content: "";
@@ -469,7 +463,7 @@ body.container:before {
 
 @media (min-width: 1024px) {
   .show--medium-min {
-    display: block !important;
+    display: block;
     visibility: visible !important; } }
 
 .align-left {
@@ -1126,9 +1120,8 @@ figure {
   z-index: 1; }
 
 .navigation-container {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
   background: #FFFFFF;
   z-index: 1;
@@ -1431,10 +1424,14 @@ dd {
     font-size: 6vw;
     line-height: 1;
     display: inline-block;
-    width: 50%;
+    width: 60%;
     padding: 0.05em 0;
     color: #2c2d33;
     border-bottom: 2px solid; }
+    @media (max-width: 1025px) {
+      .search__input {
+        margin: 2em 0 0;
+        width: 100%; } }
   .search__info {
     font-size: 90%;
     font-weight: bold;
@@ -1653,6 +1650,7 @@ dd {
       .post-list__entry__header__tags-list {
         margin: 1rem 0; }
       .post-list__entry__header__github-link {
+        font-weight: 700;
         cursor: pointer; }
         .post-list__entry__header__github-link:hover {
           color: #399f62; }
@@ -1666,6 +1664,8 @@ dd {
 .container--post .post__header {
   border-bottom: 2px solid;
   padding: 1rem 0; }
+  .container--post .post__header__title {
+    line-height: 1.5; }
   .container--post .post__header__subtitle {
     font-family: "sleek", "Open Sans", "Helvetica Neue", sans-serif; }
   .container--post .post__header__date {
