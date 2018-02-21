@@ -111,6 +111,14 @@ $home-icons-size: (
 
 // Post sizes
 
+$h1-post-title-font-size: (
+  $x-large: 3.5em,
+  $large: 3em,
+  $medium: 2.2em,
+  $small: 2em,
+  null: 4em
+);
+
 $h1-post-font-size: (
   $x-large: 2em,
   $large: 2em,

@@ -10,8 +10,11 @@
     padding: $spacing-large $spacing-base $spacing-large $spacing-x-large
   }
   @include breakpoint-max(large) {
-    padding: $spacing-large;
+    padding: $spacing-large $spacing-xx-large;
     justify-content: space-between;
+  }
+  @include breakpoint-max(large) {
+    padding: $spacing-large;
   }
 
   .button--search {

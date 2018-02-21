@@ -1,8 +1,11 @@
 table {
-  width: 100%;
+  width: 150%;
   border-collapse: collapse;
   border: 1px solid darken($white, 7%);
   margin-bottom: 1em;
+  @include breakpoint-max(x-large) {
+    width: 100%;
+  }
 }
 thead {
   background-color: darken($white, 5%);

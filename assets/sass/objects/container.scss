@@ -30,6 +30,14 @@
     &--post {
       width: 70%;
       padding: 0 $spacing-xx-large;
+      @include breakpoint-max(x-large) {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+      }
+      @include breakpoint-max(small) {
+        padding: 0 1em 0;
+      }
     }
 }
 

@@ -1,7 +1,7 @@
 <div class="flex align-items navigation-container {% if page.layout != 'home' %} navigation-container--blog {% endif %}">
     <a href="{{ site.url }}" class="logo block"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
     <div class="flex navigation align-items">
-        <ul class="flex align-items navigation__list show--large-min" data-aos="fade-up" data-aos-delay="500">
+        <ul class="flex align-items navigation__list show--large-min">
             {% if page.layout == 'home' %}
                 {% include partials/navigation/home.html %}
             {% else %}
