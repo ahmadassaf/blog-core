@@ -1,7 +1,7 @@
 <div class="flex align-items navigation-container {% if page.layout != 'home' %} navigation-container--blog {% endif %}">
     <a href="{{ site.url }}" class="logo block"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
     <div class="flex navigation align-items">
-        <ul class="flex align-items navigation__list show--medium-min" data-aos="fade-up" data-aos-delay="500">
+        <ul class="flex align-items navigation__list show--large-min" data-aos="fade-up" data-aos-delay="500">
             {% if page.layout == 'home' %}
                 {% include partials/navigation/home.html %}
             {% else %}
@@ -15,7 +15,7 @@
         </ul>
         <div class="flex align-items navigation-container__actions">
             <i id="button-search" class="hover fa fa-search button--search" aria-hidden="true"></i>
-            <i id="openNavigationMenu" class="hover fa fa-bars menu--responsive__toggle show--medium-max" aria-hidden="true"></i>
+            <i id="openNavigationMenu" class="hover fa fa-bars menu--responsive__toggle show--large-max" aria-hidden="true"></i>
         </div>
     </div>
     {% include partials/search.html %}

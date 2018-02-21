@@ -49,15 +49,21 @@
   }
 }
 
-.show--medium-max {
-  @include breakpoint-max(medium) {
+.hide--large-min {
+  @media (min-width: $large) {
+    display: none;
+  }
+}
+
+.show--large-max {
+  @include breakpoint-max(large) {
     display: block !important;
     visibility: visible !important;
   }
 }
 
-.show--medium-min {
-  @media (min-width: $medium) {
+.show--large-min {
+  @media (min-width: $large) {
     display: block;
     visibility: visible !important;
   }

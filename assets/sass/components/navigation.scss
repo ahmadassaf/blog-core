@@ -9,7 +9,7 @@
   @include breakpoint-max(x-large) {
     padding: $spacing-large $spacing-base $spacing-large $spacing-x-large
   }
-  @include breakpoint-max(medium) {
+  @include breakpoint-max(large) {
     padding: $spacing-large;
     justify-content: space-between;
   }
@@ -28,7 +28,7 @@
       @include breakpoint-max(large) {
         margin: 0 $spacing-base;
       }
-      @include breakpoint-max(medium) {
+      @include breakpoint-max(large) {
         font-size: 1.5em;
         margin: 0 $spacing-large;
       }
@@ -36,6 +36,9 @@
 
     .navigation__list {
       .navigation__list__item {
+        &--responsive {
+          font-style: normal;
+        }
         @include breakpoint-max(x-large) {
           font-size: 16px;
         }
@@ -49,7 +52,7 @@
   .navigation {
     justify-content: baseline;
 
-    @include breakpoint-max(medium) {
+    @include breakpoint-max(large) {
       justify-content: space-between;
     }
 
@@ -62,7 +65,7 @@
         top: 1.2em;
         right: 1em;
       }
-      @media (min-width: $medium) {
+      @media (min-width: $large) {
         display: none;
       }
     }
@@ -71,7 +74,7 @@
       position: relative;
       flex-direction: row-reverse;
 
-      @include breakpoint-max(medium) {
+      @include breakpoint-max(large) {
         position: fixed;
         width: 100%;
         height: 100%;
@@ -95,21 +98,20 @@
         padding: 0 $spacing-large;
         cursor: pointer;
         letter-spacing: 2px;
-        @include breakpoint-max(large) {
-          padding: 0 1.5em;
+        
+        &--current {
+          color: $green;
         }
-        @include breakpoint-max(medium) {
-          margin: 1em 0;
-        }
-
         &:hover {
           @extend .hover;
         }
-        
-        &.is-active {
-          color: $green;
-        }
 
+        @include breakpoint-max(large) {
+          padding: 0 1.5em;
+        }
+        @include breakpoint-max(large) {
+          margin: 1em 0;
+        }
       }
     }
   }

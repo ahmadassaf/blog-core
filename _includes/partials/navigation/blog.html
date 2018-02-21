@@ -1,19 +1,21 @@
 <li class="navigation__list__item">
     <a href="{{ site.url }}/posts">
         <i class="fa fa-archive" aria-hidden="true"></i>
+        <i class="navigation__list__item--responsive hide--large-min">Archive</i>
     </a>
 </li>
 <li class="navigation__list__item">
     <a href="{{ site.url }}/tags">
         <i class="fa fa-bookmark" aria-hidden="true"></i>
+        <i class="navigation__list__item--responsive hide--large-min">Tags</i>
     </a>
 </li>
-
 {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign categories = site_categories | split:',' | uniq %}
 {% for item in (0..categories.size) %}{% unless forloop.last %}
     {% capture category %}{{ categories[item] | strip_newlines }}{% endcapture %}
-    <li class="navigation__list__item" {% if page.title == category or page.category == category %} class="current" {% endif %}>
+    <li class="navigation__list__item">
         <a href="{{ site.url }}/{{ category | downcase | replace:' ', '-' | replace:'&-', ''}}">{{ category }}</a>
     </li>
 {% endunless %}{% endfor %}
+
