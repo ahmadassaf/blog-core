@@ -12,13 +12,7 @@
     text-transform: uppercase;
 
     &:hover {
-      @extend .tags--hovered;
+      @extend .hover--tags;
     }
   }
-}
-
-.tags--hovered {
-  border: 1px solid $green;
-  background: $green;
-  color: $white;
 }

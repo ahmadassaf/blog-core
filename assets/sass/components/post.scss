@@ -76,10 +76,6 @@
       &__github-link {
         font-weight: $font-weight-bold;
         cursor: pointer;
-
-        &:hover {
-          color: $green;
-        }
         i {
           padding: 0 10px 0 0;
         }

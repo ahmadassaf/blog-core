@@ -1,12 +1,22 @@
-<div class="navigation-container">
-    <div class="flex navigation {% if page.layout != 'home' %} navigation--blog {% endif %}">
-        <a href="{{ site.url }}" class="logo block"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
-        {% if page.layout == 'home' %}
-            {% include partials/navigation/home.html %}
-        {% else %}
-            {% include partials/navigation/blog.html %}
-        {% endif %}
-        <i id="openNavigationMenu" class="fa fa-bars menu--responsive__toggle--open show--medium-max" aria-hidden="true"></i>
+<div class="flex align-items navigation-container {% if page.layout != 'home' %} navigation-container--blog {% endif %}">
+    <a href="{{ site.url }}" class="logo block"><img alt="logo" src="{{ site.url }}/images/{{ site.logo }}"></a>
+    <div class="flex navigation align-items">
+        <ul class="flex align-items navigation__list show--medium-min" data-aos="fade-up" data-aos-delay="500">
+            {% if page.layout == 'home' %}
+                {% include partials/navigation/home.html %}
+            {% else %}
+                {% include partials/navigation/blog.html %}
+            {% endif %}
+            <span id="closeNavigationMenu" class="hover menu--responsive__toggle--close" aria-hidden="true">
+                <svg class="icon icon--cross">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </span>
+        </ul>
+        <div class="flex align-items navigation-container__actions">
+            <i id="button-search" class="hover fa fa-search button--search" aria-hidden="true"></i>
+            <i id="openNavigationMenu" class="hover fa fa-bars menu--responsive__toggle show--medium-max" aria-hidden="true"></i>
+        </div>
     </div>
     {% include partials/search.html %}
 </div>

@@ -37,12 +37,6 @@
 
 // Hide/show
 
-.hide--medium {
-  @include breakpoint-max(medium) {
-    visibility: hidden;
-  }
-}
-
 .hide--small {
   @include breakpoint-max(small) {
     display: none;
@@ -70,6 +64,11 @@
 }
 
 // alignment
+
+.align-items {
+  align-items: center;
+}
+
 .align-left {
   @include clearfix();
   float: left;
@@ -97,4 +96,16 @@
 
 .clickthrough {
   pointer-events: none;
+}
+
+.hover {
+  cursor: pointer;
+  &:hover {
+    color: $green;
+  }
+  &--tags {
+    border: 1px solid $green;
+    background: $green;
+    color: $white;
+  }
 }

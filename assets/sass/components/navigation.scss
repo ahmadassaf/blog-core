@@ -5,11 +5,50 @@
   background: $white;
   z-index: 1;  
   padding: $spacing-large $spacing-xx-large;
+  
+  @include breakpoint-max(x-large) {
+    padding: $spacing-large $spacing-base $spacing-large $spacing-x-large
+  }
   @include breakpoint-max(medium) {
     padding: $spacing-large;
+    justify-content: space-between;
   }
+
+  .button--search {
+    display: none;
+    font-size: 1.1em;
+  }
+
+  &--blog {
+    justify-content: space-between;
+
+    .button--search {
+      display: inline;
+      margin: 0 $spacing-large;
+      @include breakpoint-max(large) {
+        margin: 0 $spacing-base;
+      }
+      @include breakpoint-max(medium) {
+        font-size: 1.5em;
+        margin: 0 $spacing-large;
+      }
+    }
+
+    .navigation__list {
+      .navigation__list__item {
+        @include breakpoint-max(x-large) {
+          font-size: 16px;
+        }
+        @include breakpoint-max(large) {
+          padding: 1.5em;
+        }
+      }
+    }
+  }
+
   .navigation {
     justify-content: baseline;
+
     @include breakpoint-max(medium) {
       justify-content: space-between;
     }
@@ -17,31 +56,19 @@
     .menu--responsive__toggle {
       font-size: 2em;
       margin: auto 0;
-      cursor: pointer;
-      &:hover {
-        color: $green;
+      &--close {
+        @extend .menu--responsive__toggle;
+        position: absolute;
+        top: 1.2em;
+        right: 1em;
       }
       @media (min-width: $medium) {
         display: none;
       }
     }
 
-    .menu--responsive__toggle--open {
-      @extend .menu--responsive__toggle;
-    }
-
-    .menu--responsive__toggle--close {
-      @extend .menu--responsive__toggle;
-
-    }
-
-    &--blog {
-      justify-content: space-between;
-    }
-
     &__list {
       position: relative;
-      align-items: center;
       flex-direction: row-reverse;
 
       @include breakpoint-max(medium) {
@@ -51,16 +78,10 @@
         background: $white;
         top: 0;
         left: 0;
-        visibility: hidden;
-        flex-direction: column;
         padding: 5em 0;
-      }
-
-      .menu--responsive__toggle--close {
-        @extend .menu--responsive__toggle;
-        position: absolute;
-        right: 35px;
-        top: 40px;
+        visibility: hidden;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
       }
       
       &__item {
@@ -82,7 +103,7 @@
         }
 
         &:hover {
-          color: $green;
+          @extend .hover;
         }
         
         &.is-active {
