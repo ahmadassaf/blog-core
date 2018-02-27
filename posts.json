@@ -5,10 +5,11 @@
   {
         "{{ forloop.index }}" : {
           "id"       : "{{ forloop.index }}",
-          "title"    : "{{ post.title | escape }}",
+          "title"    : "{{ post.title }}",
+          "subtitle" : "{{ post.subtitle }}",
           "image"    : "{{ post.image }}",
           "category" : "{{ post.categories | join: ' ' }}",
-          "content"  : "{{ post.content | strip_html | strip_newlines | remove:  "   " | escape | remove: "\" }}",
+          "content"  : "{{ post.content | strip_html | strip_newlines | strip | escape | remove: "\" }}",
           "url"      : "{{ site.baseurl }}{{ post.url }}",
           "date"     : "{{ post.date }}"
         }

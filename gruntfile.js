@@ -59,7 +59,10 @@ module.exports = function(grunt) {
                 },
                 options: {
                     debug: true,
-                    transform: ['stringify', ['babelify', { 'presets': ['es2015', 'es2016', 'react'] }]],
+                    transform: [
+                        'stringify', 
+                        ['babelify', { 'presets': ['es2015', 'es2016', 'react'] }]
+                    ],
                     standalone: pkg['export-symbol']
                   }
             }

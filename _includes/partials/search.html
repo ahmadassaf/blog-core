@@ -1,8 +1,5 @@
 <div class="search">
-  <form class="search__form" action="">
-    <input class="search__input" name="search" type="search" placeholder="Find..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
-    <span class="search__info">Hit enter to search or ESC to close</span>
-  </form>
+  <div id="search__wrapper"></div>
   <div class="search__related">
     <h3>May I Suggest?</h3>
     <div class="search__suggestion">
@@ -15,45 +12,3 @@
     </svg>
   </button>
 </div>
-
-<script>
-
-(function() {
-
-  const mainContainer = document.querySelector('.container--main');
-  const openCtrl = document.getElementById('button-search');
-  const closeCtrl = document.getElementById('button-search-close');
-  const searchContainer = document.querySelector('.search');
-  const inputSearch = searchContainer.querySelector('.search__input');
-
-    function openSearch() {
-      mainContainer.classList.add('container__main--overlay');
-      closeCtrl.classList.remove('button--hidden');
-      searchContainer.classList.add('search--open');
-      setTimeout(function() {
-        inputSearch.focus();
-      }, 500);
-    }
-    
-    function closeSearch() {
-      mainContainer.classList.remove('container__main--overlay');
-      closeCtrl.classList.add('button--hidden');
-      searchContainer.classList.remove('search--open');
-      inputSearch.blur();
-      inputSearch.value = '';
-    }
-
-    openCtrl.addEventListener('click', openSearch);
-    closeCtrl.addEventListener('click', closeSearch);
-
-    document.addEventListener('keyup', function(ev) {
-      if (ev.keyCode === 27) {
-        closeSearch();
-      }
-    });
-  
-  
-})();
-
-</script>
-
