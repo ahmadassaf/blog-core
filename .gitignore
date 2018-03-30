@@ -46,4 +46,3 @@ cache
 _site/
 .sass-cache/
 .jekyll-metadata
-assets/js/build/
