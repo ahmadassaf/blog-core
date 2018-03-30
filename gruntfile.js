@@ -22,12 +22,7 @@ module.exports = function(grunt) {
                     src: ['**'],
                     dest: 'images/posts/'
                 }]
-            },
-            styles:{
-                files: {
-                    'assets/deploy/main.css': '_site/assets/deploy.css'             
-                }
-            } 
+            }
         },
 
         imagemin: {
@@ -80,7 +75,7 @@ module.exports = function(grunt) {
             },
             min: {
               files: {
-                'assets/deploy/main.min.js' : ['assets/deploy/main.js']
+                '_site/assets/deploy/main.min.js' : ['assets/deploy/main.js']
               }
             }
         },
