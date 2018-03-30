@@ -60,6 +60,14 @@ $socialColours:
     @return $colour;
 }
 
+.go-to-posts {
+    border-bottom: 4px solid $green;
+    &:hover {
+        color: $green;
+        border-color: $black;
+    }
+}
+
 .link {
     display: inline;
     border-bottom: 2px solid $green;

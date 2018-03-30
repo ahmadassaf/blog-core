@@ -245,7 +245,8 @@ a {
 strong {
   font-weight: 700;
   font-family: "tauri";
-  font-size: 0.85em; }
+  font-size: 0.85em;
+  margin: 0 5px; }
 
 p {
   margin: 0 0 1rem 0;
@@ -739,64 +740,61 @@ input {
   input::-ms-clear {
     display: none; }
 
-.introduction__title {
-  font-size: 10em;
-  letter-spacing: 12px;
-  font-family: "tauri";
-  line-height: normal;
-  font-weight: 400; }
-  @media screen and (max-width: 1500px) {
-    .introduction__title {
-      font-size: 7.6em; } }
-  @media screen and (max-width: 1250px) {
-    .introduction__title {
-      font-size: 7.6em; } }
-  @media screen and (max-width: 1100px) {
-    .introduction__title {
-      font-size: 6em; } }
-  @media screen and (max-width: 800px) {
-    .introduction__title {
-      font-size: 5em; } }
-  @media (max-width: 1251px) {
-    .introduction__title {
-      letter-spacing: 8px; } }
-  @media (max-width: 1101px) {
-    .introduction__title {
-      letter-spacing: 4px;
-      line-height: 1.3em; } }
-
-.introduction__subtitle {
-  font-size: 3em;
-  font-weight: 400; }
-  @media screen and (max-width: 1500px) {
-    .introduction__subtitle {
-      font-size: 2.5em; } }
-  @media screen and (max-width: 1250px) {
-    .introduction__subtitle {
-      font-size: 2.5em; } }
-  @media screen and (max-width: 1100px) {
-    .introduction__subtitle {
-      font-size: 2em; } }
-  @media screen and (max-width: 800px) {
-    .introduction__subtitle {
-      font-size: 1.8em; } }
-  .introduction__subtitle--rotating {
-    border-bottom: 7px solid #268bd2; }
-
-.introduction__greetings--title {
-  text-align: center;
-  color: #808080; }
-
-@media (max-width: 671px) {
-  .introduction__greetings {
-    text-align: center; } }
-
-.introduction__footer {
-  color: #585b63; }
-
-@media (max-width: 801px) {
-  .introduction__title, .introduction__subtitle {
-    text-align: center; } }
+.introduction {
+  padding: 2rem 0; }
+  .introduction__title {
+    font-size: 10em;
+    letter-spacing: 12px;
+    font-family: "tauri";
+    line-height: normal;
+    font-weight: 400; }
+    @media screen and (max-width: 1500px) {
+      .introduction__title {
+        font-size: 7.6em; } }
+    @media screen and (max-width: 1250px) {
+      .introduction__title {
+        font-size: 7.6em; } }
+    @media screen and (max-width: 1100px) {
+      .introduction__title {
+        font-size: 6em; } }
+    @media screen and (max-width: 800px) {
+      .introduction__title {
+        font-size: 5em; } }
+    @media (max-width: 1251px) {
+      .introduction__title {
+        letter-spacing: 8px; } }
+    @media (max-width: 1101px) {
+      .introduction__title {
+        letter-spacing: 4px;
+        line-height: 1.3em; } }
+  .introduction__subtitle {
+    font-size: 3em;
+    font-weight: 400; }
+    @media screen and (max-width: 1500px) {
+      .introduction__subtitle {
+        font-size: 2.5em; } }
+    @media screen and (max-width: 1250px) {
+      .introduction__subtitle {
+        font-size: 2.5em; } }
+    @media screen and (max-width: 1100px) {
+      .introduction__subtitle {
+        font-size: 2em; } }
+    @media screen and (max-width: 800px) {
+      .introduction__subtitle {
+        font-size: 1.8em; } }
+    .introduction__subtitle--rotating {
+      border-bottom: 7px solid #268bd2; }
+  .introduction__greetings--title {
+    text-align: center;
+    color: #808080; }
+  @media (max-width: 671px) {
+    .introduction__greetings {
+      text-align: center; } }
+  .introduction__footer {
+    color: #585b63; }
+  @media (max-width: 801px) {
+    .introduction__title, .introduction__subtitle {
+      text-align: center; } }
 
 .currently {
   flex-direction: column; }
@@ -873,6 +871,12 @@ figure {
   figure > a {
     display: block;
     border: none; }
+
+.go-to-posts {
+  border-bottom: 4px solid #399f62; }
+  .go-to-posts:hover {
+    color: #399f62;
+    border-color: #2c2d33; }
 
 .link {
   display: inline;
@@ -1006,6 +1010,9 @@ figure {
 
 .list {
   list-style: none; }
+
+.archive--error .section__title {
+  display: none; }
 
 /*!
  * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
@@ -1524,7 +1531,7 @@ dd {
     padding: 0.75em;
     font-size: 0.85em;
     background-color: #f2f2f2;
-    color: #585b63 !important;
+    color: #585b63;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
@@ -1532,6 +1539,9 @@ dd {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+    .pagination__pager:hover {
+      background-color: #808080;
+      color: #FFFFFF; }
 
 .section {
   margin: 3rem 0; }
@@ -1548,7 +1558,9 @@ dd {
       line-height: 2; } }
 
 .container--blog .section__title {
-  margin: 3rem 0; }
+  margin: 3rem 0;
+  font-family: "sleek", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700; }
   .container--blog .section__title:before {
     display: none; }
   .container--blog .section__title:after {
@@ -1624,44 +1636,46 @@ dd {
       @media (max-width: 801px) {
         .post h3:before {
           display: none; } }
-  .post-list__entry {
-    margin: 0.5rem 0;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #f2f2f2;
-    position: relative; }
-    .post-list__entry:last-of-type {
-      border-bottom: none; }
-    .post-list__entry__header {
-      margin-bottom: 5px;
-      width: 100%;
-      text-transform: capitalize;
-      letter-spacing: 1px; }
-      .post-list__entry__header__subtitle {
-        font-weight: 400;
-        color: #808080;
-        display: block; }
-        @media (max-width: 671px) {
-          .post-list__entry__header__subtitle {
-            margin: 10px 0; } }
-      .post-list__entry__header__date {
-        color: #808080;
-        float: right;
-        font-size: 0.6em;
-        text-transform: uppercase;
-        font-family: "sleek", "Open Sans", "Helvetica Neue", sans-serif; }
-        @media (max-width: 1101px) {
-          .post-list__entry__header__date {
-            float: none;
-            display: block; } }
-      .post-list__entry__header__tags-list {
-        margin: 1rem 0; }
-      .post-list__entry__header__github-link {
-        font-weight: 700;
-        cursor: pointer;
-        display: block;
-        margin: 1rem 0; }
-        .post-list__entry__header__github-link i {
-          padding: 0 10px 0 0; }
+  .post-list {
+    margin: 3rem 0; }
+    .post-list__entry {
+      margin: 0.5rem 0;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f2f2f2;
+      position: relative; }
+      .post-list__entry:last-of-type {
+        border-bottom: none; }
+      .post-list__entry__header {
+        margin-bottom: 5px;
+        width: 100%;
+        text-transform: capitalize;
+        letter-spacing: 1px; }
+        .post-list__entry__header__subtitle {
+          font-weight: 400;
+          color: #808080;
+          display: block; }
+          @media (max-width: 671px) {
+            .post-list__entry__header__subtitle {
+              margin: 10px 0; } }
+        .post-list__entry__header__date {
+          color: #808080;
+          float: right;
+          font-size: 0.6em;
+          text-transform: uppercase;
+          font-family: "sleek", "Open Sans", "Helvetica Neue", sans-serif; }
+          @media (max-width: 1101px) {
+            .post-list__entry__header__date {
+              float: none;
+              display: block; } }
+        .post-list__entry__header__tags-list {
+          margin: 1rem 0; }
+        .post-list__entry__header__github-link {
+          font-weight: 700;
+          cursor: pointer;
+          display: block;
+          margin: 1rem 0; }
+          .post-list__entry__header__github-link i {
+            padding: 0 10px 0 0; }
 
 .post-list__entry:hover .post-list__entry__header * {
   color: #399f62; }
@@ -1749,7 +1763,7 @@ dd {
   text-align: right; }
 
 .projects {
-  margin: 6rem 0; }
+  margin: 4rem 0; }
   .projects__item {
     display: block;
     margin: 1.3em 0; }

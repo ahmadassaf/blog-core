@@ -85,6 +85,16 @@ module.exports = function(grunt) {
             }
         },
         
+        validation: {
+            options: {
+                stoponerror: false,
+                generateReport: false
+            },
+            files: {
+                src: ['_site/**/*.html']
+            }
+        },
+
         bgShell: {
             jekyllBuild: {
                 cmd: 'jekyll build --incremental --quiet',
@@ -102,7 +112,7 @@ module.exports = function(grunt) {
 
         watch: {
             files: ['assets/js/**/*', 'assets/sass/**/*'],
-            tasks: ['sass', 'copy', 'browserify']
+            tasks: ['sass', 'copy', 'browserify', 'validation']
         },
 
         concurrent: {
@@ -133,9 +143,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bg-shell');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-w3c-html-validation');
 
     // Register the grunt build task
-    grunt.registerTask('build', ['clean', 'mkdir:deployment', 'sass', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'uglify']);
+    grunt.registerTask('build', ['clean', 'mkdir:deployment', 'sass', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'uglify', 'validation']);
 
     // Register the grunt serve task
     grunt.registerTask('serve', ['build', 'uglify', 'concurrent:serve']);
@@ -146,5 +157,6 @@ module.exports = function(grunt) {
     // Register build as the default task fallback
     grunt.registerTask('default', 'build');
 
+    grunt.registerTask('validate', ['validation']);
 
 };

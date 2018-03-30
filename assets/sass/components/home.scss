@@ -1,4 +1,6 @@
 .introduction {
+  padding: $spacing-large 0;
+
   &__title {
     @include font-size($home-title-size);
     letter-spacing: $letter-spacing-x-large;

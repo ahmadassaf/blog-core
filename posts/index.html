@@ -4,16 +4,16 @@ title: Archive
 ---
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     {% include partials/head.html %}
 
     <div class="container--archive">
         <ul class="list post-list">
-        {% for post in paginator.posts %}
-            {% include partials/post.html %}
-        {% endfor %}
-        {% include partials/archive/pagination.html %}
+            {% for post in paginator.posts %}
+                {% include partials/post.html %}
+            {% endfor %}
         </ul>
+        {% include partials/archive/pagination.html %}
     </div>
     {% include partials/footer.html %}
 

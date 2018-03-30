@@ -41,51 +41,55 @@
     }
   }
 
-  &-list__entry {
-    margin: $spacing-small 0;
-    padding: $spacing-small 0;
-    border-bottom: 1px solid $grey-400;
-    position: relative;
+  &-list {
+    margin: $spacing-x-large 0;
 
-      &:last-of-type {
-        border-bottom: none;
-      }
-    &__header {
-      margin-bottom: 5px;
-      width: 100%;
-      text-transform: capitalize;
-      letter-spacing: 1px;
-
-      &__subtitle {
-        font-weight: $font-weight-regular;
-        color: $grey-600;
-        display: block;
-        @include breakpoint-max(x-small) {
-          margin: 10px 0;
+    &__entry {
+      margin: $spacing-small 0;
+      padding: $spacing-small 0;
+      border-bottom: 1px solid $grey-400;
+      position: relative;
+  
+        &:last-of-type {
+          border-bottom: none;
         }
-      }
-      &__date {
-        color: $grey-600;
-        float: right;
-        font-size: $x-small-font-size;
-        text-transform: uppercase;
-        font-family: $primary-font-family;
-        @include breakpoint-max(medium) {
-          float: none;
+      &__header {
+        margin-bottom: 5px;
+        width: 100%;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+  
+        &__subtitle {
+          font-weight: $font-weight-regular;
+          color: $grey-600;
           display: block;
+          @include breakpoint-max(x-small) {
+            margin: 10px 0;
+          }
         }
-      }
-      &__tags-list {
-        margin: $spacing-base 0;
-      }
-
-      &__github-link {
-        font-weight: $font-weight-bold;
-        cursor: pointer;
-        display: block;
-        margin: $spacing-base 0;
-        i {
-          padding: 0 10px 0 0;
+        &__date {
+          color: $grey-600;
+          float: right;
+          font-size: $x-small-font-size;
+          text-transform: uppercase;
+          font-family: $primary-font-family;
+          @include breakpoint-max(medium) {
+            float: none;
+            display: block;
+          }
+        }
+        &__tags-list {
+          margin: $spacing-base 0;
+        }
+  
+        &__github-link {
+          font-weight: $font-weight-bold;
+          cursor: pointer;
+          display: block;
+          margin: $spacing-base 0;
+          i {
+            padding: 0 10px 0 0;
+          }
         }
       }
     }

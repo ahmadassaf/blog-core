@@ -10,7 +10,7 @@ permalink: /tags.html
 
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
 {% capture tag %}{{ tags[item] | strip_newlines }}{% endcapture %}
-   <h3 id="{{ tag }}" class="archive--tags__title">{{ tag }}</h3>
+   <h3 class="archive--tags__title">{{ tag }}</h3>
    <ul class="list post-list">
     {% for post in site.tags[tag] %}{% if post.title != null %}
         {% include partials/post.html %}

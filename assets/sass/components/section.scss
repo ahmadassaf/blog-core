@@ -21,6 +21,9 @@
 
 .container--blog .section__title {
   margin: $spacing-x-large 0;
+  font-family: $primary-font-family;
+  font-weight: $font-weight-bold;
+
   &:before {
     display: none;
   }

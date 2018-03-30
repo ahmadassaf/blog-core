@@ -1,17 +1,21 @@
 <div>
 
-    <!-- Article Schema.org Metadata -->
-    {% include meta/post.html %}
-    <!-- End Article Metadata -->
+	{% if page.layout != 'error' %}
+		<!-- Article Schema.org Metadata -->
+		{% include meta/post.html %}
+		<!-- End Article Metadata -->
+	{% endif %}
 
     <div class="post__header">
 
-        <h1 itemprop="name headline" class="post__header__title">
-            {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
-        </h1>
-        <h3 class="post__header__subtitle">
-            {{ page.subtitle }}
-		</h3>
+		<h1 {% if page.layout != 'error' %} itemprop="name headline" {% endif %} class="post__header__title">
+			{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
+		</h1>
+		{% if page.subtitle %}
+			<h3 class="post__header__subtitle">
+				{{ page.subtitle }}
+			</h3>
+		{% endif %}
 		
         {% if page.layout != 'error' %}
 			<div itemprop='dateCreated dateModified datePublished' class="post__header__date">
@@ -27,7 +31,7 @@
 				<span class="post__header__contributions__entry">
 					<i class="fab fa-github" aria-hidden="true"></i>
 					<a itemprop="sameAs" target="_blank" 
-						href='{{site.github-repo}}blob/master/{{page.category | downcase | url_escape }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>
+						href='{{site.github-repo}}blob/master/{{page.category | downcase | replace: " ", "%20" }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>
 						Contribute to this post on Github
 					</a>
 					</span> {% if page.hackerNews %}

@@ -1,4 +1,4 @@
-<li class="post-list__entry {% if post.featured and (page.layout == 'archive' or page.layout == 'compress') %} post-list__entry--featured {% endif %}" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" data-link="{% if post.type == 'project' %}{{ post.link }} {% else %} {{ site.url }}{{ post.url }} {% endif %}">
+<li class="post-list__entry {% if post.featured and (page.layout == 'archive' or page.layout == 'compress') %} post-list__entry--featured {% endif %}" itemid="{% if post.type == 'project' %}{{ post.link }} {% else %} {{ site.url }}{{ post.url }} {% endif %}" itemscope itemtype="http://schema.org/BlogPosting">
   
   <!-- Article Schema.org Metadata -->
   {% include meta/post.html %}
@@ -19,6 +19,6 @@
     {% endfor %}
   </ul>
   {% if post.github %}
-    <a class="hover post-list__entry__header__github-link"><i class="fab fa-github" href="{{post.github}}"></i>Github Repository</a>
+    <a class="hover post-list__entry__header__github-link" href="{{post.github}}"><i class="fab fa-github"></i>Github Repository</a>
   {% endif %}
 </li>

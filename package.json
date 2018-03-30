@@ -38,6 +38,7 @@
     "grunt-newer": "^1.3.0",
     "grunt-sass": "^2.1.0",
     "grunt-shell": "^2.1.0",
+    "grunt-w3c-html-validation": "^0.1.9",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.1.0",
     "prettier": "1.10.2",
