@@ -112,7 +112,7 @@ module.exports = function(grunt) {
 
         watch: {
             files: ['assets/js/**/*', 'assets/sass/**/*'],
-            tasks: ['sass', 'copy', 'browserify', 'validation']
+            tasks: ['sass', 'copy', 'browserify']
         },
 
         concurrent: {
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-w3c-html-validation');
 
     // Register the grunt build task
-    grunt.registerTask('build', ['clean', 'mkdir:deployment', 'sass', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'uglify', 'validation']);
+    grunt.registerTask('build', ['clean', 'mkdir:deployment', 'sass', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'uglify']);
 
     // Register the grunt serve task
     grunt.registerTask('serve', ['build', 'uglify', 'concurrent:serve']);
