@@ -14,12 +14,12 @@ body {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,{
   margin: 0 0 $spacing-medium 0;
-  font-family: $titles-font-family;
-  font-weight: $font-weight-regular;
+  font-family:$primary-font-family;
+  font-weight: $font-weight-bold;
   color: $black;
   text-transform: uppercase;
   letter-spacing: $letter-spacing-large;
-  line-height: $heading-line-height;
+  line-height: $heading-line-height-tight;
   @include breakpoint-max(x-small) {
     line-height: $heading-line-height-tight;
   }

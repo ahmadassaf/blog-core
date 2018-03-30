@@ -3,6 +3,8 @@
 
   &__title {
     position: relative;
+    font-family: $titles-font-family;
+    font-weight: $font-weight-regular;
     &:before {
       @extend .underlined;
       width: 300px;

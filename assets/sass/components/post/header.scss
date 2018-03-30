@@ -9,7 +9,8 @@
       line-height: $heading-line-height-tight;
     }
     &__subtitle {
-      font-family: $primary-font-family;
+      color: $grey-600;
+      font-weight: $font-weight-regular;
     }
     &__date {
       color: $grey-600;

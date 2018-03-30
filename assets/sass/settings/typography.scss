@@ -15,7 +15,7 @@ $heading-line-height-tight: 1.5;
 
 $base-letter-spacing: 0.2px;
 $letter-spacing-x-large: 12px;
-$letter-spacing-large: 6px;
+$letter-spacing-large: 5px;
 $letter-spacing-medium: 3px;
 $letter-spacing-small: 1px;
 
@@ -136,9 +136,9 @@ $h2-post-font-size: (
 );
 
 $h3-post-font-size: (
-  $x-large: 1.1em,
-  $large: 1.1,
-  $medium: 1em,
+  $x-large: 1.5em,
+  $large: 1.5,
+  $medium: 1.2em,
   $small: 1em,
   null: 1.2em
 );

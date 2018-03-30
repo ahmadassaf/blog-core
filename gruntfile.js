@@ -55,7 +55,7 @@ module.exports = function(grunt) {
         browserify: {
             dist: {
                 files: {
-                    'assets/deploy/main.js': ['assets/js/src/**/*.js']
+                    'assets/deploy/main.js': 'assets/js/src/main.js'
                 },
                 options: {
                     debug: true,

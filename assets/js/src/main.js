@@ -3,6 +3,7 @@
 const aos = require('aos');
 const fitVids = require('./vendor/fitvids');
 const Typed = require('typed.js');
+const Search = require('./search');
 
 window.onload = function() {
     
@@ -22,20 +23,11 @@ window.onload = function() {
         });
     }
     
-    // Allow the archive elements to be clickable
-    document
-      .querySelectorAll('.post--archive')
-      .forEach(e =>
-        e.addEventListener(
-          'click',
-          function() {
-            window.open(e.getAttribute('data-link'), '_self');
-          },
-          false
-        )
-      );
-    
-      // Handle the toggling of the search menu on/off
+    if (document.getElementsByClassName('container--home').length 
+          || document.getElementsByClassName('container--blog').length) {
+      const Projects = require('./projects');
+    }
+    // Handle the toggling of the search menu on/off
     document
       .getElementById('openNavigationMenu')
       .addEventListener('click', function() {

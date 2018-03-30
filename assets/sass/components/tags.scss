@@ -10,9 +10,5 @@
     margin: 3px;
     border: 1px solid transparent;
     text-transform: uppercase;
-
-    &:hover {
-      @extend .hover--tags;
-    }
   }
 }

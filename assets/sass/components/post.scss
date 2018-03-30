@@ -5,14 +5,9 @@
     position: relative;
     @include font-size($h1-post-font-size);
     font-weight: $font-weight-bold;
+    font-family: $titles-font-family;
     margin: $spacing-xx-large 0;
-
-    &:before {
-      @extend .underlined;
-      width: 250px;
-      top: -25px;
-      left: 0;
-    }
+    padding: 0;
   }
 
   h2 {
@@ -30,12 +25,26 @@
     @include font-size($h3-post-font-size);
     font-weight: $font-weight-bold;
     margin: $spacing-large 0;
+    position: relative;
+
+    &:before {
+      content: "";
+      height: 20px;
+      width: 25px;
+      background:$green;
+      position: absolute;
+      top: 15px;
+      left: -45px;
+      @include breakpoint-max(small) {
+        display: none;
+      }
+    }
   }
 
   &-list__entry {
-    margin: $spacing-base 0;
-    border-bottom: 1px solid $grey-400;
+    margin: $spacing-small 0;
     padding: $spacing-small 0;
+    border-bottom: 1px solid $grey-400;
     position: relative;
 
       &:last-of-type {
@@ -49,7 +58,6 @@
 
       &__subtitle {
         font-weight: $font-weight-regular;
-        font-family: $primary-font-family;
         color: $grey-600;
         display: block;
         @include breakpoint-max(x-small) {
@@ -74,17 +82,22 @@
       &__github-link {
         font-weight: $font-weight-bold;
         cursor: pointer;
+        display: block;
+        margin: $spacing-base 0;
         i {
           padding: 0 10px 0 0;
         }
       }
-
-      &:hover {
-        cursor: pointer;
-        * {
-            color: $green;
-          }
-      }
     }
+  }
+}
+
+.post-list__entry:hover {
+  .post-list__entry__header * {
+    color:$green;
+  }
+  li.post-list__entry__header__tags-list__tag{
+    background: $green;
+    color: $white;
   }
 }
