@@ -65,7 +65,7 @@ module.exports = function(grunt) {
 
         uglify: {
             options: {
-                mangle: false,
+                mangle: true,
                 sourceMap: {
                     root: '.'
                 },
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
             },
             min: {
               files: {
-                '_site/assets/deploy/main.min.js' : ['assets/deploy/main.js']
+                './assets/deploy/main.min.js' : ['./assets/deploy/main.js']
               }
             }
         },

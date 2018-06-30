@@ -4,7 +4,7 @@
   width: 100%;
   background: $white;
   z-index: 1;  
-  padding: $spacing-base $spacing-xx-large;
+  padding: $spacing-xx-large;
   
   @include breakpoint-max(x-large) {
     padding: $spacing-large $spacing-base $spacing-large $spacing-x-large
