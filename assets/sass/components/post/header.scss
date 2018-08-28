@@ -25,6 +25,9 @@
       &__entry {
         margin: 0 $spacing-smallest 0 0;
       }
+      &:hover{
+        color: $green;
+      }
     }
     &__tags-list {
       margin: $spacing-base 0;

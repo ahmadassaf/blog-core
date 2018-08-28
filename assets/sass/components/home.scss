@@ -3,10 +3,9 @@
 
   &__title {
     @include font-size($home-title-size);
-    letter-spacing: $letter-spacing-x-large;
+    letter-spacing: $letter-spacing-large;
     font-family: $titles-font-family;
     line-height: normal;
-    font-weight: $font-weight-regular;
     @include breakpoint-max(large) {
       letter-spacing: 8px;
     }
@@ -49,11 +48,11 @@
   &__item {
     display: inline-flex;
     align-items: baseline;
+    text-align: left;
     color: $grey-600;
     margin: 5px 0;
     letter-spacing: $letter-spacing-small;
     @include font-size($h4-font-size);
-
     i {
       margin: 0 10px 0 0;
     }

@@ -1,5 +1,6 @@
 // Misc
 @import url('https://fonts.googleapis.com/css?family=Amiko:400,700');
+
 $primary-font-family: 'amiko', "Open Sans", "Helvetica Neue", sans-serif;
 $titles-font-family: 'amiko';
 $code-font-family: 'liberation';
@@ -76,10 +77,10 @@ $h6-font-size: (
 // Navigation sizes
 
 $navigation-font-size: (
-  $x-large: 18px,
-  $large: 18px,
-  $medium: 18px,
-  $small: 18px,
+  $x-large: 15px,
+  $large: 25px,
+  $medium: 25px,
+  $small: 25px,
   null: 18px
 );
 
@@ -87,10 +88,10 @@ $navigation-font-size: (
 
 $home-title-size: (
   $x-large: 7.6em,
-  $large: 7.6em,
-  $medium: 6em,
-  $small: 5em,
-  null: 10em
+  $large: 7em,
+  $medium: 5.5em,
+  $small: 4em,
+  null: 9em
 );
 
 $home-subtitle-size: (

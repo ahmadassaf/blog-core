@@ -11,6 +11,9 @@
     &--home {
       width: 100%;
       padding: $spacing-large $spacing-xx-large;
+      @include breakpoint-max(xx-small) {
+        text-align: center;
+      }
     }
     &--blog {
       margin: 0 auto;
@@ -27,8 +30,9 @@
       }
     }
     &--post {
-      width: 70%;
-      padding: 0 $spacing-xx-large;
+      width: 80%;
+      margin: 0 auto;
+      padding: 0 $spacing-xx-large $spacing-xx-large;
       @include breakpoint-max(x-large) {
         width: 90%;
         margin: 0 auto;
@@ -43,6 +47,19 @@
 .border {
   @include square(100%);
   position: fixed;
-  border: 20px solid $dark;
+  border: 20px solid $green;
   z-index: 11;
+  pointer-events: none;
+  &--blog {
+    border-color: black;
+  }
+  @include breakpoint-max(x-large) {
+    border-width: 15px;
+  }
+  @include breakpoint-max(medium) {
+    border-width: 10px;
+  }
+  @include breakpoint-max(x-small) {
+    border-width: 0;
+  }
 }

@@ -1,4 +1,8 @@
 .logo {
   @include square(80px);
   min-width: 80px;
+
+  @include breakpoint-max(medium) {
+    display: none;
+  }
 }

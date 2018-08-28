@@ -14,7 +14,10 @@
     @media (max-width: $small + 1) { @content ; }
   } @else if $size == x-small {
     @media (max-width: $x-small + 1) { @content ; }
+  } @else if $size == xx-small {
+    @media (max-width: $xx-small + 1) { @content ; }
   }
+  
 }
 
 @mixin breakpoint-min($size) {
@@ -31,5 +34,7 @@
     @media (min-width: $small) { @content ; }
   } @else if $size == x-small {
     @media (min-width: $x-small) { @content ; }
+  }@else if $size == xx-small {
+    @media (max-width: $xx-small + 1) { @content ; }
   }
 }

@@ -29,11 +29,11 @@
 
     &:before {
       content: "";
-      height: 20px;
+      height: 25px;
       width: 25px;
       background:$green;
       position: absolute;
-      top: 15px;
+      top: 5px;
       left: -45px;
       @include breakpoint-max(small) {
         display: none;
@@ -45,7 +45,7 @@
     margin: $spacing-x-large 0;
 
     &__entry {
-      margin: $spacing-small 0;
+      margin: $spacing-base 0;
       padding: $spacing-small 0;
       border-bottom: 1px solid $grey-400;
       position: relative;
@@ -58,14 +58,15 @@
         width: 100%;
         text-transform: capitalize;
         letter-spacing: 1px;
-  
+        
+        &__title {
+          font-weight: $font-weight-bold;
+        }
         &__subtitle {
           font-weight: $font-weight-regular;
           color: $grey-600;
           display: block;
-          @include breakpoint-max(x-small) {
-            margin: 10px 0;
-          }
+          margin: 10px 0;
         }
         &__date {
           color: $grey-600;

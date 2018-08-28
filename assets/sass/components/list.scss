@@ -3,6 +3,20 @@
 }
 
 .archive {
+  &--tags {
+    &__title {
+      position: relative;
+      &::after {
+          content: "";
+          width: 100px;
+          height: 10px;
+          position: absolute;
+          display: block;
+          left: 0;
+          background: $green;
+      }
+    }
+  }
   &--error {
     .section__title {
       display: none;

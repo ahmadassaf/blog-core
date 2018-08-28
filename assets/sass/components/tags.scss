@@ -3,12 +3,19 @@
 
   li {
     display: inline-flex;
-    font-size: 0.8em;
+    font-size: 14px;
     background: $grey-400;
     padding: 7px 10px;
     color: $grey-800;
     margin: 3px;
     border: 1px solid transparent;
     text-transform: uppercase;
+
+    @include breakpoint-max(small) {
+      font-size: 10px;
+    }
+    @include breakpoint-max(x-small) {
+      display: none;
+    }
   }
 }

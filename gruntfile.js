@@ -147,7 +147,7 @@ module.exports = function(grunt) {
     grunt.registerTask('serve', ['build', 'uglify', 'concurrent:serve']);
 
     // Register the grunt serve task
-    grunt.registerTask('local', ['build', 'newer:imagemin', 'uglify', 'concurrent:local']);
+    grunt.registerTask('local', ['build', 'uglify', 'concurrent:local']);
 
     // Register build as the default task fallback
     grunt.registerTask('default', 'build');

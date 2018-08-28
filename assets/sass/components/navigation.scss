@@ -10,11 +10,11 @@
     padding: $spacing-large $spacing-base $spacing-large $spacing-x-large
   }
   @include breakpoint-max(large) {
-    padding: $spacing-large $spacing-xx-large;
+    padding: $spacing-large;
     justify-content: space-between;
   }
-  @include breakpoint-max(large) {
-    padding: $spacing-large;
+  @include breakpoint-max(medium) {
+    justify-content: flex-end;
   }
 
   .button--search {
@@ -25,6 +25,13 @@
   &--blog {
     justify-content: space-between;
 
+    @include breakpoint-max(x-large) {
+      padding: $spacing-x-large;
+    }
+    @include breakpoint-max(medium) {
+      justify-content: flex-end;
+    }
+
     .button--search {
       display: inline;
       margin: 0 $spacing-large;
@@ -34,20 +41,6 @@
       @include breakpoint-max(large) {
         font-size: 1.5em;
         margin: 0 $spacing-large;
-      }
-    }
-
-    .navigation__list {
-      .navigation__list__item {
-        &--responsive {
-          font-style: normal;
-        }
-        @include breakpoint-max(x-large) {
-          font-size: 16px;
-        }
-        @include breakpoint-max(large) {
-          padding: 1.5em;
-        }
       }
     }
   }
@@ -77,6 +70,10 @@
       position: relative;
       flex-direction: row-reverse;
 
+      &--responsive {
+        font-style: normal;
+      }
+
       @include breakpoint-max(large) {
         position: fixed;
         width: 100%;
@@ -84,7 +81,7 @@
         background: $white;
         top: 0;
         left: 0;
-        padding: 5em 0;
+        padding: 1em 0;
         visibility: hidden;
         flex-direction: column-reverse;
         justify-content: flex-end;
@@ -92,15 +89,16 @@
       
       &__item {
         display: inline-flex;
-        @include font-size($navigation-font-size);
         position: relative;
         transition: all $animation-time $animation-curve;
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-regular;
         text-transform: uppercase;
+        text-align: center;
         opacity: 1;
         padding: 0 $spacing-large;
         cursor: pointer;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        @include font-size($navigation-font-size);
         
         &--current {
           color: $green;
@@ -110,10 +108,10 @@
         }
 
         @include breakpoint-max(large) {
-          padding: 0 1.5em;
-        }
-        @include breakpoint-max(large) {
+          padding: 1em;
+          width: 100%;
           margin: 1em 0;
+          justify-content: center;
         }
       }
     }
