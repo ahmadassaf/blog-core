@@ -1,6 +1,11 @@
 .logo {
-  @include square(80px);
+  font-family: "Allerta Stencil";
   min-width: 80px;
+  font-size: 70px;
+  border: 5px solid;
+  text-align: center;
+  line-height: 70px;
+  text-decoration: line-through;
 
   @include breakpoint-max(medium) {
     display: none;

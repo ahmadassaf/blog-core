@@ -3,6 +3,7 @@
 
 $primary-font-family: 'amiko', "Open Sans", "Helvetica Neue", sans-serif;
 $titles-font-family: 'amiko';
+$logo-font-familu: 'Allerta Stencil';
 $code-font-family: 'liberation';
 
 $font-weight-light: 200;
@@ -11,8 +12,9 @@ $font-weight-bold: 700;
 $font-weight-bolder: 800;
 
 $base-line-height: 1.8;
+$body-line-height: 2.1;
 $heading-line-height: 2;
-$heading-line-height-tight: 1.5;
+$heading-line-height-tight: 1.2;
 
 $base-letter-spacing: 0.2px;
 $letter-spacing-x-large: 12px;
@@ -21,8 +23,8 @@ $letter-spacing-medium: 3px;
 $letter-spacing-small: 1px;
 
 // Font sizes
-
-$small-font-size: 0.85em;
+$medium-font-size: 0.9em;
+$small-font-size: 0.8em;
 $x-small-font-size: 0.6em;
 
 $regular-font-size: (
@@ -106,7 +108,7 @@ $home-icons-size: (
   $x-large: 2em,
   $large: 2em,
   $medium: 1.8em,
-  $small: 1.8em,  
+  $small: 1.8em,
   null: 2em
 );
 

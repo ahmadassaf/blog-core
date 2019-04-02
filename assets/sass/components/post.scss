@@ -1,5 +1,6 @@
 .post {
   font-size: $base-font-size;
+  margin: 0 auto;
 
   h1 {
     position: relative;
@@ -41,6 +42,14 @@
     }
   }
 
+  a {
+    color: $green;
+    &:hover {
+      font-weight: $font-weight-bold;
+      color: $blue;
+    }
+  }
+
   &-list {
     margin: $spacing-x-large 0;
 
@@ -49,7 +58,7 @@
       padding: $spacing-small 0;
       border-bottom: 1px solid $grey-400;
       position: relative;
-  
+
         &:last-of-type {
           border-bottom: none;
         }
@@ -58,20 +67,24 @@
         width: 100%;
         text-transform: capitalize;
         letter-spacing: 1px;
-        
+
         &__title {
           font-weight: $font-weight-bold;
         }
         &__subtitle {
           font-weight: $font-weight-regular;
+          line-height: $base-line-height;
           color: $grey-600;
           display: block;
+          font-size: $small-font-size;
           margin: 10px 0;
         }
         &__date {
+          position: absolute;
           color: $grey-600;
-          float: right;
-          font-size: $x-small-font-size;
+          right: 0;
+          bottom: 10px;
+          font-size: $small-font-size;
           text-transform: uppercase;
           font-family: $primary-font-family;
           @include breakpoint-max(medium) {
@@ -80,9 +93,9 @@
           }
         }
         &__tags-list {
-          margin: $spacing-base 0;
+          margin: $spacing-base 0 0;
         }
-  
+
         &__github-link {
           font-weight: $font-weight-bold;
           cursor: pointer;
@@ -105,4 +118,53 @@
     background: $green;
     color: $white;
   }
+}
+
+
+
+.post__related-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5em 0 0;
+  width: 100%;
+  border-top: 10px solid #399f62;
+  padding: 30px 0;
+}
+
+.post__related-content section {
+  width: 45%;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.post__related-content section .tags {
+  display: none;
+}
+
+.post__related-content .section__title::before {
+  background: none;
+}
+
+
+.post__related-content .section__title::after {
+  content: "";
+  bottom: -20px;
+  left: 0;
+  background: #399f62;
+  height: 10px;
+  position: absolute;
+  width: 220px;
+}
+
+
+
+
+.post__related-content section .post-list__entry__header__date {
+  display: none;
+}
+
+.post__related-content section li.post-list__entry {
+  margin: 0;
+  border: none;
 }

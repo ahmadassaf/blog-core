@@ -3,16 +3,15 @@
 const aos = require('aos');
 const fitVids = require('./vendor/fitvids');
 const Typed = require('typed.js');
-const Search = require('./search');
 
 window.onload = function() {
-    
+
     // Initialize AOS that loads the elements animation
     aos.init();
-    
+
     // Add Fitvids which lets you get fluid width videos in a responsive web design by keeping an intrinsic aspect ratio
     fitVids('#blog-post');
-    
+
     // Add the type animation in the home for profession rotation
     if (document.getElementById('profession')) {
         new Typed('#profession', {
@@ -22,10 +21,9 @@ window.onload = function() {
             loop: true,
         });
     }
-    
-    if (document.getElementsByClassName('container--home').length 
-          || document.getElementsByClassName('container--blog').length) {
-      const Projects = require('./projects');
+
+    if (document.getElementsByClassName('container--home').length || document.getElementsByClassName('container--blog').length) {
+        require('./projects');
     }
     // Handle the toggling of the search menu on/off
     document
@@ -39,5 +37,7 @@ window.onload = function() {
       .addEventListener('click', function() {
         document.querySelector('.navigation__list').style.visibility =
           'hidden';
-      });      
+      });
 };
+
+require('./search');

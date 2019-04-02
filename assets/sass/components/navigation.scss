@@ -3,9 +3,9 @@
   top: 0;
   width: 100%;
   background: $white;
-  z-index: 1;  
-  padding: $spacing-xx-large;
-  
+  z-index: 1;
+  padding: $spacing-large $spacing-xx-large 0;
+
   @include breakpoint-max(x-large) {
     padding: $spacing-large $spacing-base $spacing-large $spacing-x-large
   }
@@ -70,6 +70,36 @@
       position: relative;
       flex-direction: row-reverse;
 
+      &__submenu__container {
+        &__submenu {
+            display: flex;
+            visibility: hidden;
+            flex-wrap: wrap-reverse;
+            position: absolute;
+            background: $black;
+            color: $white;
+            width: 450px;
+            border-radius: 2px;
+            bottom: -230px;
+            padding: 0 $spacing-large $spacing-base;
+            box-shadow: 0px 2px 18px 2px $black;
+            transition: .15s ease-in-out 0s;
+
+            li {
+                margin: 20px 0 0;
+                width: 100%;
+                font-size: 15px;
+                padding: 0;
+            }
+        }
+
+        &:hover {
+            .navigation__list__submenu__container__submenu {
+                visibility: visible;
+            }
+        }
+      }
+
       &--responsive {
         font-style: normal;
       }
@@ -86,12 +116,11 @@
         flex-direction: column-reverse;
         justify-content: flex-end;
       }
-      
       &__item {
         display: inline-flex;
         position: relative;
         transition: all $animation-time $animation-curve;
-        font-weight: $font-weight-regular;
+        font-weight: $font-weight-bold;
         text-transform: uppercase;
         text-align: center;
         opacity: 1;
@@ -99,7 +128,7 @@
         cursor: pointer;
         letter-spacing: 1px;
         @include font-size($navigation-font-size);
-        
+
         &--current {
           color: $green;
         }

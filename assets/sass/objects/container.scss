@@ -10,7 +10,7 @@
 
     &--home {
       width: 100%;
-      padding: $spacing-large $spacing-xx-large;
+      padding: $spacing-xx-large;
       @include breakpoint-max(xx-small) {
         text-align: center;
       }
@@ -30,7 +30,7 @@
       }
     }
     &--post {
-      width: 80%;
+      width: 70%;
       margin: 0 auto;
       padding: 0 $spacing-xx-large $spacing-xx-large;
       @include breakpoint-max(x-large) {

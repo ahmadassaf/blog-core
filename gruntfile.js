@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 module.exports = function(grunt) {
 
     var pkg = grunt.file.readJSON('package.json');
@@ -38,6 +40,7 @@ module.exports = function(grunt) {
 
         sass: {
             options: {
+                implementation: sass,
                 sourceMap: true
             },
             dist: {
@@ -55,7 +58,7 @@ module.exports = function(grunt) {
                 options: {
                     debug: true,
                     transform: [
-                        'stringify', 
+                        'stringify',
                         ['babelify', { 'presets': ['es2015', 'es2016', 'react'] }]
                     ],
                     standalone: pkg['export-symbol']
@@ -79,7 +82,7 @@ module.exports = function(grunt) {
               }
             }
         },
-        
+
         validation: {
             options: {
                 stoponerror: false,
@@ -101,7 +104,7 @@ module.exports = function(grunt) {
                 cmd: 'bundle exec jekyll serve --incremental --quiet'
             },
             jekyllLocal: {
-                cmd: 'bundle exec jekyll serve --incremental --quiet --config _config.yml,_config.dev.yml'
+                cmd: 'bundle exec jekyll serve --incremental --quiet --config _config.yml, _config.dev.yml'
             }
         },
 

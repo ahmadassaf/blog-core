@@ -35,7 +35,7 @@ img {
 
 figure {
   display: flex;
-  margin: 2em auto;
+  margin: $spacing-large auto;
   max-width: 1000px;
   flex-direction: column;
   @include clearfix();

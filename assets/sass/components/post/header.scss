@@ -2,6 +2,7 @@
 
   .post__header {
     border-bottom: 2px solid;
+    text-align: center;
     padding: $spacing-base 0;
 
     &__title {
@@ -30,7 +31,9 @@
       }
     }
     &__tags-list {
-      margin: $spacing-base 0;
+      margin: $spacing-base auto;
+      display: table;
+
       &__tag {
         cursor: pointer;
         padding: $spacing-smallest $spacing-small;
@@ -38,6 +41,7 @@
         color:$black;
         font-size: $small-font-size;
         text-transform: uppercase;
+        display: inline-table;
         margin: $spacing-smallest;
 
           &:hover {

@@ -16,21 +16,30 @@
 				{{ page.subtitle }}
 			</h3>
 		{% endif %}
-		
+
         {% if page.layout != 'error' %}
 			<div itemprop='dateCreated dateModified datePublished' class="post__header__date">
 				{% if page.date %}{{ page.date | date: '%B %d %Y' }}{% endif %}
-			</div>
+            </div>
+
+            <ul class="flex post__header__tags-list list">
+                {% for tag in page.tags %}
+                <li class="post__header__tags-list__tag">
+                    <a itemprop='articleSection keywords' href="{{ site.url }}/{{ tag | downcase | replace:' ', '-' }}">{{ tag }}</a>
+                </li>
+                {% unless forloop.last %}{% endunless %} {% endfor %}
+            </ul>
+
 			<div class="post__header__reading-time">
 				<i class="far fa-clock" aria-hidden="true"></i>
 				Reading Time: {{ content | reading_time_as_i }}
 			</div>
-			
+
 			<div class="post__header__contributions">
 
 				<span class="post__header__contributions__entry">
 					<i class="fab fa-github" aria-hidden="true"></i>
-					<a itemprop="sameAs" target="_blank" 
+					<a itemprop="sameAs" target="_blank"
 						href='{{site.github-repo}}blob/master/{{page.category | downcase | replace: " ", "%20" }}/{{page.date | date: "%Y-%m-%d" }}-{{ page.title | downcase | replace: " ", "-" }}.md'>
 						Contribute to this post on Github
 					</a>
@@ -41,14 +50,7 @@
 				</span> {% endif %}
 
 			</div>
-			
-			<ul class="flex post__header__tags-list list">
-				{% for tag in page.tags %}
-				<li class="post__header__tags-list__tag">
-					<a itemprop='articleSection keywords' href="{{ site.url }}/{{ tag | downcase | replace:' ', '-' }}">{{ tag }}</a>
-				</li>
-				{% unless forloop.last %}{% endunless %} {% endfor %}
-			</ul>
+
 			<div class="post__header__share-buttons">
 				{% include partials/post/share.html %}
 			</div>

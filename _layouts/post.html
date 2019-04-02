@@ -22,9 +22,15 @@ layout: compress
             {% include partials/post/share.html %}
         </div>
 
+        <div class="post__related-content">
+            {% include partials/recent-posts.html %}
+            {% include partials/featured-posts.html %}
+        </div>
+        
         {% include partials/post/comments.html %}
 
     </div>
+    
 
     {% include meta/author.html %}
     {% include meta/JSON-LD/post.html %}
