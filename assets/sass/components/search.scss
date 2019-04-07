@@ -12,7 +12,7 @@
 	transition: transform 0.3s;
 	transition-delay: 0.4s;
 	transition-timing-function: ease-out;
-  
+
     &::after {
       content: '';
       position: absolute;
@@ -28,18 +28,17 @@
       pointer-events: auto;
       transform: translate3d(-100%,0,0);
       transition-delay: 0s;
-      
+
       &::after {
         transform: translate3d(100%,0,0);
         transition-delay: 0.4s;
       }
     }
-    
+
     &__input {
       font-family: inherit;
       font-size: 6vw;
       line-height: 1;
-      display: inline-block;
       width: 60%;
       padding: 0.05em 0;
       color: $black;
@@ -62,7 +61,7 @@
       display: flex;
       padding: $spacing-xxxx-large 0 0 0;
       flex-direction: column;
-      
+
       h3{
         @include font-size($h4-font-size);
         margin: 0;

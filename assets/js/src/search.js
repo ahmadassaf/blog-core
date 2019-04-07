@@ -27,7 +27,7 @@ class Posts extends Component {
     const openCtrl = document.getElementById('button-search');
     const closeCtrl = document.getElementById('button-search-close');
     const searchContainer = document.querySelector('.search');
-  
+
     function openSearch() {
       mainContainer.classList.add('container__main--overlay');
       closeCtrl.classList.remove('button--hidden');
@@ -36,7 +36,7 @@ class Posts extends Component {
         document.getElementById('search__input').focus();
       }, 500);
     }
-    
+
     function closeSearch() {
       mainContainer.classList.remove('container__main--overlay');
       closeCtrl.classList.add('button--hidden');
@@ -44,10 +44,10 @@ class Posts extends Component {
       document.getElementById('search__input').blur();
       document.getElementById('search__input').value = '';
     }
-  
+
     openCtrl.addEventListener('click', openSearch);
     closeCtrl.addEventListener('click', closeSearch);
-  
+
     document.addEventListener('keyup', function(ev) {
       if (ev.keyCode === 27) {
         closeSearch();
@@ -80,7 +80,7 @@ class Posts extends Component {
     document.querySelector('.search__related').style.display = posts.length ? 'none' : 'block';
     return (
       <form className="search__form" action="">
-        <input id="search__input" className="search__input" name="search" type="search" placeholder="Find..." autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" onChange={this.searchPosts.bind(this)}/>
+        <input id="search__input" className="search__input inline-block" name="search" type="search" placeholder="Find..." autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" onChange={this.searchPosts.bind(this)}/>
         <span className="search__info">Hit enter to search or ESC to close</span>
         <ul id="search__results" className="list post-list">
           {posts.map(post =>
@@ -88,7 +88,7 @@ class Posts extends Component {
             <h4 className="post-list__entry__header">
               <a href={post.url} className="post-list__entry__header__title">
                 <span>{post.title}</span>
-                <span className="post-list__entry__header__subtitle">{post.subtitle}</span> 
+                <span className="post-list__entry__header__subtitle">{post.subtitle}</span>
               </a>
             </h4>
           </li>
