@@ -80,7 +80,7 @@
             color: $white;
             width: 450px;
             border-radius: 2px;
-            bottom: -230px;
+            bottom: -350px;
             padding: 0 $spacing-large $spacing-base;
             box-shadow: 0px 2px 18px 2px $black;
             transition: .15s ease-in-out 0s;
@@ -90,6 +90,19 @@
                 width: 100%;
                 font-size: 15px;
                 padding: 0;
+                cursor: pointer;
+
+                &:nth-child(2) {
+                    padding: 20px 0 0;
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        position: absolute;
+                        top: -5px;
+                        height: 2px;
+                        border-top: 2px solid $white;
+                    }
+                }
             }
         }
 
