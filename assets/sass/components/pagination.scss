@@ -6,7 +6,7 @@
     padding: 0.75em;
     font-size: $small-font-size;
     background-color: $grey-400;
-    color: $grey-800;
+    color: $black;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
@@ -14,6 +14,16 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    &.disabled {
+        color: $grey;
+        &:hover {
+            background-color: $grey-400;
+            color: $grey;
+            cursor:auto;
+        }
+    }
+
     &:hover {
       background-color: $grey-600;
       color: $white;

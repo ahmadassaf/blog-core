@@ -21,5 +21,9 @@
     .section__title {
       display: none;
     }
+    h2 {
+        text-align: center;
+        margin: $spacing-large 0;
+    }
   }
 }

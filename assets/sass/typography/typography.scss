@@ -40,7 +40,6 @@ a {
 strong {
   font-weight: $font-weight-bold;
   font-family: $titles-font-family;
-  font-size: $small-font-size;
   margin: 0 5px;
 }
 p {
@@ -72,7 +71,7 @@ h2,
 h3,
 .h3 {
   @include font-size($h3-font-size);
-  letter-spacing: $letter-spacing-medium;
+  letter-spacing: $letter-spacing-small;
 }
 
 h4,

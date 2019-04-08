@@ -13,7 +13,7 @@
             {{ categories[item] | strip_newlines }}
         {% endcapture %}
         <li class="navigation__container__list--item">
-            <a href="{{ site.url }}/{{ category | downcase | replace:' ', '-' | replace:'&-', ''}}">{{ category }}</a>
+            <a href="{{ site.url }}/{{ category | trim | downcase | replace:' ', '' | replace:'&-', ''}}">{{ category }}</a>
         </li>
     {% endunless %}
 {% endfor %}

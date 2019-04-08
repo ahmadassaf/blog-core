@@ -17,27 +17,27 @@
  * Variables
  */
 
- $dt-gray-dark: #000000;  // Background
+ $dt-gray-dark: #2c2d33;  // Background
  $dt-gray: #44475a;       // Current Line & Selection
  $dt-gray-light: #f8f8f2; // Foreground
  $dt-blue: #6272a4;       // Comment
  $dt-cyan: #8be9fd;
- $dt-green: #50fa7b;
- $dt-orange: #ffb86c;
+ $dt-green: #399f62;
+ $dt-orange: #f89406;
  $dt-pink: #ff79c6;
  $dt-purple: #bd93f9;
- $dt-red: #ff5555;
- $dt-yellow: #f1fa8c;
- 
+ $dt-red: #ee5f5b;
+ $dt-yellow: #ecd211;
+
  /*
   * Styles
   */
- 
+
  .highlight {
     background: $dt-gray-dark;
     color: $dt-gray-light;
-    white-space: pre;
     overflow: auto;
+    border-radius: 2px;
     word-wrap: normal;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -46,7 +46,7 @@
     font-size: $medium-font-size;
     margin: 10px 0;
     white-space: pre-wrap;
- 
+
    .hll,
    .s,
    .sa,
@@ -64,11 +64,11 @@
    .ss {
      color: $dt-yellow;
    }
- 
+
    .go {
      color: $dt-gray;
    }
- 
+
    .err,
    .g,
    .l,
@@ -95,21 +95,21 @@
    .bp {
      color: $dt-gray-light;
    }
- 
+
    .gh,
    .gi,
    .gu {
      font-weight: bold;
    }
- 
+
    .ge {
      text-decoration: underline;
    }
- 
+
    .bp {
      font-style: italic;
    }
- 
+
    .c,
    .ch,
    .cm,
@@ -118,7 +118,7 @@
    .cs {
      color: $dt-blue;
    }
- 
+
    .kd,
    .kt,
    .nb,
@@ -130,7 +130,7 @@
    .vm {
      color: $dt-cyan;
    }
- 
+
    .kd,
    .nb,
    .nl,
@@ -141,14 +141,14 @@
    .vm {
      font-style: italic;
    }
- 
+
    .na,
    .nc,
    .nf,
    .fm {
      color: $dt-green;
    }
- 
+
    .k,
    .o,
    .cp,
@@ -160,7 +160,7 @@
    .ow {
      color: $dt-pink;
    }
- 
+
    .m,
    .mb,
    .mf,
@@ -170,7 +170,7 @@
    .il {
      color: $dt-purple;
    }
- 
+
    .gd {
      color: $dt-red;
    }
