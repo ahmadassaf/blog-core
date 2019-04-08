@@ -22,6 +22,10 @@
       color: $black;
       font-weight: $font-weight-bold;
   }
+    &--search {
+        font-size: 25px;
+        margin: 0 1rem;
+    }
     &--search-close {
         @include font-size($h2-font-size);
         position: absolute;

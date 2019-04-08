@@ -93,7 +93,7 @@ $socialColours:
             padding-left: 0;
         }
         @include breakpoint-max(x-small) {
-            padding: 1.5em;
+            padding: 1.2em;
         }
         a {
             @include font-size($home-icons-size);

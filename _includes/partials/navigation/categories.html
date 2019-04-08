@@ -1,7 +1,7 @@
-<li class="navigation__list__item">
+<li class="navigation__container__list--item">
     <a href="{{ site.url }}/posts">All Posts (Archive)</a>
 </li>
-<li class="navigation__list__item">
+<li class="navigation__container__list--item">
     <a href="{{ site.url }}/tags">Browse Topics</a>
 </li>
 {% capture site_categories %}
@@ -12,7 +12,7 @@
         {% for item in (0..categories.size) %}{% unless forloop.last %}{% capture category %}
             {{ categories[item] | strip_newlines }}
         {% endcapture %}
-        <li class="navigation__list__item">
+        <li class="navigation__container__list--item">
             <a href="{{ site.url }}/{{ category | downcase | replace:' ', '-' | replace:'&-', ''}}">{{ category }}</a>
         </li>
     {% endunless %}

@@ -39,7 +39,7 @@
 
 .hide--small {
   @include breakpoint-max(small) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -67,6 +67,13 @@
     display: block;
     visibility: visible !important;
   }
+}
+
+.show--small-min {
+    @include breakpoint-max(small) {
+        display: block !important;
+        visibility: visible !important;
+      }
 }
 
 // alignment

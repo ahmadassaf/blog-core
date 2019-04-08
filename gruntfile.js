@@ -110,7 +110,7 @@ module.exports = function(grunt) {
 
         watch: {
             files: ['assets/js/**/*', 'assets/sass/**/*'],
-            tasks: ['sass', 'copy', 'browserify']
+            tasks: ['sass', 'copy', 'browserify', 'uglify']
         },
 
         concurrent: {

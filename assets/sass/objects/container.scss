@@ -11,6 +11,9 @@
     &--home {
       width: 100%;
       padding: $spacing-xx-large;
+      @include breakpoint-max(small) {
+        padding: $spacing-large;
+      }
       @include breakpoint-max(xx-small) {
         text-align: center;
       }
@@ -19,7 +22,12 @@
       margin: 0 auto;
       width: 60%;
       @include breakpoint-max(large) {
-        width: 80%;
+        width: 94%;
+        margin: $spacing-large auto;
+      }
+      @include breakpoint-max(small) {
+        width: 90%;
+        margin: $spacing-large auto;
       }
     }
     &--archive {
@@ -30,7 +38,7 @@
       }
     }
     &--post {
-      width: 70%;
+      width: 80%;
       margin: 0 auto;
       padding: 0 $spacing-xx-large $spacing-xx-large;
       @include breakpoint-max(x-large) {

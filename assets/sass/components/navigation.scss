@@ -1,78 +1,92 @@
-.navigation-container {
+@mixin responsiveNavigationContainer {
+    display: none;
+    position: fixed;
+    @include square(100%);
+    background: $white;
+    top: 0;
+    left: 0;
+    padding: calc(3 * #{$spacing-xx-large}) 0;
+}
+
+@mixin responsiveNavigationContainerList {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+@mixin responsiveNavigationContainerListItem {
+    width: 100%;
+    margin: $spacing-large 0;
+    font-size: 1.5em;
+    justify-content: center;
+}
+
+.navigation {
   position: sticky;
   top: 0;
   width: 100%;
   background: $white;
   z-index: 1;
-  padding: $spacing-large $spacing-xx-large 0;
+  padding: $spacing-large $spacing-xx-large;
 
-  @include breakpoint-max(x-large) {
-    padding: $spacing-large $spacing-base $spacing-large $spacing-x-large
-  }
-  @include breakpoint-max(large) {
-    padding: $spacing-large;
-    justify-content: space-between;
-  }
-  @include breakpoint-max(medium) {
-    justify-content: flex-end;
-  }
-
-  .button--search {
-    display: none;
-    font-size: 1.1em;
-  }
-
-  &--blog {
-    justify-content: space-between;
-
-    @include breakpoint-max(x-large) {
-      padding: $spacing-x-large;
-    }
-    @include breakpoint-max(medium) {
-      justify-content: flex-end;
+    @include breakpoint-max(small) {
+        padding: $spacing-large;
+        justify-content: space-between;
     }
 
     .button--search {
-      display: inline;
-      margin: 0 $spacing-large;
-      @include breakpoint-max(large) {
-        margin: 0 $spacing-base;
-      }
-      @include breakpoint-max(large) {
-        font-size: 1.5em;
-        margin: 0 $spacing-large;
-      }
+        display: none;
+    }
+
+  &--blog {
+    justify-content: space-between;
+    padding: $spacing-large $spacing-xx-large 0;
+    @include breakpoint-max(large) {
+        padding: $spacing-large;
+    }
+    @include breakpoint-max(small) {
+        padding: $spacing-large $spacing-base;
+    }
+
+    .button--search {
+        display: flex;
+    }
+    .navigation__container {
+        @include responsiveNavigationContainer;
+    }
+    .navigation__container__list {
+        @include responsiveNavigationContainerList;
+        flex-wrap: wrap-reverse;
+    }
+    .navigation__container__list--item {
+        @include responsiveNavigationContainerListItem;
+    }
+    .navigation__container__actions {
+        display: flex;
+    }
+
+    .menu--responsive__toggle--close {
+        visibility: visible;
     }
   }
 
-  .navigation {
+  &__container {
+
     justify-content: baseline;
 
-    @include breakpoint-max(large) {
-      justify-content: space-between;
-    }
-
-    .menu--responsive__toggle {
-      font-size: 2em;
-      margin: auto 0;
-      &--close {
-        @extend .menu--responsive__toggle;
-        position: absolute;
-        top: 1.2em;
-        right: 1em;
-      }
-      @media (min-width: $large) {
-        display: none;
-      }
+    @include breakpoint-max(small) {
+        @include responsiveNavigationContainer;
     }
 
     &__list {
       position: relative;
       flex-direction: row-reverse;
-
-      &__submenu__container {
-        &__submenu {
+      @include breakpoint-max(small) {
+        @include responsiveNavigationContainerList;
+      }
+      &__submenu{
+        &--container {
             display: flex;
+            z-index: 1;
             visibility: hidden;
             flex-wrap: wrap-reverse;
             position: absolute;
@@ -84,6 +98,14 @@
             padding: 0 $spacing-large $spacing-base;
             box-shadow: 0px 2px 18px 2px $black;
             transition: .15s ease-in-out 0s;
+
+            @include breakpoint-max(medium) {
+                width: 320px;
+                right: 30px;
+            }
+            @include breakpoint-max(small) {
+               right: auto;
+            }
 
             li {
                 margin: 20px 0 0;
@@ -107,29 +129,13 @@
         }
 
         &:hover {
-            .navigation__list__submenu__container__submenu {
+            .navigation__container__list__submenu--container {
                 visibility: visible;
             }
         }
       }
 
-      &--responsive {
-        font-style: normal;
-      }
-
-      @include breakpoint-max(large) {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: $white;
-        top: 0;
-        left: 0;
-        padding: 1em 0;
-        visibility: hidden;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-      }
-      &__item {
+      &--item {
         display: inline-flex;
         position: relative;
         transition: all $animation-time $animation-curve;
@@ -142,21 +148,37 @@
         letter-spacing: 1px;
         @include font-size($navigation-font-size);
 
+        @include breakpoint-max(small) {
+            @include responsiveNavigationContainerListItem;
+        }
+
         &--current {
           color: $green;
         }
         &:hover {
           @extend .hover;
         }
-
-        @include breakpoint-max(large) {
-          padding: 1em;
-          width: 100%;
-          margin: 1em 0;
-          justify-content: center;
-        }
       }
+    }
+
+    &__actions {
+        display: none;
+        @include breakpoint-max(small) {
+            display: flex;
+        }
     }
   }
 }
 
+.menu--responsive__toggle {
+    font-size: 2em;
+    margin: auto 0;
+    &--close {
+      @extend .menu--responsive__toggle;
+      position: absolute;
+      visibility: hidden;
+      z-index: 1;
+      top: 1.7em;
+      right: 1em;
+    }
+}

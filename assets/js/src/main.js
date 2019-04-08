@@ -4,7 +4,7 @@ const aos = require('aos');
 const fitVids = require('./vendor/fitvids');
 const Typed = require('typed.js');
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function(event) {
 
     // Initialize AOS that loads the elements animation
     aos.init();
@@ -26,18 +26,13 @@ window.onload = function() {
         require('./projects');
     }
     // Handle the toggling of the search menu on/off
-    document
-      .getElementById('openNavigationMenu')
-      .addEventListener('click', function() {
-        document.querySelector('.navigation__list').style.visibility =
-          'visible';
+    document.addEventListener('click', function(event) {
+        if ( event.srcElement.id === 'openNavigationMenu' ) {
+            document.querySelector('.navigation__container').style.display = 'block';
+        } else if ( event.srcElement.id === 'closeNavigationMenu' ) {
+            document.querySelector('.navigation__container').style.display = 'none';
+        }
       });
-    document
-      .getElementById('closeNavigationMenu')
-      .addEventListener('click', function() {
-        document.querySelector('.navigation__list').style.visibility =
-          'hidden';
-      });
-};
+});
 
 require('./search');
