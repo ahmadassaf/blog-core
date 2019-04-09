@@ -6,6 +6,12 @@ const Typed = require('typed.js');
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
+    var config = {
+        startOnReady: true,
+        theme: 'neutral'
+    };
+    mermaid.initialize(config);
+
     // Initialize AOS that loads the elements animation
     aos.init();
 

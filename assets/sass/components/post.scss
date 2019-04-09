@@ -104,6 +104,33 @@
       }
     }
   }
+
+    div.mermaid {
+
+        visibility: hidden;
+        opacity: 0;
+
+        span.edgeLabel {
+            font-size: 16px;
+            color: $grey-800;
+            // background-color: $grey-200 !important;
+        }
+        .node * {
+            stroke: $black !important;
+        }
+
+        foreignObject {
+            font-size: 16px;
+        }
+    }
+
+    div.mermaid[data-processed="true"] {
+        text-align: center;
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+
 }
 
 .post-list__entry:hover {

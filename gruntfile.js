@@ -24,6 +24,14 @@ module.exports = function(grunt) {
                     src: ['**'],
                     dest: 'images/posts/'
                 }]
+            },
+            js: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/js/src/dist/',
+                    src: ['**'],
+                    dest: 'assets/deploy/'
+                }]
             }
         },
 
@@ -144,7 +152,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-w3c-html-validation');
 
     // Register the grunt build task
-    grunt.registerTask('build', ['clean', 'mkdir:deployment', 'sass', 'copy:images', 'bgShell:jekyllBuild', 'browserify', 'uglify']);
+    grunt.registerTask('build', ['clean', 'mkdir:deployment', 'sass', 'copy', 'bgShell:jekyllBuild', 'browserify', 'uglify']);
 
     // Register the grunt serve task
     grunt.registerTask('serve', ['build', 'uglify', 'concurrent:serve']);

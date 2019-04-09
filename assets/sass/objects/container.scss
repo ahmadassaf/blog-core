@@ -51,23 +51,3 @@
       }
     }
 }
-
-.border {
-  @include square(100%);
-  position: fixed;
-  border: 20px solid $green;
-  z-index: 11;
-  pointer-events: none;
-  &--blog {
-    border-color: black;
-  }
-  @include breakpoint-max(x-large) {
-    border-width: 15px;
-  }
-  @include breakpoint-max(medium) {
-    border-width: 10px;
-  }
-  @include breakpoint-max(x-small) {
-    border-width: 0;
-  }
-}
