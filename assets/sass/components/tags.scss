@@ -11,6 +11,11 @@
     border: 1px solid transparent;
     text-transform: uppercase;
 
+    &:hover {
+        background: $green;
+        color: $white;
+    }
+
     @include breakpoint-max(small) {
       font-size: 10px;
     }

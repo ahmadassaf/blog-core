@@ -111,8 +111,8 @@ module.exports = function(grunt) {
             jekyllServe: {
                 cmd: 'bundle exec jekyll serve --incremental --quiet'
             },
-            jekyllLocal: {
-                cmd: 'bundle exec jekyll serve --incremental --quiet --config _config.yml, _config.dev.yml'
+            jekyllProd: {
+                cmd: 'bundle exec jekyll serve --incremental --quiet --config _config.yml, _config.prod.yml'
             }
         },
 
@@ -125,10 +125,6 @@ module.exports = function(grunt) {
             serve: [
                 'watch',
                 'bgShell:jekyllServe'
-            ],
-            local: [
-                'watch',
-                'bgShell:jekyllLocal'
             ],
             options: {
                 logConcurrentOutput: true
@@ -158,7 +154,7 @@ module.exports = function(grunt) {
     grunt.registerTask('serve', ['build', 'uglify', 'concurrent:serve']);
 
     // Register the grunt serve task
-    grunt.registerTask('local', ['build', 'uglify', 'concurrent:local']);
+    grunt.registerTask('prod', ['clean', 'mkdir:deployment', 'sass', 'copy', 'bgShell:jekyllProd', 'browserify', 'uglify']);
 
     // Register build as the default task fallback
     grunt.registerTask('default', 'build');

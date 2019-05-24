@@ -10,6 +10,11 @@
       {% if post.subtitle %} <span class="post-list__entry__header__subtitle">{{ post.subtitle }}</span>{% endif %}
     </a>
   </h4>
+  {% if post.languages %}
+    {% for language in post.languages %}
+    <span class="post-list__entry__header__language language-{{language | replace(" ", "-") | downcase }}">{{language}}</span>
+    {% endfor %}
+  {% endif %}
   {% if post.github %}
     <a class="hover post-list__entry__header__github-link" href="{{post.github}}"><i class="fab fa-github"></i>Github Repository</a>
   {% endif %}

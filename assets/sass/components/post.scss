@@ -92,6 +92,13 @@
           margin: $spacing-base 0 0;
         }
 
+        &__language {
+            color:$white;
+            padding: 0.5ch 1ch;
+            margin: 0 10px 0 0;
+            font-size: $small-font-size;
+        }
+
         &__github-link {
           font-weight: $font-weight-bold;
           cursor: pointer;
@@ -113,7 +120,6 @@
         span.edgeLabel {
             font-size: 16px;
             color: $grey-800;
-            // background-color: $grey-200 !important;
         }
         .node * {
             stroke: $black !important;
@@ -133,12 +139,10 @@
 
 }
 
-.post-list__entry:hover {
-  .post-list__entry__header * {
+.post-list__entry:hover .post-list__entry__header__title, .post-list__entry.hover .post-list__entry__header__title {
     color:$green;
-  }
-  li.post-list__entry__header__tags-list__tag{
-    background: $green;
-    color: $white;
-  }
+}
+
+.post-list__entry:hover .post-list__entry__header__subtitle, .post-list__entry.hover .post-list__entry__header__subtitle {
+    color:$green;
 }

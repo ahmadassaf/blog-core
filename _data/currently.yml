@@ -2,6 +2,9 @@
   url: http://beamery.com
   icon: fa fa-building
 
+- title: PhD Information Retrieval and Semantic Web
+  icon: fas fa-graduation-cap
+
 - title: Reviewing Python Data Science and PHP Data Structures books
   icon: fa fa-paperclip
 
