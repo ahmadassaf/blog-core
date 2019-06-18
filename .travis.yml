@@ -10,10 +10,11 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 addons:
   ssh_known_hosts:
-  - 178.62.50.198
-  - 178.62.50.198:8028
+  - 104.225.220.86
+  - 104.225.220.86:8028
 sudo: false
 before_install:
+- openssl aes-256-cbc -K $encrypted_32ec88e6f89f_key -iv $encrypted_32ec88e6f89f_iv -in deploy-key.enc -out deploy-key -d
 - bundle install
 - nvm install 4.2.2
 - nvm use 4.2.2
@@ -21,8 +22,8 @@ before_install:
 - npm install
 - bash _scripts/install.sh
 before_script:
-- echo -e "Host 178.62.50.198\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- echo -e "Host 178.62.50.198:8028\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- echo -e "Host 104.225.220.86\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- echo -e "Host 104.225.220.86:8028\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 script:
 - bash _scripts/build.sh
 - bash _scripts/test.sh
@@ -30,3 +31,4 @@ after_success:
 - bash _scripts/deploy.sh
 notifications:
   slack: snarc:Gg5ax4SydLjIhkl9IU3N4V29
+
