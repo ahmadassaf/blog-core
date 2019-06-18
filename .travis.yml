@@ -26,7 +26,6 @@ before_script:
 - echo -e "Host 104.225.220.86:8028\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 script:
 - bash _scripts/build.sh
-- bash _scripts/test.sh
 after_success:
 - bash _scripts/deploy.sh
 notifications:
