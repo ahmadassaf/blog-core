@@ -112,7 +112,7 @@ module.exports = function(grunt) {
                 cmd: 'bundle exec jekyll serve --incremental --quiet'
             },
             jekyllProd: {
-                cmd: 'bundle exec jekyll serve --incremental --quiet --config _config.yml, _config.prod.yml'
+                cmd: 'JEKYLL_ENV=production bundle exec jekyll serve --incremental --quiet --config _config.yml, _config.prod.yml'
             }
         },
 
