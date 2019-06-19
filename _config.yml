@@ -1,9 +1,8 @@
 # Site
 title: Ahmad Assaf's Blog
 description: Ahmad Assaf's blog about Software Engineering, Data Science, Productivity and Web Development
-url: http://localhost:4000
+url: http://ahmadassaf.com
 github-repo: https://github.com/ahmadassaf/blog/
-logo: logo.svg
 locale: en_USf
 
 default-post-image: website-screenshot.png   # this image will be shown when post's front matter doesn't specify any image
