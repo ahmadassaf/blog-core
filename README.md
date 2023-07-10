@@ -1,12 +1,6 @@
 # Ahmad Assaf Personal Webspace
 
-### [Homepage](http://ahmadassaf.com) | [Blog](http://ahmadassaf.com/blog)
-
-<a href="https://travis-ci.org/ahmadassaf/blog-core" id="status-image-popup" name="status-images" class="open-popup" title="Latest push build on default branch**: passed" data-ember-action="1015">
-    <img src="https://travis-ci.org/ahmadassaf/blog-core.svg" alt="build**:passed"/>
-</a>
-<a class="badge" href="https://david-dm.org/ahmadassaf/blog-core" data-reactid="35"><img src="https://david-dm.org/ahmadassaf/blog-core/status.svg" alt="dependencies status" data-reactid="36"></a>
-<a class="badge" href="https://david-dm.org/ahmadassaf/blog-core" data-reactid="35" data-type="dev"><img src="https://david-dm.org/ahmadassaf/blog-core/dev-status.svg" alt="devDependencies status" data-reactid="36"></a>
+### [Homepage](http://assaf.website) | [Blog](http://assaf.website/blog)
 
 Having had my blog on WordPress for a while now, i thought i need a lighter platform especially that my blog content is very lightweight and i don't really need a fully fledged CRM. Another reason to move away from WordPress was the need to have a collaborative effort and to write posts in Markdown. I have finally decided on [Jekyll](https**://jekyllrb.com/) for its simplicity and extensibility.
 
