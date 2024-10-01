@@ -10,8 +10,6 @@ Jekyll uses the Liquid templating language to process templates. There are two i
 First, a YAML front-matter block is at the beginning of every content file. It specifies the layout of the page and other variables, like title, date and tags. It may include custom page variables that you’ve created, too.
 Liquid template tags are used to execute loops and conditional statements and to output content.
 
-[![screenshot](https://s22.postimg.cc/esn1hj8q9/blog.png)](http://ahmadassaf.com)
-
 > For more details you can check out [my blog post](ahmadassaf.com/posts/power-up-a-hero-blog-with-jekyll/)
 
 ## Setting up the environment
